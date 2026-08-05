@@ -1,0 +1,254 @@
+[
+  {
+    "is_exam_point": false,
+    "standard_no": "GB/T 2951.13-2008",
+    "clause": "封面",
+    "type": "non_exam",
+    "priority": "",
+    "title": "封面/标准号/发布与实施日期",
+    "key_requirements": ["GB/T 2951.13-2008/IEC 60811-1-3:2001", "2008-06-26 发布", "2009-04-01 实施"],
+    "interpretation": "封面、标准号、发布日期、实施日期属框架性信息，本身不是考点，仅用于溯源。",
+    "needs_review": false
+  },
+  {
+    "is_exam_point": false,
+    "standard_no": "GB/T 2951.13-2008",
+    "clause": "前言",
+    "type": "non_exam",
+    "priority": "",
+    "title": "前言/编制说明/起草单位与起草人",
+    "key_requirements": ["本部分代替 GB/T 2951.3-1997", "起草单位:上海电缆研究所", "主要起草人:李明珠、王申、朱永华、王春红、黄萱"],
+    "interpretation": "前言记录版本沿革与归口单位，不考具体参数，是非考点。",
+    "needs_review": false
+  },
+  {
+    "is_exam_point": false,
+    "standard_no": "GB/T 2951.13-2008",
+    "clause": "1 范围/1.1 规范性引用文件/2~4 试验原则等",
+    "type": "non_exam",
+    "priority": "",
+    "title": "范围/引用文件/试验原则/适用范围/型式试验说明",
+    "key_requirements": ["本部分规定了密度测定、吸水试验、收缩试验方法", "试验方法首先作为型式试验用"],
+    "interpretation": "范围与原则章仅说明方法适用对象和一般规定，属框架性描述，不是考点。",
+    "needs_review": false
+  },
+  {
+    "is_exam_point": true,
+    "standard_no": "GB/T 2951.13-2008",
+    "clause": "5 预处理",
+    "type": "sample_prep",
+    "priority": "P1",
+    "title": "试样存放/预处理条件",
+    "key_requirements": ["所有试验应在绝缘和护套料挤出或硫化(或交联)后存放至少16h方可进行", "环境温度下进行时，试样应在(23±5)℃下存放至少3h"],
+    "interpretation": "这是几乎所有2951试验共用的前置条件，容易出填空/判断，属应知考点。",
+    "needs_review": false
+  },
+  {
+    "is_exam_point": true,
+    "standard_no": "GB/T 2951.13-2008",
+    "clause": "8.1 悬浮法",
+    "type": "test_method",
+    "priority": "P0",
+    "title": "密度测定—悬浮法(通用方法)",
+    "key_requirements": ["沿与导体轴线垂直方向切取试样，切成边长(1~2)mm小块", "试液与被试材料不应发生化学反应", "混合试液密度用比重计测定，读数到小数点后三位，即被测试样密度", "试液:密度<1g/mL用乙醇/水混合物；≥1g/mL用氯化锌/水混合物"],
+    "interpretation": "悬浮法是密度测定的通用方法，操作细节和读数精度是高频考点。",
+    "needs_review": false
+  },
+  {
+    "is_exam_point": true,
+    "standard_no": "GB/T 2951.13-2008",
+    "clause": "8.2 比重瓶法",
+    "type": "test_method",
+    "priority": "P0",
+    "title": "密度测定—比重瓶法(基准方法)",
+    "key_requirements": ["试样质量不小于1g、不大于5g，切成小块避免气泡", "试样保存在(23±2)℃", "比重瓶注满试液，试液温度在液浴中达到(23±0.5)℃", "96%酒精试液密度 d=0.7988 g/mL"],
+    "interpretation": "比重瓶法是基准方法，温度条件(23±0.5)℃和酒精密度0.7988是易考参数。",
+    "needs_review": false
+  },
+  {
+    "is_exam_point": true,
+    "standard_no": "GB/T 2951.13-2008",
+    "clause": "9.1 电气试验方法",
+    "type": "test_method",
+    "priority": "P0",
+    "title": "吸水试验—电气试验(绝缘线芯在水中耐电压)",
+    "key_requirements": [
+      "表1 绝缘厚度平均值与直流电压: 0.8和0.9mm→800V; 1.0和1.2mm→1000V; 1.2<t≤1.6mm→1400V; 1.6<t≤2.0mm→2000V; 2.0<t→2500V",
+      "从电缆试样切取约3m长被试绝缘线芯",
+      "预试验:浸水1h后，导体和水间施加交流4kV保持5min，不击穿方可用于主试验",
+      "主试验:导体接负极，施加表1直流电压，试样应不击穿"
+    ],
+    "interpretation": "绝缘厚度-试验电压对应表是核心参数表，必考；预试验4kV/5min也是常考点。",
+    "needs_review": false
+  },
+  {
+    "is_exam_point": true,
+    "standard_no": "GB/T 2951.13-2008",
+    "clause": "9.2 重量吸水试验",
+    "type": "sample_prep",
+    "priority": "P0",
+    "title": "吸水试验—重量法试样制备",
+    "key_requirements": [
+      "额定电压0.6/1kV及以下、导体截面≤25mm²电缆:试样约300mm长一段绝缘线芯",
+      "其他电缆:绝缘磨/削成(0.6~0.9)mm厚薄片，冲切(80~100)mm长、(4~5)mm宽试样",
+      "每个被试绝缘线芯制备两个试样"
+    ],
+    "interpretation": "重量法试样的尺寸与数量规定，属实操考点。",
+    "needs_review": false
+  },
+  {
+    "is_exam_point": false,
+    "standard_no": "GB/T 2951.21-2008",
+    "clause": "封面/前言",
+    "type": "non_exam",
+    "priority": "",
+    "title": "封面/前言/起草信息",
+    "key_requirements": ["GB/T 2951.21-2008/IEC 60811-2-1:2001", "代替 GB/T 2951.5-1997"],
+    "interpretation": "框架性信息，非考点。",
+    "needs_review": false
+  },
+  {
+    "is_exam_point": true,
+    "standard_no": "GB/T 2951.21-2008",
+    "clause": "8.1.2~8.1.3 取样与试样制备",
+    "type": "sample_prep",
+    "priority": "P0",
+    "title": "耐臭氧试验—取样与试样制备",
+    "key_requirements": [
+      "距离端头不小于1.5m处取足够长度绝缘线芯，制备2个试样",
+      "有挤包半导电屏蔽层时:除去2个试样屏蔽层、保留2个试样屏蔽层",
+      "哑铃试件最小厚度0.6mm(按GB/T 2951.11制备)",
+      "所有试样应无可见机械损伤"
+    ],
+    "interpretation": "取样位置(≥1.5m)与半导电层处理方式是实操高频考点。",
+    "needs_review": false
+  },
+  {
+    "is_exam_point": true,
+    "standard_no": "GB/T 2951.21-2008",
+    "clause": "8.1.4 试棒直径表1",
+    "type": "parameter",
+    "priority": "P0",
+    "title": "耐臭氧试验—试棒直径(按绝缘线芯外径)",
+    "key_requirements": [
+      "d≤12.5mm → 试棒直径 4±0.1mm",
+      "12.5<d≤20mm → 5±0.1mm",
+      "20<d≤30mm → 6±0.1mm",
+      "30<d≤45mm → 8±0.1mm",
+      "45<d → 10±0.1mm"
+    ],
+    "interpretation": "试棒直径与线芯外径对应表是耐臭氧试验的核心参数，必考。",
+    "needs_review": false
+  },
+  {
+    "is_exam_point": true,
+    "standard_no": "GB/T 2951.21-2008",
+    "clause": "8.1.5 臭氧暴露",
+    "type": "test_method",
+    "priority": "P0",
+    "title": "耐臭氧试验—暴露条件与评定",
+    "key_requirements": [
+      "试样保持在(25±2)℃，暴露在带规定臭氧浓度的干燥循环空气中",
+      "臭氧空气流量控制在280L/h~560L/h，箱内压力略高于大气压",
+      "试验后正常视力或矫正视力(不用放大镜)检查:绝缘试样最远180°弯曲部分、哑铃中部窄条应无裂纹",
+      "夹具附近裂纹忽略"
+    ],
+    "interpretation": "暴露温度、流量范围、裂纹判定是试验关键结论，必考。",
+    "needs_review": false
+  },
+  {
+    "is_exam_point": true,
+    "standard_no": "GB/T 2951.21-2008",
+    "clause": "8.1 安全警告",
+    "type": "requirement",
+    "priority": "P1",
+    "title": "臭氧毒性警告与伸长率",
+    "key_requirements": ["环境臭氧浓度不应超过0.1×10⁻⁶(或现行卫生标准较小值)", "用夹具夹住试件两端，伸长33%±2%"],
+    "interpretation": "安全限值与伸长率是试验设置参数，属应知考点。",
+    "needs_review": false
+  },
+  {
+    "is_exam_point": false,
+    "standard_no": "GB/T 2951.31-2008",
+    "clause": "封面/前言",
+    "type": "non_exam",
+    "priority": "",
+    "title": "封面/前言/起草信息",
+    "key_requirements": ["GB/T 2951.31-2008/IEC 60811-3-1:1985", "代替 GB/T 2951.6-1997"],
+    "interpretation": "框架性信息，非考点。",
+    "needs_review": false
+  },
+  {
+    "is_exam_point": true,
+    "standard_no": "GB/T 2951.31-2008",
+    "clause": "8 高温压力试验",
+    "type": "test_method",
+    "priority": "P0",
+    "title": "绝缘和护套高温压力试验",
+    "key_requirements": [
+      "每个被试绝缘线芯从(250~500)mm样段截取3个相邻试样，长(50~100)mm",
+      "刀口厚度(0.70±0.01)mm的矩形刀片加压",
+      "压力F系数k:软线/软电缆及D≤15mm固定敷设电缆k=0.6；D>15mm固定敷设及扇形k=0.7",
+      "加热时间:D≤15mm为4h；D>15mm为6h",
+      "压痕中间值应不大于绝缘厚度平均值(按8.1.4测量)的50%"
+    ],
+    "interpretation": "高温压力试验的取样、刀片厚度、k系数、加热时间、50%压痕限是核心考点。",
+    "needs_review": false
+  },
+  {
+    "is_exam_point": true,
+    "standard_no": "GB/T 2951.31-2008",
+    "clause": "9 抗开裂试验(热冲击) 表1/表2",
+    "type": "parameter",
+    "priority": "P0",
+    "title": "绝缘/护套抗开裂试验—试棒直径与卷绕圈数",
+    "key_requirements": [
+      "表1(按试样外径D): D≤2.5→试棒5mm/6圈; 2.5<D≤4.5→9/6; 4.5<D≤6.5→13/6; 6.5<D≤9.5→19/4; 9.5<D≤12.5→40/2",
+      "表2(按试样厚度δ): δ≤1→试棒2mm/6圈; 1<δ≤2→4/6; 2<δ≤3→6/6; 3<δ≤4→8/4; 4<δ≤5→10/2",
+      "预热到(150±3)℃，保持1h",
+      "试样应无裂纹"
+    ],
+    "interpretation": "抗开裂试验的两个参数表(外径表/厚度表)与150±3℃是必考参数。",
+    "needs_review": false
+  },
+  {
+    "is_exam_point": false,
+    "standard_no": "GB/T 2951.32-2008",
+    "clause": "封面/前言",
+    "type": "non_exam",
+    "priority": "",
+    "title": "封面/前言/起草信息",
+    "key_requirements": ["GB/T 2951.32-2008/IEC 60811-3-2:1985", "代替 GB/T 2951.7-1997"],
+    "interpretation": "框架性信息，非考点。",
+    "needs_review": false
+  },
+  {
+    "is_exam_point": true,
+    "standard_no": "GB/T 2951.32-2008",
+    "clause": "8 失重试验",
+    "type": "test_method",
+    "priority": "P0",
+    "title": "绝缘和护套失重试验",
+    "key_requirements": [
+      "烘箱:空气每小时更换8~20次，不得用旋转风扇；有争议用自然通风烘箱",
+      "分析天平感量0.1mg",
+      "管状试件两端不应封闭；哑铃试件厚(1.0±0.2)mm；每试件表面积≥5cm²",
+      "制备好试件在环境湿度下干燥器存放≥20h，取出立即称重(精确0.1mg)",
+      "在(80±2)℃烘箱保存7×24h，再干燥器存放20h后称重",
+      "失重=质量差(mg)/表面积(cm²)，取3试件中间值，单位mg/cm²"
+    ],
+    "interpretation": "失重试验的烘箱换气次数、温度80±2℃、时间7×24h、结果以mg/cm²表示是核心考点。",
+    "needs_review": false
+  },
+  {
+    "is_exam_point": true,
+    "standard_no": "GB/T 2951.32-2008",
+    "clause": "9 热稳定性试验",
+    "type": "sample_prep",
+    "priority": "P0",
+    "title": "热稳定性试验—玻璃管试样",
+    "key_requirements": ["玻璃管长110mm，外径约5mm，内径(4.0±0.5)mm，一端密封(如熔融法)"],
+    "interpretation": "热稳定性试验所用玻璃管的尺寸与密封要求是实操考点。",
+    "needs_review": false
+  }
+]

@@ -1,0 +1,340 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>在线自测卷 · gbt_2951_kb_mvp</title><style>
+*{box-sizing:border-box}
+body{font-family:-apple-system,"Segoe UI","Microsoft YaHei",sans-serif;max-width:920px;
+     margin:0 auto;padding:24px 18px 80px;color:#1f2329;line-height:1.7;background:#f7f8fa}
+h1{font-size:22px;margin:0 0 4px;border-left:5px solid #2f6fed;padding-left:12px}
+.sub{color:#6b7280;font-size:13px;margin:0 0 16px;padding-left:17px}
+.card{background:#fff;border:1px solid #e6e8eb;border-radius:10px;padding:16px 18px;margin:14px 0}
+.info{background:#f0f5ff;border-color:#d6e2ff;font-size:13px;color:#334}
+.info b{color:#2f6fed}
+h2{font-size:17px;color:#2f6fed;margin:28px 0 10px;padding-bottom:6px;border-bottom:2px solid #e6ecfb}
+.q{background:#fff;border:1px solid #e6e8eb;border-radius:10px;padding:14px 16px;margin:10px 0;
+   transition:border-color .15s}
+.q .stem{font-weight:600;color:#1f2329;margin-bottom:8px}
+.q .pts{float:right;font-weight:400;font-size:12px;color:#9aa0a6}
+.opt{display:block;margin:5px 0 5px 4px;cursor:pointer;padding:4px 8px;border-radius:6px}
+.opt:hover{background:#f3f6ff}
+.opt input{margin-right:8px}
+.tf{display:inline-block;margin-right:10px;cursor:pointer;padding:5px 18px;border:1px solid #d9dde3;
+    border-radius:20px;font-size:14px;background:#fff}
+.tf:hover{border-color:#2f6fed;color:#2f6fed}
+.tf input{display:none}
+.tf.sel{background:#2f6fed;color:#fff;border-color:#2f6fed}
+input[type=text]{border:none;border-bottom:1.5px solid #b9c0c9;background:transparent;
+   padding:2px 6px;min-width:96px;font-size:14px;font-family:inherit;color:#0b57d0;text-align:center}
+input[type=text]:focus{outline:none;border-bottom-color:#2f6fed;background:#f5f8ff}
+.calcsub{margin:6px 0 6px 6px;font-size:14px}
+.calcsub .lb{display:inline-block;min-width:230px;color:#444}
+.res{margin-top:10px;font-size:13px;padding:8px 12px;border-radius:6px;display:none}
+.res.ok{background:#e9f7ef;color:#12703a;border-left:3px solid #16894a}
+.res.bad{background:#fdecec;color:#a5281b;border-left:3px solid #d93025}
+.res .src{color:#6b7280;font-size:12px;margin-top:4px}
+.bar{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid #e0e3e8;
+     padding:12px 18px;display:flex;gap:12px;align-items:center;justify-content:center;
+     box-shadow:0 -2px 12px rgba(0,0,0,.06);z-index:20}
+button{font-family:inherit;font-size:15px;padding:9px 30px;border-radius:8px;cursor:pointer;border:1px solid transparent}
+.btn-main{background:#2f6fed;color:#fff}
+.btn-main:hover{background:#1a5bd6}
+.btn-sec{background:#fff;color:#444;border-color:#d9dde3}
+.btn-sec:hover{border-color:#2f6fed;color:#2f6fed}
+#score{font-size:15px;font-weight:600;color:#1f2329}
+#score .n{font-size:24px;color:#2f6fed;margin:0 3px}
+.sheet{display:none;background:#fff;border:1px solid #e6e8eb;border-radius:10px;padding:14px 18px;margin:14px 0}
+.sheet h3{margin:0 0 8px;font-size:15px}
+.sheet .row{font-size:13px;color:#444;margin:3px 0}
+</style></head><body>
+<h1>国缆检测杯 · 标准条款自测卷</h1>
+<p class="sub">GB/T 2951.13-2008 密度测定/吸水/收缩试验　·　GB/T 2951.21-2008 耐臭氧/热延伸/浸矿物油试验　·　GB/T 2951.31-2008 高温压力/抗开裂试验　·　GB/T 2951.32-2008 失重/热稳定性试验</p>
+<div class="card info">
+  <b>总分 100 分</b>｜选择 15 题 30 分
+  ｜判断 10 题 10 分
+  ｜填空 15 题 30 分
+  ｜计算 3 题 30 分<br>
+  题目来源：kb/kb.db → judged.json（Docling OCR 提取 + 大模型判定的 13 条考点 KU）<br>
+  判分方式：<b>纯脚本规则判分</b>（不调用大模型）；满分自检 PASS、
+  零分自检 PASS；Python/JS 判分一致性已由 test_parity.py 验证。<br>
+  填空题需<b>整题全部空都答对</b>才得分；数值题按容差判定；答案支持常见近义写法与空格/全角容错。
+</div>
+<div id="sheet" class="sheet"></div>
+<h2>一、单项选择题</h2>
+<div class="q" id="q_C01"><div class="stem"><span class="pts">2分</span>1. 绝缘和护套料挤出或硫化（交联）后，所有试验应存放至少多长时间方可进行？</div><label class="opt"><input type="radio" name="c_C01" value="0">A. 8h</label><label class="opt"><input type="radio" name="c_C01" value="1">B. 12h</label><label class="opt"><input type="radio" name="c_C01" value="2">C. 16h</label><label class="opt"><input type="radio" name="c_C01" value="3">D. 24h</label><div class="res" id="res_C01"></div></div>
+<div class="q" id="q_C02"><div class="stem"><span class="pts">2分</span>2. 试验在环境温度下进行时，试样应在下列哪个温度条件下存放至少 3h？</div><label class="opt"><input type="radio" name="c_C02" value="0">A. (20±2)℃</label><label class="opt"><input type="radio" name="c_C02" value="1">B. (23±5)℃</label><label class="opt"><input type="radio" name="c_C02" value="2">C. (23±2)℃</label><label class="opt"><input type="radio" name="c_C02" value="3">D. (25±5)℃</label><div class="res" id="res_C02"></div></div>
+<div class="q" id="q_C03"><div class="stem"><span class="pts">2分</span>3. 密度测定悬浮法中，试样应沿与导体轴线垂直方向切取并切成边长多少的小块？</div><label class="opt"><input type="radio" name="c_C03" value="0">A. (0.5~1)mm</label><label class="opt"><input type="radio" name="c_C03" value="1">B. (1~2)mm</label><label class="opt"><input type="radio" name="c_C03" value="2">C. (2~3)mm</label><label class="opt"><input type="radio" name="c_C03" value="3">D. (3~5)mm</label><div class="res" id="res_C03"></div></div>
+<div class="q" id="q_C04"><div class="stem"><span class="pts">2分</span>4. 悬浮法中用比重计测定混合试液密度时，读数应读到小数点后几位？</div><label class="opt"><input type="radio" name="c_C04" value="0">A. 一位</label><label class="opt"><input type="radio" name="c_C04" value="1">B. 两位</label><label class="opt"><input type="radio" name="c_C04" value="2">C. 三位</label><label class="opt"><input type="radio" name="c_C04" value="3">D. 四位</label><div class="res" id="res_C04"></div></div>
+<div class="q" id="q_C05"><div class="stem"><span class="pts">2分</span>5. 被测材料密度小于 1g/mL 时，悬浮法应选用哪种试液？</div><label class="opt"><input type="radio" name="c_C05" value="0">A. 氯化锌/水混合物</label><label class="opt"><input type="radio" name="c_C05" value="1">B. 乙醇/水混合物</label><label class="opt"><input type="radio" name="c_C05" value="2">C. 纯蒸馏水</label><label class="opt"><input type="radio" name="c_C05" value="3">D. 甘油/水混合物</label><div class="res" id="res_C05"></div></div>
+<div class="q" id="q_C06"><div class="stem"><span class="pts">2分</span>6. 比重瓶法（基准方法）对试样质量的要求是？</div><label class="opt"><input type="radio" name="c_C06" value="0">A. 不小于0.5g、不大于2g</label><label class="opt"><input type="radio" name="c_C06" value="1">B. 不小于1g、不大于5g</label><label class="opt"><input type="radio" name="c_C06" value="2">C. 不小于5g、不大于10g</label><label class="opt"><input type="radio" name="c_C06" value="3">D. 标准未作规定</label><div class="res" id="res_C06"></div></div>
+<div class="q" id="q_C07"><div class="stem"><span class="pts">2分</span>7. 比重瓶法中，比重瓶内试液在液浴中应达到的温度是？</div><label class="opt"><input type="radio" name="c_C07" value="0">A. (23±5)℃</label><label class="opt"><input type="radio" name="c_C07" value="1">B. (23±2)℃</label><label class="opt"><input type="radio" name="c_C07" value="2">C. (23±0.5)℃</label><label class="opt"><input type="radio" name="c_C07" value="3">D. (20±0.5)℃</label><div class="res" id="res_C07"></div></div>
+<div class="q" id="q_C08"><div class="stem"><span class="pts">2分</span>8. 吸水试验（电气法）中，绝缘厚度平均值为 1.5mm 时，主试验应施加的直流电压为？</div><label class="opt"><input type="radio" name="c_C08" value="0">A. 1000V</label><label class="opt"><input type="radio" name="c_C08" value="1">B. 1400V</label><label class="opt"><input type="radio" name="c_C08" value="2">C. 2000V</label><label class="opt"><input type="radio" name="c_C08" value="3">D. 2500V</label><div class="res" id="res_C08"></div></div>
+<div class="q" id="q_C09"><div class="stem"><span class="pts">2分</span>9. 吸水试验（电气法）的预试验中，浸水 1h 后在导体与水之间施加的电压和保持时间是？</div><label class="opt"><input type="radio" name="c_C09" value="0">A. 交流2kV / 5min</label><label class="opt"><input type="radio" name="c_C09" value="1">B. 交流4kV / 5min</label><label class="opt"><input type="radio" name="c_C09" value="2">C. 交流4kV / 15min</label><label class="opt"><input type="radio" name="c_C09" value="3">D. 直流2.5kV / 1min</label><div class="res" id="res_C09"></div></div>
+<div class="q" id="q_C10"><div class="stem"><span class="pts">2分</span>10. 耐臭氧试验取样时，应在距离端头不小于多少的位置切取绝缘线芯？</div><label class="opt"><input type="radio" name="c_C10" value="0">A. 0.5m</label><label class="opt"><input type="radio" name="c_C10" value="1">B. 1.0m</label><label class="opt"><input type="radio" name="c_C10" value="2">C. 1.5m</label><label class="opt"><input type="radio" name="c_C10" value="3">D. 2.0m</label><div class="res" id="res_C10"></div></div>
+<div class="q" id="q_C11"><div class="stem"><span class="pts">2分</span>11. 耐臭氧试验中，绝缘线芯外径 d=18mm 时应选用的试棒直径为？</div><label class="opt"><input type="radio" name="c_C11" value="0">A. 4±0.1mm</label><label class="opt"><input type="radio" name="c_C11" value="1">B. 5±0.1mm</label><label class="opt"><input type="radio" name="c_C11" value="2">C. 6±0.1mm</label><label class="opt"><input type="radio" name="c_C11" value="3">D. 8±0.1mm</label><div class="res" id="res_C11"></div></div>
+<div class="q" id="q_C12"><div class="stem"><span class="pts">2分</span>12. 耐臭氧试验中，臭氧空气的流量应控制在？</div><label class="opt"><input type="radio" name="c_C12" value="0">A. 100~280 L/h</label><label class="opt"><input type="radio" name="c_C12" value="1">B. 280~560 L/h</label><label class="opt"><input type="radio" name="c_C12" value="2">C. 560~800 L/h</label><label class="opt"><input type="radio" name="c_C12" value="3">D. 标准未作规定</label><div class="res" id="res_C12"></div></div>
+<div class="q" id="q_C13"><div class="stem"><span class="pts">2分</span>13. 高温压力试验中，加压用矩形刀片的刀口厚度应为？</div><label class="opt"><input type="radio" name="c_C13" value="0">A. (0.50±0.01)mm</label><label class="opt"><input type="radio" name="c_C13" value="1">B. (0.70±0.01)mm</label><label class="opt"><input type="radio" name="c_C13" value="2">C. (0.70±0.05)mm</label><label class="opt"><input type="radio" name="c_C13" value="3">D. (1.00±0.01)mm</label><div class="res" id="res_C13"></div></div>
+<div class="q" id="q_C14"><div class="stem"><span class="pts">2分</span>14. 绝缘/护套抗开裂（热冲击）试验的预热条件是？</div><label class="opt"><input type="radio" name="c_C14" value="0">A. (100±3)℃保持1h</label><label class="opt"><input type="radio" name="c_C14" value="1">B. (150±3)℃保持1h</label><label class="opt"><input type="radio" name="c_C14" value="2">C. (150±2)℃保持2h</label><label class="opt"><input type="radio" name="c_C14" value="3">D. (80±2)℃保持1h</label><div class="res" id="res_C14"></div></div>
+<div class="q" id="q_C15"><div class="stem"><span class="pts">2分</span>15. 失重试验所用烘箱，箱内空气每小时应更换的次数为？</div><label class="opt"><input type="radio" name="c_C15" value="0">A. 3~5次</label><label class="opt"><input type="radio" name="c_C15" value="1">B. 5~10次</label><label class="opt"><input type="radio" name="c_C15" value="2">C. 8~20次</label><label class="opt"><input type="radio" name="c_C15" value="3">D. 20~30次</label><div class="res" id="res_C15"></div></div>
+<h2>二、判断题（正确画 √ ，错误画 ×）</h2>
+<div class="q" id="q_J01"><div class="stem"><span class="pts">1分</span>1. 密度测定中，悬浮法是基准方法，比重瓶法是通用方法。</div><label class="tf"><input type="radio" name="j_J01" value="true">√ 对</label><label class="tf"><input type="radio" name="j_J01" value="false">× 错</label><div class="res" id="res_J01"></div></div>
+<div class="q" id="q_J02"><div class="stem"><span class="pts">1分</span>2. 悬浮法所用试液不应与被试材料发生化学反应。</div><label class="tf"><input type="radio" name="j_J02" value="true">√ 对</label><label class="tf"><input type="radio" name="j_J02" value="false">× 错</label><div class="res" id="res_J02"></div></div>
+<div class="q" id="q_J03"><div class="stem"><span class="pts">1分</span>3. 比重瓶法中，96% 酒精试液的密度取 0.7988 g/mL。</div><label class="tf"><input type="radio" name="j_J03" value="true">√ 对</label><label class="tf"><input type="radio" name="j_J03" value="false">× 错</label><div class="res" id="res_J03"></div></div>
+<div class="q" id="q_J04"><div class="stem"><span class="pts">1分</span>4. 吸水试验（电气法）主试验时，绝缘线芯的导体应接正极。</div><label class="tf"><input type="radio" name="j_J04" value="true">√ 对</label><label class="tf"><input type="radio" name="j_J04" value="false">× 错</label><div class="res" id="res_J04"></div></div>
+<div class="q" id="q_J05"><div class="stem"><span class="pts">1分</span>5. 额定电压 0.6/1kV 及以下、导体标称截面不超过 25mm² 的电缆，做重量吸水试验时试样为约 300mm 长的一段绝缘线芯。</div><label class="tf"><input type="radio" name="j_J05" value="true">√ 对</label><label class="tf"><input type="radio" name="j_J05" value="false">× 错</label><div class="res" id="res_J05"></div></div>
+<div class="q" id="q_J06"><div class="stem"><span class="pts">1分</span>6. 耐臭氧试验后检查时，位于夹具附近的裂纹也应判为不合格。</div><label class="tf"><input type="radio" name="j_J06" value="true">√ 对</label><label class="tf"><input type="radio" name="j_J06" value="false">× 错</label><div class="res" id="res_J06"></div></div>
+<div class="q" id="q_J07"><div class="stem"><span class="pts">1分</span>7. 耐臭氧试验结果检查时，可借助放大镜观察细微裂纹。</div><label class="tf"><input type="radio" name="j_J07" value="true">√ 对</label><label class="tf"><input type="radio" name="j_J07" value="false">× 错</label><div class="res" id="res_J07"></div></div>
+<div class="q" id="q_J08"><div class="stem"><span class="pts">1分</span>8. 高温压力试验的压痕中间值应不大于绝缘厚度平均值的 50%。</div><label class="tf"><input type="radio" name="j_J08" value="true">√ 对</label><label class="tf"><input type="radio" name="j_J08" value="false">× 错</label><div class="res" id="res_J08"></div></div>
+<div class="q" id="q_J09"><div class="stem"><span class="pts">1分</span>9. 失重试验的烘箱可以使用旋转风扇加速箱内空气循环。</div><label class="tf"><input type="radio" name="j_J09" value="true">√ 对</label><label class="tf"><input type="radio" name="j_J09" value="false">× 错</label><div class="res" id="res_J09"></div></div>
+<div class="q" id="q_J10"><div class="stem"><span class="pts">1分</span>10. 热稳定性试验所用玻璃管应两端密封。</div><label class="tf"><input type="radio" name="j_J10" value="true">√ 对</label><label class="tf"><input type="radio" name="j_J10" value="false">× 错</label><div class="res" id="res_J10"></div></div>
+<h2>三、填空题</h2>
+<div class="q" id="q_F01"><div class="stem"><span class="pts">2分</span>1. 绝缘和护套料挤出或硫化（交联）后，所有试验应存放至少 <input type="text" id="f_F01_0"> h 方可进行。</div><div class="res" id="res_F01"></div></div>
+<div class="q" id="q_F02"><div class="stem"><span class="pts">2分</span>2. 试验在环境温度下进行时，试样应在 <input type="text" id="f_F02_0"> ℃ 下存放至少 <input type="text" id="f_F02_1"> h。</div><div class="res" id="res_F02"></div></div>
+<div class="q" id="q_F03"><div class="stem"><span class="pts">2分</span>3. 悬浮法中，用比重计测定混合试液密度时读数应读到小数点后 <input type="text" id="f_F03_0"> 位，该读数即为被测试样的 <input type="text" id="f_F03_1"> 。</div><div class="res" id="res_F03"></div></div>
+<div class="q" id="q_F04"><div class="stem"><span class="pts">2分</span>4. 比重瓶法中，试样质量应不小于 <input type="text" id="f_F04_0"> g、不大于 <input type="text" id="f_F04_1"> g。</div><div class="res" id="res_F04"></div></div>
+<div class="q" id="q_F05"><div class="stem"><span class="pts">2分</span>5. 比重瓶法中，试样保存在 <input type="text" id="f_F05_0"> ℃，比重瓶内试液在液浴中的温度应达到 <input type="text" id="f_F05_1"> ℃。</div><div class="res" id="res_F05"></div></div>
+<div class="q" id="q_F06"><div class="stem"><span class="pts">2分</span>6. 吸水试验（电气法）应从电缆试样上切取约 <input type="text" id="f_F06_0"> m 长的被试绝缘线芯。</div><div class="res" id="res_F06"></div></div>
+<div class="q" id="q_F07"><div class="stem"><span class="pts">2分</span>7. 吸水试验（电气法）中，绝缘厚度平均值为 2.0mm 时施加的直流电压为 <input type="text" id="f_F07_0"> V；大于 2.0mm 时为 <input type="text" id="f_F07_1"> V。</div><div class="res" id="res_F07"></div></div>
+<div class="q" id="q_F08"><div class="stem"><span class="pts">2分</span>8. 重量吸水试验中，除小截面低压电缆外，绝缘应磨或削成 <input type="text" id="f_F08_0"> mm 厚的薄片，再冲切成长 <input type="text" id="f_F08_1"> mm、宽 <input type="text" id="f_F08_2"> mm 的试样。</div><div class="res" id="res_F08"></div></div>
+<div class="q" id="q_F09"><div class="stem"><span class="pts">2分</span>9. 耐臭氧试验用哑铃试件（按 GB/T 2951.11 制备）的最小厚度为 <input type="text" id="f_F09_0"> mm，且所有试样应无可见 <input type="text" id="f_F09_1"> 。</div><div class="res" id="res_F09"></div></div>
+<div class="q" id="q_F10"><div class="stem"><span class="pts">2分</span>10. 耐臭氧试验时试样应保持在 <input type="text" id="f_F10_0"> ℃，臭氧空气流量控制在 <input type="text" id="f_F10_1"> L/h ~ <input type="text" id="f_F10_2"> L/h。</div><div class="res" id="res_F10"></div></div>
+<div class="q" id="q_F11"><div class="stem"><span class="pts">2分</span>11. 耐臭氧试验中用夹具夹住试件两端，使其伸长 <input type="text" id="f_F11_0"> ；环境臭氧浓度不应超过 <input type="text" id="f_F11_1"> 。</div><div class="res" id="res_F11"></div></div>
+<div class="q" id="q_F12"><div class="stem"><span class="pts">2分</span>12. 高温压力试验中，每个被试绝缘线芯从 (250~500)mm 样段上截取 <input type="text" id="f_F12_0"> 个相邻试样，每个长 <input type="text" id="f_F12_1"> mm。</div><div class="res" id="res_F12"></div></div>
+<div class="q" id="q_F13"><div class="stem"><span class="pts">2分</span>13. 高温压力试验的加热时间：D≤15mm 时为 <input type="text" id="f_F13_0"> h；D&gt;15mm 时为 <input type="text" id="f_F13_1"> h。</div><div class="res" id="res_F13"></div></div>
+<div class="q" id="q_F14"><div class="stem"><span class="pts">2分</span>14. 失重试验中，试件应在 (80±2)℃ 烘箱中保存 <input type="text" id="f_F14_0"> h（即 7×24h）；所用分析天平感量为 <input type="text" id="f_F14_1"> mg。</div><div class="res" id="res_F14"></div></div>
+<div class="q" id="q_F15"><div class="stem"><span class="pts">2分</span>15. 热稳定性试验所用玻璃管长 <input type="text" id="f_F15_0"> mm，外径约 <input type="text" id="f_F15_1"> mm，内径 <input type="text" id="f_F15_2"> mm，一端密封。</div><div class="res" id="res_F15"></div></div>
+<h2>四、计算与判定题</h2>
+<div class="q" id="q_CALC1"><div class="stem"><span class="pts">10分</span>1. 高温压力试验：参数选取与合格判定</div><div style="color:#444;font-size:14px;margin-bottom:8px">某 0.6/1kV 固定敷设电缆，绝缘线芯外径 D=12.0mm，绝缘厚度平均值为 1.80mm。按 GB/T 2951.31-2008 第 8 章做高温压力试验，测得三个试样压痕深度分别为 0.72mm、0.85mm、0.79mm。请确定试验参数并判定结果。</div><div class="calcsub"><span class="lb">（1）加热时间(h)</span><input type="text" id="k_CALC1_0">　<span style="color:#9aa0a6;font-size:12px">2分</span></div><div class="calcsub"><span class="lb">（2）压力计算系数k</span><input type="text" id="k_CALC1_1">　<span style="color:#9aa0a6;font-size:12px">2分</span></div><div class="calcsub"><span class="lb">（3）三个压痕的中间值(mm)</span><input type="text" id="k_CALC1_2">　<span style="color:#9aa0a6;font-size:12px">2分，容差±0.001</span></div><div class="calcsub"><span class="lb">（4）允许的压痕最大值(mm)</span><input type="text" id="k_CALC1_3">　<span style="color:#9aa0a6;font-size:12px">2分，容差±0.001</span></div><div class="calcsub"><span class="lb">（5）合格性判定</span><input type="text" id="k_CALC1_4">　<span style="color:#9aa0a6;font-size:12px">2分</span></div><div class="res" id="res_CALC1"></div></div>
+<div class="q" id="q_CALC2"><div class="stem"><span class="pts">10分</span>2. 失重试验：失重值计算与结果取值</div><div style="color:#444;font-size:14px;margin-bottom:8px">某护套料失重试验取 3 个试件，表面积均为 6.00cm²。在 (80±2)℃ 烘箱中保存 7×24h，烘前烘后质量差分别为 9.6mg、10.8mg、10.2mg。失重按「质量差(mg)/表面积(cm²)」计算，结果取 3 个试件的中间值。</div><div class="calcsub"><span class="lb">（1）试件1失重(mg/cm2)</span><input type="text" id="k_CALC2_0">　<span style="color:#9aa0a6;font-size:12px">2分，容差±0.01</span></div><div class="calcsub"><span class="lb">（2）试件2失重(mg/cm2)</span><input type="text" id="k_CALC2_1">　<span style="color:#9aa0a6;font-size:12px">2分，容差±0.01</span></div><div class="calcsub"><span class="lb">（3）试件3失重(mg/cm2)</span><input type="text" id="k_CALC2_2">　<span style="color:#9aa0a6;font-size:12px">2分，容差±0.01</span></div><div class="calcsub"><span class="lb">（4）试验结果-取中间值(mg/cm2)</span><input type="text" id="k_CALC2_3">　<span style="color:#9aa0a6;font-size:12px">2分，容差±0.01</span></div><div class="calcsub"><span class="lb">（5）烘箱温度(℃)</span><input type="text" id="k_CALC2_4">　<span style="color:#9aa0a6;font-size:12px">1分</span></div><div class="calcsub"><span class="lb">（6）保存时间(h)</span><input type="text" id="k_CALC2_5">　<span style="color:#9aa0a6;font-size:12px">1分</span></div><div class="res" id="res_CALC2"></div></div>
+<div class="q" id="q_CALC3"><div class="stem"><span class="pts">10分</span>3. 吸水试验（电气法）：按绝缘厚度查表定电压</div><div style="color:#444;font-size:14px;margin-bottom:8px">按 GB/T 2951.13-2008 表1，根据绝缘厚度平均值 t 确定吸水试验主试验所加直流电压（表1：0.8和0.9mm→800V；1.0和1.2mm→1000V；1.2&lt;t≤1.6mm→1400V；1.6&lt;t≤2.0mm→2000V；2.0mm&lt;t→2500V）。请分别填出下列厚度对应的电压，并写出预试验条件。</div><div class="calcsub"><span class="lb">（1）t=0.90mm 对应直流电压(V)</span><input type="text" id="k_CALC3_0">　<span style="color:#9aa0a6;font-size:12px">2分</span></div><div class="calcsub"><span class="lb">（2）t=1.50mm 对应直流电压(V)</span><input type="text" id="k_CALC3_1">　<span style="color:#9aa0a6;font-size:12px">2分</span></div><div class="calcsub"><span class="lb">（3）t=1.80mm 对应直流电压(V)</span><input type="text" id="k_CALC3_2">　<span style="color:#9aa0a6;font-size:12px">2分</span></div><div class="calcsub"><span class="lb">（4）t=2.40mm 对应直流电压(V)</span><input type="text" id="k_CALC3_3">　<span style="color:#9aa0a6;font-size:12px">2分</span></div><div class="calcsub"><span class="lb">（5）预试验交流电压(kV)</span><input type="text" id="k_CALC3_4">　<span style="color:#9aa0a6;font-size:12px">1分</span></div><div class="calcsub"><span class="lb">（6）预试验持续时间(min)</span><input type="text" id="k_CALC3_5">　<span style="color:#9aa0a6;font-size:12px">1分</span></div><div class="res" id="res_CALC3"></div></div>
+
+<div class="bar">
+  <span id="timer" style="color:#6b7280;font-size:13px">用时 00:00</span>
+  <button class="btn-main" onclick="submit()">交卷判分</button>
+  <button class="btn-sec" onclick="reset()">重做</button>
+  <span id="score">未交卷</span>
+</div>
+<script>/* learning-system-v2 · 判分内核（JS 版）
+ * ==========================================
+ * 本文件是 engine/generate.py 判分逻辑的【逐条镜像】。
+ * 用途：① 内联进离线试卷 HTML，实现浏览器端即时判分；② 被 node 加载做一致性测试。
+ * 规则：只判客观题（选择/判断/填空/计算），全部死规则，不调用任何大模型。
+ * 任何一侧改动，必须同步另一侧，并跑 engine/test_parity.py 验证两边判分完全一致。
+ */
+(function (root, factory) {
+  if (typeof module === "object" && module.exports) module.exports = factory();
+  else root.Grade = factory();
+})(typeof self !== "undefined" ? self : this, function () {
+
+  // ---- 归一化（镜像 generate.py normalize）----
+  function normalize(s) {
+    if (s === null || s === undefined) return "";
+    s = String(s);
+    ["\u0020", "\u00a0", "\u3000", "\t"].forEach(function (ch) {
+      s = s.split(ch).join("");
+    });
+    var map = {
+      "％": "%", "×": "x", "÷": "/", "²": "2", "³": "3",
+      "（": "(", "）": ")", "：": ":", "，": ",",
+      "。": ".", "、": ",", "～": "~", "—": "-"
+    };
+    Object.keys(map).forEach(function (k) { s = s.split(k).join(map[k]); });
+    return s.toLowerCase().trim();
+  }
+
+  // ---- 严格数值解析（镜像 generate.py to_num）----
+  var NUM_RE = /^[+-]?(\d+\.?\d*|\.\d+)([eE][+-]?\d+)?$/;
+  function toNum(x) {
+    var s = String(x === null || x === undefined ? "" : x).trim();
+    ["\u0020", "\u00a0", "\u3000"].forEach(function (ch) { s = s.split(ch).join(""); });
+    return NUM_RE.test(s) ? parseFloat(s) : null;
+  }
+
+  function closeEnough(a, b, tol) {
+    var na = toNum(a), nb = toNum(b);
+    if (na === null || nb === null) return normalize(a) === normalize(b);
+    var t = toNum(tol);
+    if (t === null) t = 0;
+    return Math.abs(na - nb) <= t + 1e-9;
+  }
+
+  // ---- 单题判分 ----
+  function gradeChoice(it, sub) {
+    var pts = it.points === undefined ? 2 : it.points;
+    if (sub === null || sub === undefined || sub === "") return 0;
+    return parseInt(sub, 10) === parseInt(it.answer, 10) ? pts : 0;
+  }
+
+  var TRUE_SET = ["true", "t", "对", "正确", "√", "v", "y", "yes", "1"];
+  var FALSE_SET = ["false", "f", "错", "错误", "x", "×", "n", "no", "0"];
+  function gradeJudge(it, sub) {
+    var pts = it.points === undefined ? 1 : it.points;
+    var user;
+    if (typeof sub === "boolean") {
+      user = sub;
+    } else {
+      var s = normalize(sub);
+      if (TRUE_SET.indexOf(s) >= 0) user = true;
+      else if (FALSE_SET.indexOf(s) >= 0) user = false;
+      else return 0;
+    }
+    return user === Boolean(it.answer) ? pts : 0;
+  }
+
+  function gradeFill(it, subs) {
+    var pts = it.points === undefined ? 2 : it.points;
+    var ans = it.answers || [], syn = it.syn || [];
+    if (!subs || subs.length !== ans.length) return 0;
+    for (var i = 0; i < subs.length; i++) {
+      var ok = normalize(subs[i]) === normalize(ans[i]);
+      if (!ok && i < syn.length && syn[i]) {
+        ok = syn[i].map(normalize).indexOf(normalize(subs[i])) >= 0;
+      }
+      if (!ok) return 0;
+    }
+    return pts;
+  }
+
+  function gradeCalc(it, subs) {
+    var total = 0;
+    for (var i = 0; i < it.subs.length; i++) {
+      var label = it.subs[i][0], target = it.subs[i][1],
+          tol = it.subs[i][2], pts = it.subs[i][3];
+      var sub = subs && subs[i] !== undefined ? subs[i] : "";
+      if (label === "合格性判定") {
+        total += normalize(sub) === normalize(target) ? pts : 0;
+      } else {
+        total += closeEnough(sub, target, tol) ? pts : 0;
+      }
+    }
+    return total;
+  }
+
+  // ---- 整卷判分 ----
+  // answers 结构: {choice:{id:idx}, judge:{id:bool|str}, fill:{id:[..]}, calc:{id:[..]}}
+  function gradeAll(bank, answers) {
+    var detail = { choice: {}, judge: {}, fill: {}, calc: {} };
+    var got = { choice: 0, judge: 0, fill: 0, calc: 0 };
+    (bank.choice || []).forEach(function (it) {
+      var s = gradeChoice(it, (answers.choice || {})[it.id]);
+      detail.choice[it.id] = s; got.choice += s;
+    });
+    (bank.judge || []).forEach(function (it) {
+      var s = gradeJudge(it, (answers.judge || {})[it.id]);
+      detail.judge[it.id] = s; got.judge += s;
+    });
+    (bank.fill || []).forEach(function (it) {
+      var s = gradeFill(it, (answers.fill || {})[it.id]);
+      detail.fill[it.id] = s; got.fill += s;
+    });
+    (bank.calc || []).forEach(function (it) {
+      var s = gradeCalc(it, (answers.calc || {})[it.id]);
+      detail.calc[it.id] = s; got.calc += s;
+    });
+    got.total = got.choice + got.judge + got.fill + got.calc;
+    return { got: got, detail: detail };
+  }
+
+  return {
+    normalize: normalize, toNum: toNum, closeEnough: closeEnough,
+    gradeChoice: gradeChoice, gradeJudge: gradeJudge,
+    gradeFill: gradeFill, gradeCalc: gradeCalc, gradeAll: gradeAll
+  };
+});
+</script>
+<script>
+var BANK = {"meta": {"standard": ["GB/T 2951.13-2008 密度测定/吸水/收缩试验", "GB/T 2951.21-2008 耐臭氧/热延伸/浸矿物油试验", "GB/T 2951.31-2008 高温压力/抗开裂试验", "GB/T 2951.32-2008 失重/热稳定性试验"], "source": "kb/kb.db → judged.json（Docling OCR 提取 + 大模型判定的 13 条考点 KU）", "design": "大模型出题 + 脚本判分。题型只保留客观题：选择/判断/填空/计算，判分 100% 规则化，不依赖大模型。每题带 src 溯源到标准条款。", "generated_by": "LLM（本轮对话）", "schema_version": 2, "scoring": {"choice": 2, "judge": 1, "fill": 2, "calc": "见 subs"}}, "choice": [{"id": "C01", "points": 2, "src": "GB/T 2951.13-2008 §5 预处理", "q": "绝缘和护套料挤出或硫化（交联）后，所有试验应存放至少多长时间方可进行？", "options": ["8h", "12h", "16h", "24h"], "answer": 2, "explain": "标准规定挤出或硫化（交联）后应存放至少 16h，使材料状态稳定后再试验。"}, {"id": "C02", "points": 2, "src": "GB/T 2951.13-2008 §5 预处理", "q": "试验在环境温度下进行时，试样应在下列哪个温度条件下存放至少 3h？", "options": ["(20±2)℃", "(23±5)℃", "(23±2)℃", "(25±5)℃"], "answer": 1, "explain": "环境温度试验的预处理条件为 (23±5)℃、至少 3h。注意与比重瓶法的 (23±2)℃ 保存、(23±0.5)℃ 液浴区分。"}, {"id": "C03", "points": 2, "src": "GB/T 2951.13-2008 §8.1 悬浮法", "q": "密度测定悬浮法中，试样应沿与导体轴线垂直方向切取并切成边长多少的小块？", "options": ["(0.5~1)mm", "(1~2)mm", "(2~3)mm", "(3~5)mm"], "answer": 1, "explain": "悬浮法试样切成边长 (1~2)mm 的小块，便于在试液中悬浮平衡。"}, {"id": "C04", "points": 2, "src": "GB/T 2951.13-2008 §8.1 悬浮法", "q": "悬浮法中用比重计测定混合试液密度时，读数应读到小数点后几位？", "options": ["一位", "两位", "三位", "四位"], "answer": 2, "explain": "读数到小数点后三位，该读数即为被测试样的密度。"}, {"id": "C05", "points": 2, "src": "GB/T 2951.13-2008 §8.1 悬浮法", "q": "被测材料密度小于 1g/mL 时，悬浮法应选用哪种试液？", "options": ["氯化锌/水混合物", "乙醇/水混合物", "纯蒸馏水", "甘油/水混合物"], "answer": 1, "explain": "密度<1g/mL 用乙醇/水混合物；密度≥1g/mL 才用氯化锌/水混合物。"}, {"id": "C06", "points": 2, "src": "GB/T 2951.13-2008 §8.2 比重瓶法", "q": "比重瓶法（基准方法）对试样质量的要求是？", "options": ["不小于0.5g、不大于2g", "不小于1g、不大于5g", "不小于5g、不大于10g", "标准未作规定"], "answer": 1, "explain": "试样质量不小于 1g、不大于 5g，并切成小块以避免夹带气泡。"}, {"id": "C07", "points": 2, "src": "GB/T 2951.13-2008 §8.2 比重瓶法", "q": "比重瓶法中，比重瓶内试液在液浴中应达到的温度是？", "options": ["(23±5)℃", "(23±2)℃", "(23±0.5)℃", "(20±0.5)℃"], "answer": 2, "explain": "试样保存在 (23±2)℃，而比重瓶试液在液浴中须达到 (23±0.5)℃，精度要求更高。"}, {"id": "C08", "points": 2, "src": "GB/T 2951.13-2008 §9.1 表1", "q": "吸水试验（电气法）中，绝缘厚度平均值为 1.5mm 时，主试验应施加的直流电压为？", "options": ["1000V", "1400V", "2000V", "2500V"], "answer": 1, "explain": "表1：1.2<t≤1.6mm 对应 1400V。1.5mm 落在该区间。"}, {"id": "C09", "points": 2, "src": "GB/T 2951.13-2008 §9.1", "q": "吸水试验（电气法）的预试验中，浸水 1h 后在导体与水之间施加的电压和保持时间是？", "options": ["交流2kV / 5min", "交流4kV / 5min", "交流4kV / 15min", "直流2.5kV / 1min"], "answer": 1, "explain": "预试验施加交流 4kV 保持 5min，不击穿方可用于主试验。"}, {"id": "C10", "points": 2, "src": "GB/T 2951.21-2008 §8.1.2 取样", "q": "耐臭氧试验取样时，应在距离端头不小于多少的位置切取绝缘线芯？", "options": ["0.5m", "1.0m", "1.5m", "2.0m"], "answer": 2, "explain": "距端头不小于 1.5m 处取样，避开端部受损或受污染部分。"}, {"id": "C11", "points": 2, "src": "GB/T 2951.21-2008 §8.1.4 表1", "q": "耐臭氧试验中，绝缘线芯外径 d=18mm 时应选用的试棒直径为？", "options": ["4±0.1mm", "5±0.1mm", "6±0.1mm", "8±0.1mm"], "answer": 1, "explain": "表1：12.5<d≤20mm 对应试棒直径 5±0.1mm。"}, {"id": "C12", "points": 2, "src": "GB/T 2951.21-2008 §8.1.5", "q": "耐臭氧试验中，臭氧空气的流量应控制在？", "options": ["100~280 L/h", "280~560 L/h", "560~800 L/h", "标准未作规定"], "answer": 1, "explain": "流量控制在 280L/h~560L/h，箱内压力略高于大气压。"}, {"id": "C13", "points": 2, "src": "GB/T 2951.31-2008 §8 高温压力试验", "q": "高温压力试验中，加压用矩形刀片的刀口厚度应为？", "options": ["(0.50±0.01)mm", "(0.70±0.01)mm", "(0.70±0.05)mm", "(1.00±0.01)mm"], "answer": 1, "explain": "刀口厚度 (0.70±0.01)mm，公差极小，是设备校验的关键尺寸。"}, {"id": "C14", "points": 2, "src": "GB/T 2951.31-2008 §9 抗开裂试验", "q": "绝缘/护套抗开裂（热冲击）试验的预热条件是？", "options": ["(100±3)℃保持1h", "(150±3)℃保持1h", "(150±2)℃保持2h", "(80±2)℃保持1h"], "answer": 1, "explain": "卷绕后预热到 (150±3)℃ 保持 1h，取出后试样应无裂纹。"}, {"id": "C15", "points": 2, "src": "GB/T 2951.32-2008 §8 失重试验", "q": "失重试验所用烘箱，箱内空气每小时应更换的次数为？", "options": ["3~5次", "5~10次", "8~20次", "20~30次"], "answer": 2, "explain": "空气每小时更换 8~20 次，且不得使用旋转风扇；有争议时用自然通风烘箱。"}], "judge": [{"id": "J01", "points": 1, "src": "GB/T 2951.13-2008 §8.1/§8.2", "answer": false, "q": "密度测定中，悬浮法是基准方法，比重瓶法是通用方法。", "explain": "说反了。悬浮法是通用方法，比重瓶法才是基准方法。"}, {"id": "J02", "points": 1, "src": "GB/T 2951.13-2008 §8.1", "answer": true, "q": "悬浮法所用试液不应与被试材料发生化学反应。", "explain": "标准明确要求试液与被试材料不发生化学反应，否则测得密度失真。"}, {"id": "J03", "points": 1, "src": "GB/T 2951.13-2008 §8.2", "answer": true, "q": "比重瓶法中，96% 酒精试液的密度取 0.7988 g/mL。", "explain": "标准给定值 d=0.7988 g/mL。"}, {"id": "J04", "points": 1, "src": "GB/T 2951.13-2008 §9.1", "answer": false, "q": "吸水试验（电气法）主试验时，绝缘线芯的导体应接正极。", "explain": "导体应接负极，方向接反会改变离子迁移方向、影响结果。"}, {"id": "J05", "points": 1, "src": "GB/T 2951.13-2008 §9.2", "answer": true, "q": "额定电压 0.6/1kV 及以下、导体标称截面不超过 25mm² 的电缆，做重量吸水试验时试样为约 300mm 长的一段绝缘线芯。", "explain": "小截面低压电缆可直接取整段线芯；其他电缆才需磨/削成薄片再冲切。"}, {"id": "J06", "points": 1, "src": "GB/T 2951.21-2008 §8.1.5", "answer": false, "q": "耐臭氧试验后检查时，位于夹具附近的裂纹也应判为不合格。", "explain": "夹具附近的裂纹应忽略，因其由夹持应力集中引起，非材料耐臭氧性能所致。"}, {"id": "J07", "points": 1, "src": "GB/T 2951.21-2008 §8.1.5", "answer": false, "q": "耐臭氧试验结果检查时，可借助放大镜观察细微裂纹。", "explain": "应以正常视力或矫正视力检查，不用放大镜。"}, {"id": "J08", "points": 1, "src": "GB/T 2951.31-2008 §8", "answer": true, "q": "高温压力试验的压痕中间值应不大于绝缘厚度平均值的 50%。", "explain": "这是高温压力试验的判定限值，取三个试样压痕的中间值。"}, {"id": "J09", "points": 1, "src": "GB/T 2951.32-2008 §8", "answer": false, "q": "失重试验的烘箱可以使用旋转风扇加速箱内空气循环。", "explain": "标准明确不得使用旋转风扇，只允许每小时换气 8~20 次的自然/强制通风方式。"}, {"id": "J10", "points": 1, "src": "GB/T 2951.32-2008 §9", "answer": false, "q": "热稳定性试验所用玻璃管应两端密封。", "explain": "玻璃管长 110mm、外径约 5mm、内径 (4.0±0.5)mm，只有一端密封。"}], "fill": [{"id": "F01", "points": 2, "src": "GB/T 2951.13-2008 §5", "q": "绝缘和护套料挤出或硫化（交联）后，所有试验应存放至少 ____ h 方可进行。", "answers": ["16"], "syn": [["16h"]], "explain": "16h 是 2951 系列各试验共用的前置条件。"}, {"id": "F02", "points": 2, "src": "GB/T 2951.13-2008 §5", "q": "试验在环境温度下进行时，试样应在 ____ ℃ 下存放至少 ____ h。", "answers": ["(23±5)", "3"], "syn": [["23±5", "23+-5", "(23±5)℃", "23±5℃"], ["3h"]], "explain": "(23±5)℃、至少 3h。"}, {"id": "F03", "points": 2, "src": "GB/T 2951.13-2008 §8.1", "q": "悬浮法中，用比重计测定混合试液密度时读数应读到小数点后 ____ 位，该读数即为被测试样的 ____ 。", "answers": ["三", "密度"], "syn": [["3"], ["密度值"]], "explain": "读数到小数点后三位，直接作为试样密度。"}, {"id": "F04", "points": 2, "src": "GB/T 2951.13-2008 §8.2", "q": "比重瓶法中，试样质量应不小于 ____ g、不大于 ____ g。", "answers": ["1", "5"], "syn": [["1g"], ["5g"]], "explain": "1g~5g，并切成小块避免气泡。"}, {"id": "F05", "points": 2, "src": "GB/T 2951.13-2008 §8.2", "q": "比重瓶法中，试样保存在 ____ ℃，比重瓶内试液在液浴中的温度应达到 ____ ℃。", "answers": ["(23±2)", "(23±0.5)"], "syn": [["23±2", "23+-2"], ["23±0.5", "23+-0.5"]], "explain": "两个温度精度不同，是典型易混点。"}, {"id": "F06", "points": 2, "src": "GB/T 2951.13-2008 §9.1", "q": "吸水试验（电气法）应从电缆试样上切取约 ____ m 长的被试绝缘线芯。", "answers": ["3"], "syn": [["3m"]], "explain": "约 3m 长线芯。"}, {"id": "F07", "points": 2, "src": "GB/T 2951.13-2008 §9.1 表1", "q": "吸水试验（电气法）中，绝缘厚度平均值为 2.0mm 时施加的直流电压为 ____ V；大于 2.0mm 时为 ____ V。", "answers": ["2000", "2500"], "syn": [["2000v"], ["2500v"]], "explain": "表1：1.6<t≤2.0mm→2000V；2.0<t→2500V。t=2.0 属于前一档。"}, {"id": "F08", "points": 2, "src": "GB/T 2951.13-2008 §9.2", "q": "重量吸水试验中，除小截面低压电缆外，绝缘应磨或削成 ____ mm 厚的薄片，再冲切成长 ____ mm、宽 ____ mm 的试样。", "answers": ["(0.6~0.9)", "(80~100)", "(4~5)"], "syn": [["0.6~0.9", "0.6-0.9"], ["80~100", "80-100"], ["4~5", "4-5"]], "explain": "薄片 0.6~0.9mm 厚，试样 80~100mm 长、4~5mm 宽。"}, {"id": "F09", "points": 2, "src": "GB/T 2951.21-2008 §8.1.3", "q": "耐臭氧试验用哑铃试件（按 GB/T 2951.11 制备）的最小厚度为 ____ mm，且所有试样应无可见 ____ 。", "answers": ["0.6", "机械损伤"], "syn": [["0.6mm"], ["损伤"]], "explain": "哑铃试件最小厚度 0.6mm；试样不得有可见机械损伤。"}, {"id": "F10", "points": 2, "src": "GB/T 2951.21-2008 §8.1.5", "q": "耐臭氧试验时试样应保持在 ____ ℃，臭氧空气流量控制在 ____ L/h ~ ____ L/h。", "answers": ["(25±2)", "280", "560"], "syn": [["25±2", "25+-2"], ["280l/h"], ["560l/h"]], "explain": "(25±2)℃，流量 280~560 L/h。"}, {"id": "F11", "points": 2, "src": "GB/T 2951.21-2008 §8.1 安全警告", "q": "耐臭氧试验中用夹具夹住试件两端，使其伸长 ____ ；环境臭氧浓度不应超过 ____ 。", "answers": ["33%±2%", "0.1×10-6"], "syn": [["33±2", "33%+-2%", "33±2%"], ["0.1x10-6", "0.1ppm", "0.1×10⁻⁶"]], "explain": "伸长 33%±2%；环境臭氧限值 0.1×10⁻⁶（或现行卫生标准中较小值）。"}, {"id": "F12", "points": 2, "src": "GB/T 2951.31-2008 §8", "q": "高温压力试验中，每个被试绝缘线芯从 (250~500)mm 样段上截取 ____ 个相邻试样，每个长 ____ mm。", "answers": ["3", "(50~100)"], "syn": [["三"], ["50~100", "50-100"]], "explain": "3 个相邻试样，长 50~100mm。"}, {"id": "F13", "points": 2, "src": "GB/T 2951.31-2008 §8", "q": "高温压力试验的加热时间：D≤15mm 时为 ____ h；D>15mm 时为 ____ h。", "answers": ["4", "6"], "syn": [["4h"], ["6h"]], "explain": "按外径分档：≤15mm 加热 4h，>15mm 加热 6h。对应 k 系数 0.6 / 0.7。"}, {"id": "F14", "points": 2, "src": "GB/T 2951.32-2008 §8", "q": "失重试验中，试件应在 (80±2)℃ 烘箱中保存 ____ h（即 7×24h）；所用分析天平感量为 ____ mg。", "answers": ["168", "0.1"], "syn": [["7x24", "7*24"], ["0.1mg"]], "explain": "7×24h=168h；天平感量 0.1mg，称重也精确到 0.1mg。"}, {"id": "F15", "points": 2, "src": "GB/T 2951.32-2008 §9", "q": "热稳定性试验所用玻璃管长 ____ mm，外径约 ____ mm，内径 ____ mm，一端密封。", "answers": ["110", "5", "(4.0±0.5)"], "syn": [["110mm"], ["5mm"], ["4.0±0.5", "4±0.5", "4.0+-0.5"]], "explain": "玻璃管 110mm 长、外径约 5mm、内径 (4.0±0.5)mm，一端密封。"}], "calc": [{"id": "CALC1", "src": "GB/T 2951.31-2008 §8 高温压力试验", "title": "高温压力试验：参数选取与合格判定", "stem": "某 0.6/1kV 固定敷设电缆，绝缘线芯外径 D=12.0mm，绝缘厚度平均值为 1.80mm。按 GB/T 2951.31-2008 第 8 章做高温压力试验，测得三个试样压痕深度分别为 0.72mm、0.85mm、0.79mm。请确定试验参数并判定结果。", "subs": [["加热时间(h)", "4", 0, 2], ["压力计算系数k", "0.6", 0, 2], ["三个压痕的中间值(mm)", "0.79", 0.001, 2], ["允许的压痕最大值(mm)", "0.90", 0.001, 2], ["合格性判定", "合格", 0, 2]], "explain": "D=12.0mm≤15mm 且为固定敷设 → k=0.6、加热 4h；三个压痕排序 0.72/0.79/0.85，中间值 0.79mm；限值=1.80×50%=0.90mm；0.79≤0.90 → 合格。"}, {"id": "CALC2", "src": "GB/T 2951.32-2008 §8 失重试验", "title": "失重试验：失重值计算与结果取值", "stem": "某护套料失重试验取 3 个试件，表面积均为 6.00cm²。在 (80±2)℃ 烘箱中保存 7×24h，烘前烘后质量差分别为 9.6mg、10.8mg、10.2mg。失重按「质量差(mg)/表面积(cm²)」计算，结果取 3 个试件的中间值。", "subs": [["试件1失重(mg/cm2)", "1.60", 0.01, 2], ["试件2失重(mg/cm2)", "1.80", 0.01, 2], ["试件3失重(mg/cm2)", "1.70", 0.01, 2], ["试验结果-取中间值(mg/cm2)", "1.70", 0.01, 2], ["烘箱温度(℃)", "80", 0, 1], ["保存时间(h)", "168", 0, 1]], "explain": "9.6/6.00=1.60；10.8/6.00=1.80；10.2/6.00=1.70。排序 1.60/1.70/1.80，中间值 1.70 mg/cm²。烘箱 (80±2)℃、7×24h=168h。"}, {"id": "CALC3", "src": "GB/T 2951.13-2008 §9.1 表1", "title": "吸水试验（电气法）：按绝缘厚度查表定电压", "stem": "按 GB/T 2951.13-2008 表1，根据绝缘厚度平均值 t 确定吸水试验主试验所加直流电压（表1：0.8和0.9mm→800V；1.0和1.2mm→1000V；1.2<t≤1.6mm→1400V；1.6<t≤2.0mm→2000V；2.0mm<t→2500V）。请分别填出下列厚度对应的电压，并写出预试验条件。", "subs": [["t=0.90mm 对应直流电压(V)", "800", 0, 2], ["t=1.50mm 对应直流电压(V)", "1400", 0, 2], ["t=1.80mm 对应直流电压(V)", "2000", 0, 2], ["t=2.40mm 对应直流电压(V)", "2500", 0, 2], ["预试验交流电压(kV)", "4", 0, 1], ["预试验持续时间(min)", "5", 0, 1]], "explain": "0.90mm→800V；1.50mm 落在 1.2<t≤1.6→1400V；1.80mm 落在 1.6<t≤2.0→2000V；2.40mm>2.0→2500V。预试验：浸水 1h 后施加交流 4kV、保持 5min 不击穿。"}]};
+
+function collect(){
+  var a = {choice:{}, judge:{}, fill:{}, calc:{}};
+  (BANK.choice||[]).forEach(function(it){
+    var el = document.querySelector('input[name="c_'+it.id+'"]:checked');
+    a.choice[it.id] = el ? el.value : "";
+  });
+  (BANK.judge||[]).forEach(function(it){
+    var el = document.querySelector('input[name="j_'+it.id+'"]:checked');
+    a.judge[it.id] = el ? el.value : "";
+  });
+  (BANK.fill||[]).forEach(function(it){
+    a.fill[it.id] = it.answers.map(function(_,i){
+      var el = document.getElementById('f_'+it.id+'_'+i); return el ? el.value : "";
+    });
+  });
+  (BANK.calc||[]).forEach(function(it){
+    a.calc[it.id] = it.subs.map(function(_,i){
+      var el = document.getElementById('k_'+it.id+'_'+i); return el ? el.value : "";
+    });
+  });
+  return a;
+}
+
+function fmtAns(t, it){
+  if(t==='choice') return String.fromCharCode(65+parseInt(it.answer,10)) + '. ' + it.options[it.answer];
+  if(t==='judge')  return it.answer ? '对 √' : '错 ×';
+  if(t==='fill')   return it.answers.join('  /  ');
+  if(t==='calc')   return it.subs.map(function(s){return s[0]+'='+s[1];}).join('；');
+  return '';
+}
+
+function submit(){
+  var ans = collect();
+  var r = Grade.gradeAll(BANK, ans);
+  var full = 0, rows = [];
+  ['choice','judge','fill','calc'].forEach(function(t){
+    (BANK[t]||[]).forEach(function(it){
+      var max = (t==='calc') ? it.subs.reduce(function(x,s){return x+s[3];},0)
+                             : (it.points===undefined ? (t==='judge'?1:2) : it.points);
+      full += max;
+      var got = r.detail[t][it.id];
+      var box = document.getElementById('res_'+it.id);
+      var okAll = got === max;
+      box.className = 'res ' + (okAll ? 'ok' : (got>0 ? 'ok' : 'bad'));
+      box.style.display = 'block';
+      box.innerHTML = '<b>' + (okAll?'✓ 正确':(got>0?'△ 部分正确':'✗ 错误')) + '　得分 '+got+'/'+max+'</b>'
+        + '<div>正确答案：' + fmtAns(t,it).replace(/</g,'&lt;') + '</div>'
+        + (it.explain ? '<div>解析：'+it.explain.replace(/</g,'&lt;')+'</div>' : '')
+        + (it.src ? '<div class="src">来源：'+it.src.replace(/</g,'&lt;')+'</div>' : '');
+      document.getElementById('q_'+it.id).style.borderColor = okAll ? '#9bd8b4' : (got>0 ? '#f3d19e' : '#f0b3ae');
+      rows.push({t:t,id:it.id,got:got,max:max});
+    });
+  });
+  var pct = full ? Math.round(r.got.total/full*1000)/10 : 0;
+  document.getElementById('score').innerHTML =
+    '得分 <span class="n">'+r.got.total+'</span>/ '+full+'　（'+pct+'%）'+
+    '　选择'+r.got.choice+' 判断'+r.got.judge+' 填空'+r.got.fill+' 计算'+r.got.calc;
+  var wrong = rows.filter(function(x){return x.got < x.max;});
+  var sh = document.getElementById('sheet');
+  sh.style.display='block';
+  sh.innerHTML = '<h3>错题清单（'+wrong.length+' 题）</h3>' +
+    (wrong.length ? wrong.map(function(x){
+        return '<div class="row">· '+x.id+'　得 '+x.got+'/'+x.max+'　<a href="#q_'+x.id+'">定位</a></div>';
+      }).join('') : '<div class="row">全部正确，满分通过。</div>');
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+function reset(){
+  document.querySelectorAll('input[type=radio]').forEach(function(e){e.checked=false;});
+  document.querySelectorAll('input[type=text]').forEach(function(e){e.value='';});
+  document.querySelectorAll('.res').forEach(function(e){e.style.display='none';});
+  document.querySelectorAll('.q').forEach(function(e){e.style.borderColor='#e6e8eb';});
+  document.querySelectorAll('.tf').forEach(function(e){e.classList.remove('sel');});
+  document.getElementById('score').innerHTML='未交卷';
+  document.getElementById('sheet').style.display='none';
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+document.addEventListener('change', function(e){
+  if(e.target.type==='radio' && e.target.name.indexOf('j_')===0){
+    document.querySelectorAll('input[name="'+e.target.name+'"]').forEach(function(r){
+      r.parentNode.classList.remove('sel');
+    });
+    e.target.parentNode.classList.add('sel');
+  }
+});
+
+var t0 = Date.now();
+setInterval(function(){
+  var s = Math.floor((Date.now()-t0)/1000);
+  document.getElementById('timer').textContent =
+    '用时 ' + String(Math.floor(s/60)).padStart(2,'0') + ':' + String(s%60).padStart(2,'0');
+}, 1000);
+</script>
+</body></html>

@@ -1,0 +1,37 @@
+# ---- 依赖 / 缓存 ----
+.venv/
+__pycache__/
+*.pyc
+
+# ---- OCR 中间产物（可重生成，体积大）----
+kb/raw/
+
+# ---- MVP 探索期草稿脚本（非主线，不进版本控制）----
+kb/audit_*.py
+kb/diag*.py
+kb/run_*.py
+kb/make_report.py
+kb/_raw_dump.txt
+kb/audit_report.json
+kb/kb_report.html
+kb/kb.db
+
+# ---- 待重下的低质量资料（用户确认：3956 为水印垃圾，重下后替换）----
+rules/gbt_3956.json
+materials/gbt_3956_extracted.txt
+out/gbt_3956_bank.json
+out/gbt_3956_preview.html
+
+# ---- 旧部署/探索遗留（与 out/ 重复，非主线开发内容）----
+scripts/
+site/
+
+# ---- 运行日志 ----
+*.log
+
+# ---- 运行态数据（成绩记录等，用户本地产生，不进版本控制）----
+# 注意：仅忽略仓库根目录的 data/，不要误伤 public/data/（SPA 静态资产）
+/data/
+
+# ---- 系统 ----
+.DS_Store
