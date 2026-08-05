@@ -1,0 +1,86 @@
+<!doctype html><html lang="zh"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>国缆检测杯 · 学习考试系统（在线版）</title>
+<style>
+*{box-sizing:border-box}
+:root{--blue:#2f6fed;--blue-d:#1a5bd6;--bg:#f7f8fa;--card:#fff;--bd:#e6e8eb;--tx:#1f2329;--mut:#6b7280;--ok:#12703a;--bad:#a5281b;--p0:#d93025;--p1:#e8830c;--p2:#2f6fed}
+body{font-family:-apple-system,"Segoe UI","Microsoft YaHei",sans-serif;margin:0;color:var(--tx);background:var(--bg);line-height:1.65}
+header{background:#fff;border-bottom:1px solid var(--bd);position:sticky;top:0;z-index:30}
+.bar{max-width:1040px;margin:0 auto;display:flex;align-items:center;gap:6px;padding:10px 16px;flex-wrap:wrap}
+.logo{font-weight:700;font-size:17px;color:var(--blue);margin-right:8px;white-space:nowrap}
+.bar a{color:var(--mut);text-decoration:none;font-size:14px;padding:6px 11px;border-radius:7px}
+.bar a:hover{background:#f0f5ff;color:var(--blue)}
+.bar a.on{background:var(--blue);color:#fff}
+main{max-width:1040px;margin:0 auto;padding:22px 16px 90px}
+h1{font-size:23px;margin:0 0 4px}
+.sub{color:var(--mut);font-size:13px;margin:0 0 18px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:11px;padding:16px 18px;margin:13px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.tile{background:var(--card);border:1px solid var(--bd);border-radius:11px;padding:16px;cursor:pointer;transition:.12s}
+.tile:hover{border-color:var(--blue);box-shadow:0 3px 14px rgba(47,111,237,.12);transform:translateY(-2px)}
+.tile h3{margin:0 0 6px;font-size:16px;color:var(--blue)}
+.tile p{margin:0;font-size:13px;color:var(--mut)}
+.tag{display:inline-block;font-size:11px;padding:1px 8px;border-radius:10px;background:#eef2ff;color:var(--blue);margin:2px 4px 2px 0}
+button{font-family:inherit;font-size:14px;padding:8px 20px;border-radius:8px;cursor:pointer;border:1px solid transparent}
+.b{background:var(--blue);color:#fff}.b:hover{background:var(--blue-d)}
+.s{background:#fff;color:#444;border-color:var(--bd)}.s:hover{border-color:var(--blue);color:var(--blue)}
+.q{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:14px 16px;margin:10px 0}
+.q .stem{font-weight:600;margin-bottom:8px}.pts{float:right;font-weight:400;font-size:12px;color:#9aa0a6}
+.opt{display:block;margin:5px 0 5px 4px;cursor:pointer;padding:4px 8px;border-radius:6px}.opt:hover{background:#f3f6ff}
+.opt input{margin-right:8px}
+.tf{display:inline-block;margin:6px 10px 0 0;cursor:pointer;padding:6px 20px;border:1px solid #d9dde3;border-radius:20px;font-size:14px;background:#fff}
+.tf:hover{border-color:var(--blue);color:var(--blue)}.tf.sel{background:var(--blue);color:#fff;border-color:var(--blue)}
+input[type=text]{border:none;border-bottom:1.5px solid #b9c0c9;background:transparent;padding:2px 6px;min-width:90px;font-size:14px;font-family:inherit;color:#0b57d0;text-align:center}
+input[type=text]:focus{outline:none;border-bottom-color:var(--blue);background:#f5f8ff}
+.calcsub{margin:6px 0 6px 6px;font-size:14px}.calcsub .lb{display:inline-block;min-width:210px;color:#444}
+.res{margin-top:9px;font-size:13px;padding:8px 12px;border-radius:6px;display:none}
+.res.ok{background:#e9f7ef;color:var(--ok);border-left:3px solid #16894a}
+.res.bad{background:#fdecec;color:var(--bad);border-left:3px solid #d93025}
+.res .src{color:var(--mut);font-size:12px;margin-top:4px}
+.barfix{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--bd);padding:12px 18px;display:flex;gap:12px;align-items:center;justify-content:center;box-shadow:0 -2px 12px rgba(0,0,0,.06);z-index:25}
+.score{font-size:15px;font-weight:600}#score .n{font-size:24px;color:var(--blue);margin:0 3px}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{border:1px solid var(--bd);padding:6px 9px;text-align:left;vertical-align:top}
+th{background:#f0f5ff;color:var(--blue-d)}
+input[type=search],select{font-family:inherit;font-size:14px;padding:7px 10px;border:1px solid var(--bd);border-radius:7px;margin:4px 6px 4px 0}
+.fc{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:26px;margin:16px 0;min-height:170px;cursor:pointer;display:flex;flex-direction:column;justify-content:center}
+.fc .f{font-size:18px;font-weight:600}.fc .b2{margin-top:14px;color:var(--blue);font-size:15px;display:none}
+.fc.flip .b2{display:block}.fc.flip .f{color:var(--mut)}
+.p0{background:#fdecec;color:var(--p0);border-color:#f3c4c0}.p1{background:#fff3e6;color:var(--p1);border-color:#f3d4ab}.p2{background:#eef2ff;color:var(--p2);border-color:#cdd9fb}
+.sel-deck{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.sel-deck .d{cursor:pointer;padding:7px 14px;border:1px solid var(--bd);border-radius:8px;font-size:14px;background:#fff}.sel-deck .d.on{background:var(--blue);color:#fff;border-color:var(--blue)}
+.empty{color:var(--mut);text-align:center;padding:40px;font-size:15px}
+.hidden{display:none}
+.katex,.mono{font-family:"SFMono-Regular",Consolas,monospace}
+.fb-fab{position:fixed;right:22px;bottom:80px;z-index:40;background:var(--blue);color:#fff;border:none;border-radius:50%;width:54px;height:54px;font-size:24px;box-shadow:0 4px 16px rgba(47,111,237,.4);cursor:pointer}
+.fb-box{position:fixed;right:22px;bottom:140px;z-index:41;width:340px;background:#fff;border:1px solid var(--bd);border-radius:12px;padding:16px;box-shadow:0 8px 30px rgba(0,0,0,.18)}
+.fb-box textarea{width:100%;min-height:70px;border:1px solid var(--bd);border-radius:7px;padding:8px;font-family:inherit;font-size:13px}
+.muted{color:var(--mut);font-size:12px}
+.note{background:#fff8e6;border:1px solid #f0dca0;border-radius:8px;padding:10px 13px;font-size:13px;color:#7a5b00;margin:10px 0}
+</style>
+</head><body>
+<header><div class="bar">
+  <span class="logo">⚡ 国缆杯学习系统</span>
+  <a href="#/home" data-r="home">首页</a>
+  <a href="#/exam" data-r="exam">自测卷</a>
+  <a href="#/study" data-r="study">学习页</a>
+  <a href="#/flashcards" data-r="flashcards">闪卡</a>
+  <a href="#/terminology" data-r="terminology">术语库</a>
+  <a href="#/builder" data-r="builder">出卷器</a>
+  <a href="#/syllabus" data-r="syllabus">考试大纲</a>
+  <a href="#/feedback" data-r="feedback">反馈</a>
+</div></header>
+<main id="app"></main>
+<button class="fb-fab" id="fbFab" title="提交反馈">📝</button>
+<div class="fb-box hidden" id="fbBox">
+  <b>反馈 / 报错 / 建议</b>
+  <div class="muted" id="fbCtx"></div>
+  <textarea id="fbText" placeholder="描述你遇到的问题或建议…（可先划选文字再点反馈）"></textarea>
+  <div style="margin-top:8px;display:flex;gap:8px;justify-content:flex-end">
+    <button class="s" id="fbCancel">取消</button>
+    <button class="b" id="fbSend">提交</button>
+  </div>
+</div>
+<script src="data/grade.js"></script>
+<script src="app.js"></script>
+</body></html>
