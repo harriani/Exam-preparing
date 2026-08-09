@@ -1,0 +1,997 @@
+{
+  "time": "2026-08-09 11:52:03",
+  "duration_s": 7.9,
+  "summary": {
+    "PASS": 154,
+    "WARN": 8
+  },
+  "stats": {
+    "raw文档": 60,
+    "KU文件": 31,
+    "已判标准": 45,
+    "KU总数": 296,
+    "考点KU": 278,
+    "P0": 105,
+    "P1": 126,
+    "P2": 47,
+    "非考点NA": 18,
+    "题库文件": 10,
+    "题目总数": 478,
+    "已出题标准": 44,
+    "出题覆盖率": "44/45"
+  },
+  "results": [
+    {
+      "suite": "T0 环境与目录",
+      "case": "存在 engine/generate.py",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T0 环境与目录",
+      "case": "存在 engine/grade.js",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T0 环境与目录",
+      "case": "存在 kb/ku_schema.py",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T0 环境与目录",
+      "case": "存在 kb/master_judged.json",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T0 环境与目录",
+      "case": "存在 public/index.html",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T0 环境与目录",
+      "case": "存在 public/app.js",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T0 环境与目录",
+      "case": "引擎模块可导入",
+      "status": "PASS",
+      "msg": "generate + ku_schema"
+    },
+    {
+      "suite": "T0 环境与目录",
+      "case": "rules/ 存在题库真源",
+      "status": "PASS",
+      "msg": "10 个题库"
+    },
+    {
+      "suite": "T0 环境与目录",
+      "case": "out/ 无混入的题库真源",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T1 KU数据契约",
+      "case": "schema 版本号存在",
+      "status": "PASS",
+      "msg": "ku/1.0"
+    },
+    {
+      "suite": "T1 KU数据契约",
+      "case": "KU 非空",
+      "status": "PASS",
+      "msg": "296 条"
+    },
+    {
+      "suite": "T1 KU数据契约",
+      "case": "count 字段与实际一致",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T1 KU数据契约",
+      "case": "全部 KU 通过 schema 校验",
+      "status": "PASS",
+      "msg": "296 条全通过"
+    },
+    {
+      "suite": "T1 KU数据契约",
+      "case": "standard_no/title/clause 必填",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T1 KU数据契约",
+      "case": "标准号格式合法",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T1 KU数据契约",
+      "case": "标准号带年份（防版本混淆）",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T1 KU数据契约",
+      "case": "KU 无重复(标准号+标题)",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T1 KU数据契约",
+      "case": "考点 KU 都有 key_requirements",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_10491_full.json 可解析",
+      "status": "PASS",
+      "msg": "ok"
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_10491_full.json 引擎硬校验",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_10491_full.json 四题型结构",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_10491_full.json 每题都有 id",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_2951_11_12.json 可解析",
+      "status": "PASS",
+      "msg": "ok"
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_2951_11_12.json 引擎硬校验",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_2951_11_12.json 四题型结构",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_2951_11_12.json 每题都有 id",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_2951_full.json 可解析",
+      "status": "PASS",
+      "msg": "ok"
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_2951_full.json 引擎硬校验",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_2951_full.json 四题型结构",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_2951_full.json 每题都有 id",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_2951_kb_mvp.json 可解析",
+      "status": "PASS",
+      "msg": "ok"
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_2951_kb_mvp.json 引擎硬校验",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_2951_kb_mvp.json 四题型结构",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_2951_kb_mvp.json 每题都有 id",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_3048_8.json 可解析",
+      "status": "PASS",
+      "msg": "ok"
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_3048_8.json 引擎硬校验",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_3048_8.json 四题型结构",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_3048_8.json 每题都有 id",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_3048_full.json 可解析",
+      "status": "PASS",
+      "msg": "ok"
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_3048_full.json 引擎硬校验",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_3048_full.json 四题型结构",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_3048_full.json 每题都有 id",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_3956.json 可解析",
+      "status": "PASS",
+      "msg": "ok"
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_3956.json 引擎硬校验",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_3956.json 四题型结构",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_3956.json 每题都有 id",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_5023_full.json 可解析",
+      "status": "PASS",
+      "msg": "ok"
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_5023_full.json 引擎硬校验",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_5023_full.json 四题型结构",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_5023_full.json 每题都有 id",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_8734_full.json 可解析",
+      "status": "PASS",
+      "msg": "ok"
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_8734_full.json 引擎硬校验",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_8734_full.json 四题型结构",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_8734_full.json 每题都有 id",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_others_full.json 可解析",
+      "status": "PASS",
+      "msg": "ok"
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_others_full.json 引擎硬校验",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_others_full.json 四题型结构",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "gbt_others_full.json 每题都有 id",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T2 题库结构契约",
+      "case": "全库题号跨文件唯一",
+      "status": "PASS",
+      "msg": "478 个题号"
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_10491_full.json 总分>0",
+      "status": "PASS",
+      "msg": "64 分"
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_10491_full.json 满分卷=满分",
+      "status": "PASS",
+      "msg": "64/64"
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_10491_full.json 全错卷=0分",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_10491_full.json 空卷=0分",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_2951_11_12.json 总分>0",
+      "status": "PASS",
+      "msg": "98 分"
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_2951_11_12.json 满分卷=满分",
+      "status": "PASS",
+      "msg": "98/98"
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_2951_11_12.json 全错卷=0分",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_2951_11_12.json 空卷=0分",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_2951_full.json 总分>0",
+      "status": "PASS",
+      "msg": "214 分"
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_2951_full.json 满分卷=满分",
+      "status": "PASS",
+      "msg": "214/214"
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_2951_full.json 全错卷=0分",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_2951_full.json 空卷=0分",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_2951_kb_mvp.json 总分>0",
+      "status": "PASS",
+      "msg": "100 分"
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_2951_kb_mvp.json 满分卷=满分",
+      "status": "PASS",
+      "msg": "100/100"
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_2951_kb_mvp.json 全错卷=0分",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_2951_kb_mvp.json 空卷=0分",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_3048_8.json 总分>0",
+      "status": "PASS",
+      "msg": "60 分"
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_3048_8.json 满分卷=满分",
+      "status": "PASS",
+      "msg": "60/60"
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_3048_8.json 全错卷=0分",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_3048_8.json 空卷=0分",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_3048_full.json 总分>0",
+      "status": "PASS",
+      "msg": "376 分"
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_3048_full.json 满分卷=满分",
+      "status": "PASS",
+      "msg": "376/376"
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_3048_full.json 全错卷=0分",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_3048_full.json 空卷=0分",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_3956.json 总分>0",
+      "status": "PASS",
+      "msg": "23 分"
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_3956.json 满分卷=满分",
+      "status": "PASS",
+      "msg": "23/23"
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_3956.json 全错卷=0分",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_3956.json 空卷=0分",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_5023_full.json 总分>0",
+      "status": "PASS",
+      "msg": "67 分"
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_5023_full.json 满分卷=满分",
+      "status": "PASS",
+      "msg": "67/67"
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_5023_full.json 全错卷=0分",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_5023_full.json 空卷=0分",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_8734_full.json 总分>0",
+      "status": "PASS",
+      "msg": "71 分"
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_8734_full.json 满分卷=满分",
+      "status": "PASS",
+      "msg": "71/71"
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_8734_full.json 全错卷=0分",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_8734_full.json 空卷=0分",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_others_full.json 总分>0",
+      "status": "PASS",
+      "msg": "67 分"
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_others_full.json 满分卷=满分",
+      "status": "PASS",
+      "msg": "67/67"
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_others_full.json 全错卷=0分",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T3 判分自检",
+      "case": "gbt_others_full.json 空卷=0分",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T4 判分一致性(PY↔JS)",
+      "case": "gbt_10491_full.json 两端逐题一致",
+      "status": "PASS",
+      "msg": "✅ PARITY PASS：Python 与 JS 判分完全一致"
+    },
+    {
+      "suite": "T4 判分一致性(PY↔JS)",
+      "case": "gbt_2951_11_12.json 两端逐题一致",
+      "status": "PASS",
+      "msg": "✅ PARITY PASS：Python 与 JS 判分完全一致"
+    },
+    {
+      "suite": "T4 判分一致性(PY↔JS)",
+      "case": "gbt_2951_full.json 两端逐题一致",
+      "status": "PASS",
+      "msg": "✅ PARITY PASS：Python 与 JS 判分完全一致"
+    },
+    {
+      "suite": "T4 判分一致性(PY↔JS)",
+      "case": "gbt_2951_kb_mvp.json 两端逐题一致",
+      "status": "PASS",
+      "msg": "✅ PARITY PASS：Python 与 JS 判分完全一致"
+    },
+    {
+      "suite": "T4 判分一致性(PY↔JS)",
+      "case": "gbt_3048_8.json 两端逐题一致",
+      "status": "PASS",
+      "msg": "✅ PARITY PASS：Python 与 JS 判分完全一致"
+    },
+    {
+      "suite": "T4 判分一致性(PY↔JS)",
+      "case": "gbt_3048_full.json 两端逐题一致",
+      "status": "PASS",
+      "msg": "✅ PARITY PASS：Python 与 JS 判分完全一致"
+    },
+    {
+      "suite": "T4 判分一致性(PY↔JS)",
+      "case": "gbt_3956.json 两端逐题一致",
+      "status": "PASS",
+      "msg": "✅ PARITY PASS：Python 与 JS 判分完全一致"
+    },
+    {
+      "suite": "T4 判分一致性(PY↔JS)",
+      "case": "gbt_5023_full.json 两端逐题一致",
+      "status": "PASS",
+      "msg": "✅ PARITY PASS：Python 与 JS 判分完全一致"
+    },
+    {
+      "suite": "T4 判分一致性(PY↔JS)",
+      "case": "gbt_8734_full.json 两端逐题一致",
+      "status": "PASS",
+      "msg": "✅ PARITY PASS：Python 与 JS 判分完全一致"
+    },
+    {
+      "suite": "T4 判分一致性(PY↔JS)",
+      "case": "gbt_others_full.json 两端逐题一致",
+      "status": "PASS",
+      "msg": "✅ PARITY PASS：Python 与 JS 判分完全一致"
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_10491_full.json 每题都有 src",
+      "status": "PASS",
+      "msg": "27 题全有"
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_10491_full.json src 标准号在库内",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_10491_full.json src 有条款号",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_10491_full.json 条款可回查 KU",
+      "status": "WARN",
+      "msg": "1/27 题条款未建 KU（题可能对，但无法自动回查）: ['K1049_01:JB/T 10491-2022 6.2.3']"
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_2951_11_12.json 每题都有 src",
+      "status": "PASS",
+      "msg": "43 题全有"
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_2951_11_12.json src 标准号在库内",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_2951_11_12.json src 有条款号",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_2951_11_12.json 条款可回查 KU",
+      "status": "PASS",
+      "msg": "全部命中"
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_2951_full.json 每题都有 src",
+      "status": "PASS",
+      "msg": "88 题全有"
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_2951_full.json src 标准号在库内",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_2951_full.json src 有条款号",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_2951_full.json 条款可回查 KU",
+      "status": "WARN",
+      "msg": "39/88 题条款未建 KU（题可能对，但无法自动回查）: ['C2951_01:GB/T 2951.13-2008 8.1', 'C2951_02:GB/T 2951.13-2008 8.1', 'C2951_03:GB/T 2951.13-2008 8.2']"
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_2951_kb_mvp.json 每题都有 src",
+      "status": "PASS",
+      "msg": "43 题全有"
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_2951_kb_mvp.json src 标准号在库内",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_2951_kb_mvp.json src 有条款号",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_2951_kb_mvp.json 条款可回查 KU",
+      "status": "WARN",
+      "msg": "42/43 题条款未建 KU（题可能对，但无法自动回查）: ['BMVP_C01:GB/T 2951.13-2008 5', 'BMVP_C02:GB/T 2951.13-2008 5', 'BMVP_C03:GB/T 2951.13-2008 8.1']"
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_3048_8.json 每题都有 src",
+      "status": "PASS",
+      "msg": "26 题全有"
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_3048_8.json src 标准号在库内",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_3048_8.json src 有条款号",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_3048_8.json 条款可回查 KU",
+      "status": "WARN",
+      "msg": "4/26 题条款未建 KU（题可能对，但无法自动回查）: ['C3048_8_07:GB/T 3048.8-2025 3.1', 'J3048_8_03:GB/T 3048.8-2025 7.2', 'J3048_8_06:GB/T 3048.8-2025 7.2']"
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_3048_full.json 每题都有 src",
+      "status": "PASS",
+      "msg": "152 题全有"
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_3048_full.json src 标准号在库内",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_3048_full.json src 有条款号",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_3048_full.json 条款可回查 KU",
+      "status": "PASS",
+      "msg": "全部命中"
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_3956.json 每题都有 src",
+      "status": "PASS",
+      "msg": "11 题全有"
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_3956.json src 标准号在库内",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_3956.json src 有条款号",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_3956.json 条款可回查 KU",
+      "status": "WARN",
+      "msg": "7/11 题条款未建 KU（题可能对，但无法自动回查）: ['B3956_C01:GB/T 3956-2008 3', 'B3956_C02:GB/T 3956-2008 6', 'B3956_J01:GB/T 3956-2008 5.1']"
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_5023_full.json 每题都有 src",
+      "status": "PASS",
+      "msg": "27 题全有"
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_5023_full.json src 标准号在库内",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_5023_full.json src 有条款号",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_5023_full.json 条款可回查 KU",
+      "status": "PASS",
+      "msg": "全部命中"
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_8734_full.json 每题都有 src",
+      "status": "PASS",
+      "msg": "29 题全有"
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_8734_full.json src 标准号在库内",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_8734_full.json src 有条款号",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_8734_full.json 条款可回查 KU",
+      "status": "PASS",
+      "msg": "全部命中"
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_others_full.json 每题都有 src",
+      "status": "PASS",
+      "msg": "32 题全有"
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_others_full.json src 标准号在库内",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_others_full.json src 有条款号",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T5 溯源零幻觉",
+      "case": "gbt_others_full.json 条款可回查 KU",
+      "status": "WARN",
+      "msg": "11/32 题条款未建 KU（题可能对，但无法自动回查）: ['COTH_02:GB/T 11017.2-2024 6.4.1', 'COTH_07:GB/T 12706.3-2020 4.7', 'COTH_12:GB/T 19666-2019 5']"
+    },
+    {
+      "suite": "T6 前端SPA冒烟",
+      "case": "app.js 语法通过",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T6 前端SPA冒烟",
+      "case": "public/data/grade.js 可判分",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T6 前端SPA冒烟",
+      "case": "SPA 引用的数据文件齐全",
+      "status": "PASS",
+      "msg": "29 个引用全在"
+    },
+    {
+      "suite": "T6 前端SPA冒烟",
+      "case": "SPA 数据文件可解析",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T6 前端SPA冒烟",
+      "case": "public/data 与真源同步",
+      "status": "WARN",
+      "msg": "不一致: ['gbt_2951_full.json', 'gbt_3048_8.json', 'gbt_3048_full.json']（改了题库忘了同步到前端）"
+    },
+    {
+      "suite": "T7 资产覆盖度",
+      "case": "资产统计",
+      "status": "PASS",
+      "msg": "{\"raw文档\": 60, \"KU文件\": 31, \"已判标准\": 45, \"KU总数\": 296, \"考点KU\": 278, \"P0\": 105, \"P1\": 126, \"P2\": 47, \"非考点NA\": 18, \"题库文件\": 10, \"题目总数\": 478, \"已出题标准\": 44, \"出题覆盖率\": \"44/45\"}"
+    },
+    {
+      "suite": "T7 资产覆盖度",
+      "case": "P0 考点数达标(>=30)",
+      "status": "PASS",
+      "msg": "105 条"
+    },
+    {
+      "suite": "T7 资产覆盖度",
+      "case": "题目总数达标(>=100)",
+      "status": "PASS",
+      "msg": "478 题"
+    },
+    {
+      "suite": "T7 资产覆盖度",
+      "case": "已判标准都已出题",
+      "status": "WARN",
+      "msg": "1/45 份标准判了但没出题: ['GB/T 5023.4-2008']"
+    },
+    {
+      "suite": "T8 后端服务冒烟",
+      "case": "后端启动",
+      "status": "PASS",
+      "msg": "server.py :51140 已响应 /"
+    },
+    {
+      "suite": "T8 后端服务冒烟",
+      "case": "/api/build 按权重出卷",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T8 后端服务冒烟",
+      "case": "/api/grade 满分卷=满分",
+      "status": "PASS",
+      "msg": ""
+    },
+    {
+      "suite": "T8 后端服务冒烟",
+      "case": "/api/grade 全错卷=0分",
+      "status": "PASS",
+      "msg": ""
+    }
+  ]
+}

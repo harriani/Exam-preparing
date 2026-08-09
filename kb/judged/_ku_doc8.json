@@ -1,0 +1,92 @@
+[
+  {
+    "standard_no": "GB/T 3048.7-2007",
+    "type": "parameter",
+    "title": "试验电压与断路器保护",
+    "clause": "4.2.1/6.3",
+    "is_exam_point": true,
+    "priority": "P0",
+    "key_requirements": ["工频试验变压器高压输出不低于4kV，高压侧电流不小于1A", "泄漏电流为250mA时电源高压侧最大电压降小于5%", "自动断路器设定：流过高压侧瞬时电流达(1.0±0.1)A时在(50~250)ms内断开电路", "开始喷雾同时施加4kV工频试验电压，过程中保持在规定值±3%以内"],
+    "interpretation": "耐电痕试验的核心电压与保护参数。"
+  },
+  {
+    "standard_no": "GB/T 3048.7-2007",
+    "type": "parameter",
+    "title": "试验液体配方与导电率",
+    "clause": "4.4",
+    "is_exam_point": true,
+    "priority": "P0",
+    "key_requirements": ["推荐配方：1L水中含化学纯氯化钠约0.2%和表面活性剂0.1%", "试验液体导电率应为(3000±400) μS/cm（电导率仪测量）", "表面活性剂推荐仲辛基苯基聚氧乙烯醚，也可用其他相当者"],
+    "interpretation": "污秽液配方与导电率是试验条件的关键。"
+  },
+  {
+    "standard_no": "GB/T 3048.7-2007",
+    "type": "parameter",
+    "title": "喷雾装置与喷雾周期参数",
+    "clause": "4.3/6.2",
+    "is_exam_point": true,
+    "priority": "P0",
+    "key_requirements": ["喷雾设备喷程不小于1m", "喷头离地面至少600mm，距离试样约500mm，喷头轴线与试样轴线呈45°角", "试样处喷雾速度约3m/s，喷雾量(0.5±0.1)mm/min", "喷雾10s、间歇20s为一个喷雾周期"],
+    "interpretation": "喷雾方式是本试验区别于其他绝缘试验的特征参数。"
+  },
+  {
+    "standard_no": "GB/T 3048.7-2007",
+    "type": "pass_criteria",
+    "title": "合格评定判据",
+    "clause": "7",
+    "is_exam_point": true,
+    "priority": "P0",
+    "key_requirements": ["在产品标准规定的喷雾周期数内，试样无以下任一情况即为合格", "a) 表面燃烧", "b) 高压电极和接地极间形成连续电弧", "c) 表面泄漏电流超过产品标准规定值", "d) 因绝缘局部受腐蚀而引起试样击穿"],
+    "interpretation": "四项不合格情形是合格判定的直接依据。"
+  },
+  {
+    "standard_no": "GB/T 3048.7-2007",
+    "type": "sample_prep",
+    "title": "试样制备",
+    "clause": "5.1/5.2/5.3",
+    "is_exam_point": true,
+    "priority": "P1",
+    "key_requirements": ["试样长度不小于150mm；单芯电缆取绝缘线芯，多芯取单根绝缘线芯", "沿轴线垂直切除一端绝缘约20mm露出导体", "离绝缘切口100mm处垂直绕直径约1mm裸铜线(2~3)圈", "另一端面应绝缘处理或加长以防附着液体放电"],
+    "interpretation": "试样处理决定电场分布，影响结果。"
+  },
+  {
+    "standard_no": "GB/T 3048.7-2007",
+    "type": "parameter",
+    "title": "测量仪器精度",
+    "clause": "4.2.2/4.2.3",
+    "is_exam_point": true,
+    "priority": "P1",
+    "key_requirements": ["电压测量设备测量误差不超过±3%", "电流测量仪表准确度不低于1.0级"],
+    "interpretation": "仪器精度要求。"
+  },
+  {
+    "standard_no": "GB/T 3048.7-2007",
+    "type": "classification",
+    "title": "术语：漏电痕迹/电痕化",
+    "clause": "3.1/3.2",
+    "is_exam_point": true,
+    "priority": "P1",
+    "key_requirements": ["漏电痕迹：固体绝缘材料在电场和电解液联合作用下表面逐渐形成的导电通路", "电痕化：形成漏电痕迹的过程"],
+    "interpretation": "核心术语定义。"
+  },
+  {
+    "standard_no": "GB/T 3048.7-2007",
+    "type": "parameter",
+    "title": "适用范围",
+    "clause": "1",
+    "is_exam_point": true,
+    "priority": "P1",
+    "key_requirements": ["适用于测试电线电缆耐受在污秽条件下因表面漏电引起电痕迹造成损坏的能力", "不按本部分规定污秽条件得出的结果不可比", "应与GB/T 3048.1一起使用"],
+    "interpretation": "方法适用边界。"
+  },
+  {
+    "standard_no": "GB/T 3048.7-2007",
+    "type": "non_exam",
+    "title": "试验记录/前言/图示",
+    "clause": "8/前言",
+    "is_exam_point": false,
+    "priority": "",
+    "key_requirements": ["试验记录应含试验类型、试样信息、日期、液体导电率、喷雾周期量、电压电流值、至少两个相反方向彩色照片、设备校准有效期"],
+    "interpretation": "记录与版本沿革，非直接考点。"
+  }
+]

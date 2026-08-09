@@ -143,7 +143,7 @@ def group_by_kp(bank):
 
 # ----------------------------------------------------------------------------
 # 反馈系统：内存/文件读写 + 追加日志
-FB_CATS = ["题目错误", "题库质量", "学习材料", "功能缺陷", "其他"]
+FB_CATS = ["题干问题", "提取质量问题", "其他问题"]
 FB_STATUS = ["待整改", "整改中", "已整改"]
 
 def load_feedback():
@@ -159,13 +159,29 @@ def save_feedback(recs):
     json.dump(recs, open(tmp, "w", encoding="utf-8"), ensure_ascii=False)
     os.replace(tmp, FEEDBACK_JSON)
 
+def render_feedback_log():
+    # 人读视图：每条反馈紧跟它的整改（若有）。从 feedback.json 重新生成，
+    # 保证「反馈 → 整改」相邻，便于直接翻看；机器源仍为 feedback.jsonl（追加式事件流）。
+    recs = load_feedback()
+    lines = []
+    for r in recs:
+        lines.append(
+            f"[{r['created_at']}] id={r['id']} cat={r['category']} "
+            f"page={r.get('page','')} loc={r.get('location','')} status={r['status']} :: {r['detail']}"
+        )
+        if r.get("resolved_at"):
+            lines.append(
+                f"    ↳ 整改：{r['resolved_at']} {r['status']} — {r.get('resolution','') or '（无说明）'}"
+            )
+    with open(FEEDBACK_LOG, "w", encoding="utf-8") as f:
+        f.write(("\n".join(lines) + "\n") if lines else "")
+
 def append_feedback_log(rec):
-    # 追加式：jsonl（机器友好）+ log（人读，便于 grep / Agent 整改）
+    # jsonl 保持追加式（机器友好，Agent 可按 id grep 事件流：提交→整改）
     with open(FEEDBACK_JSONL, "a", encoding="utf-8") as f:
         f.write(json.dumps(rec, ensure_ascii=False) + "\n")
-    line = f"[{rec['created_at']}] id={rec['id']} cat={rec['category']} page={rec.get('page','')} loc={rec.get('location','')} status={rec['status']} :: {rec['detail']}"
-    with open(FEEDBACK_LOG, "a", encoding="utf-8") as f:
-        f.write(line + "\n")
+    # feedback.log 改为「反馈紧跟整改」的人读视图，重新生成
+    render_feedback_log()
 
 def add_feedback(payload):
     recs = load_feedback()
@@ -769,6 +785,8 @@ class Handler(http.server.BaseHTTPRequestHandler):
             return self._send(200, weak_html())
         if path == "/feedback":
             return self._send(200, feedback_html())
+        if path == "/api/feedback":
+            return self._send(200, json.dumps(load_feedback(), ensure_ascii=False), "application/json; charset=utf-8")
         if path.startswith("/take/"):
             name = path[len("/take/"):]
             if name not in list_banks():

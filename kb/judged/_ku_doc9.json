@@ -1,0 +1,283 @@
+[
+  {
+    "standard_no": "GB/T 3048.8-2025",
+    "type": "scope",
+    "title": "适用范围（交流电压试验）",
+    "clause": "1",
+    "key_requirements": [
+      "适用于电线电缆产品耐受交流电压的试验",
+      "不适用于绕组线产品的电压试验"
+    ],
+    "interpretation": "本文件描述交流电压试验方法，含试验设备、试样制备、试验程序、结果及评定、试验安全与记录。",
+    "priority": "P1",
+    "is_exam_point": true
+  },
+  {
+    "standard_no": "GB/T 3048.8-2025",
+    "type": "definition",
+    "title": "术语：峰值 / 方均根有效值 / 试验电压值",
+    "clause": "3.1~3.3",
+    "key_requirements": [
+      "峰值：一完整周波中电压的最大值（不计非破坏性放电引起的微小高频振荡）",
+      "方均根有效值：一完整周波中电压值平方的平均值的平方根",
+      "试验电压值：试验中的电压峰值除以√2"
+    ],
+    "interpretation": "注：设备标准可能要求测方均根值而非峰值（如考虑热效应时）。",
+    "priority": "P1",
+    "is_exam_point": true
+  },
+  {
+    "standard_no": "GB/T 3048.8-2025",
+    "type": "parameter",
+    "title": "试验电压频率要求",
+    "clause": "4.1.1.1",
+    "key_requirements": [
+      "试验电压通常为 45Hz~55Hz 的交流电压（工频试验电压）",
+      "制造长度试样因电缆太长无法采用工频时，宜采用频率不低于 10Hz 的交流电压",
+      "现场交流电压试验（如安装后电缆线路）宜按附录A进行"
+    ],
+    "interpretation": "频率偏离工频时需用低频（≥10Hz）替代。",
+    "priority": "P1",
+    "is_exam_point": true
+  },
+  {
+    "standard_no": "GB/T 3048.8-2025",
+    "type": "parameter",
+    "title": "试验电压波形要求",
+    "clause": "4.1.1.2",
+    "key_requirements": [
+      "波形为两个半波相同的近似正弦波",
+      "峰值与方均根有效值之比应为 √2 ± 0.05",
+      "若各谐波方均根值不大于基波方均根值的 5%，即认为满足波形要求"
+    ],
+    "interpretation": "满足上述条件则认为电压试验结果不受波形畸变影响。",
+    "priority": "P0",
+    "is_exam_point": true
+  },
+  {
+    "standard_no": "GB/T 3048.8-2025",
+    "type": "parameter",
+    "title": "试验电压容许偏差",
+    "clause": "4.1.2",
+    "key_requirements": [
+      "试验时间不超过 60s 时，测量值应保持规定电压值的 ±1% 以内",
+      "试验时间超过 60s 时，测量值应保持规定电压值的 ±3% 以内"
+    ],
+    "interpretation": "容许偏差是规定值与实测值之差，用于衡量可靠性与精度，不同于测量误差。",
+    "priority": "P0",
+    "is_exam_point": true
+  },
+  {
+    "standard_no": "GB/T 3048.8-2025",
+    "type": "method",
+    "title": "试验电压的产生方式",
+    "clause": "4.2.1",
+    "key_requirements": [
+      "宜采用试验变压器产生试验电压",
+      "较大电容的电线电缆宜采用串联谐振回路产生试验电压",
+      "试验电源应满足所需电压和电容电流要求"
+    ],
+    "interpretation": "串联谐振回路中放电时电源仅供给很小电流，限制对试样介质的破坏。",
+    "priority": "P1",
+    "is_exam_point": true
+  },
+  {
+    "standard_no": "GB/T 3048.8-2025",
+    "type": "method",
+    "title": "试验电压测量装置与不确定度",
+    "clause": "4.3.1",
+    "key_requirements": [
+      "用 GB/T 16927.2 规定的测量装置测量",
+      "在额定频率下测量试验电压峰值或方均根有效值的不确定度应在 3% 范围内"
+    ],
+    "interpretation": "正弦波畸变及瞬态电压降的测量亦应采用经程序认可的测量装置。",
+    "priority": "P1",
+    "is_exam_point": true
+  },
+  {
+    "standard_no": "GB/T 3048.8-2025",
+    "type": "parameter",
+    "title": "测量装置校准与误差限值",
+    "clause": "4.3.2",
+    "key_requirements": [
+      "可用认可的测量装置校准未认可装置；球隙按 GB/T 311.6 进行，球隙距离应增至足够大以防放电",
+      "电压互感器与试样高压端并联：测量误差 ≤ ±1%",
+      "高压静电电压表与试样高压端并联：测量误差 ≤ ±2%",
+      "分压器与试样高压端并联：分压比误差 ≤ ±1%（测有效值接≥0.5级低压表，测峰值接误差≤±1%仪表）"
+    ],
+    "interpretation": "电力电缆例行试验的三种测量方法（PT/静电表/分压器）均须满足对应误差要求。",
+    "priority": "P1",
+    "is_exam_point": true
+  },
+  {
+    "standard_no": "GB/T 3048.8-2025",
+    "type": "parameter",
+    "title": "水槽试验试样端部伸出水面长度",
+    "clause": "5.4",
+    "key_requirements": [
+      "在水槽内进行试验时，试样两个端部伸出水面的长度不应小于 200mm",
+      "应保证在规定试验电压下不发生闪络"
+    ],
+    "interpretation": "端部伸出不足会导致沿面闪络、误判。",
+    "priority": "P1",
+    "is_exam_point": true
+  },
+  {
+    "standard_no": "GB/T 3048.8-2025",
+    "type": "parameter",
+    "title": "试验电压值与耐受时间依据",
+    "clause": "6.1.1",
+    "key_requirements": [
+      "试样耐压试验的试验电压值和耐受电压时间按产品标准规定"
+    ],
+    "interpretation": "本文件只规定方法，具体电压/时间由产品标准给出。",
+    "priority": "P1",
+    "is_exam_point": true
+  },
+  {
+    "standard_no": "GB/T 3048.8-2025",
+    "type": "parameter",
+    "title": "逐级击穿试验每级耐受时间",
+    "clause": "6.1.2",
+    "key_requirements": [
+      "逐级击穿试验每级升压数值和耐受时间由供需双方商定",
+      "每级耐受时间宜不少于 5min"
+    ],
+    "interpretation": "用于确定击穿电压的阶梯升压法。",
+    "priority": "P1",
+    "is_exam_point": true
+  },
+  {
+    "standard_no": "GB/T 3048.8-2025",
+    "type": "parameter",
+    "title": "试验环境温度与放置时间",
+    "clause": "6.3.1",
+    "key_requirements": [
+      "除非产品标准另有规定，试验在环境温度下进行",
+      "试验前试样温度宜与环境温度基本一致，避免过高/过低造成错误结果",
+      "有争议时，试样宜放置环境温度下至少 24h 后再试验"
+    ],
+    "interpretation": "温度影响绝缘特性，争议以 24h 平衡为准。",
+    "priority": "P0",
+    "is_exam_point": true
+  },
+  {
+    "standard_no": "GB/T 3048.8-2025",
+    "type": "method",
+    "title": "升压速率要求",
+    "clause": "6.3.2",
+    "key_requirements": [
+      "根据设备和电压值选择合适速率升压，避免操作瞬变引起过电压",
+      "当试验电压从 75%U 升到规定值时，以 2%/s 的速率上升可满足要求",
+      "达到规定值后保持至产品标准规定时间，然后立即降压（避免直接切断电源防止瞬变）"
+    ],
+    "interpretation": "升太快引入过电压、太慢延长耐压时间，均影响结果。",
+    "priority": "P1",
+    "is_exam_point": true
+  },
+  {
+    "standard_no": "GB/T 3048.8-2025",
+    "type": "criterion",
+    "title": "试验结果评定（合格判定）",
+    "clause": "7.1",
+    "key_requirements": [
+      "试样在施加规定试验电压和持续时间内无任何击穿现象，判定耐受工频电压试验合格"
+    ],
+    "interpretation": "击穿即不合格；需区分假击穿。",
+    "priority": "P0",
+    "is_exam_point": true
+  },
+  {
+    "standard_no": "GB/T 3048.8-2025",
+    "type": "criterion",
+    "title": "假击穿与端部击穿处理",
+    "clause": "7.2~7.3",
+    "key_requirements": [
+      "异常现象应判断是否属于假击穿，假击穿应予排除并重新试验",
+      "仅当试样不可能再次耐受规定电压时，才判定不合格",
+      "端部或终端发生闪络或内部击穿，应重新安装终端并重新试验"
+    ],
+    "interpretation": "区分真/假击穿避免误判不合格。",
+    "priority": "P1",
+    "is_exam_point": true
+  },
+  {
+    "standard_no": "GB/T 3048.8-2025",
+    "type": "method",
+    "title": "中途停止恢复应重新计时",
+    "clause": "7.4",
+    "key_requirements": [
+      "除非产品标准另有规定，试验过程中因故停止施加电压，恢复时应重新计时"
+    ],
+    "interpretation": "保证实际耐压持续时间达标。",
+    "priority": "P1",
+    "is_exam_point": true
+  },
+  {
+    "standard_no": "GB/T 3048.8-2025",
+    "type": "parameter",
+    "title": "试验安全：接地电阻要求",
+    "clause": "8.3",
+    "key_requirements": [
+      "产品电压等级 ≤ 35kV 时，接地电阻应小于 4Ω",
+      "产品电压等级为 66kV~220kV 时，接地电阻应小于 2Ω",
+      "产品电压等级 ≥ 220kV 时，接地电阻应小于 1Ω"
+    ],
+    "interpretation": "试验区内应有接地极，不同电压等级对应不同接地电阻上限。",
+    "priority": "P0",
+    "is_exam_point": true
+  },
+  {
+    "standard_no": "GB/T 3048.8-2025",
+    "type": "method",
+    "title": "试验安全要求（保护与隔离）",
+    "clause": "8.1~8.4",
+    "key_requirements": [
+      "试验回路应有快速保护装置，试样击穿或闪络时能迅速切断试验电源",
+      "高压端/测量系统/试样高压端与周围接地体应保持距离防空气击穿",
+      "试验区应有可靠安全措施（金属接地栅栏、信号灯或安全警示标志）",
+      "设备/测量系统/试样接地端或附加电极应与接地电极可靠连接"
+    ],
+    "interpretation": "高压试验安全为强制性要求。",
+    "priority": "P2",
+    "is_exam_point": true
+  },
+  {
+    "standard_no": "GB/T 3048.8-2025",
+    "type": "method",
+    "title": "试验记录必备内容",
+    "clause": "9",
+    "key_requirements": [
+      "应记录：a)试验类型 b)试样编号/型号/规格/长度 c)试验日期 d)大气条件(气压温度湿度)",
+      "e)施加试验电压的方均根有效值和持续时间 f)异常现象及处理 g)试验设备及其校准日期和有效期"
+    ],
+    "interpretation": "完整记录是结果可追溯与争议处理依据。",
+    "priority": "P2",
+    "is_exam_point": true
+  },
+  {
+    "standard_no": "GB/T 3048.8-2025",
+    "type": "method",
+    "title": "多芯电缆接线方式（资料性）",
+    "clause": "6.2.1/表1/表2",
+    "key_requirements": [
+      "除产品标准另有规定外，按表1（电力/装备电缆）或表2（通信电缆）接线",
+      "应保证每线芯与其相邻线芯（接地端若有）之间至少经受一次规定工频电压试验"
+    ],
+    "interpretation": "接线方式确保各绝缘层面均被试验到。",
+    "priority": "P2",
+    "is_exam_point": false
+  },
+  {
+    "standard_no": "GB/T 3048.8-2025",
+    "type": "scope",
+    "title": "前言与历次版本（非考点）",
+    "clause": "前言",
+    "key_requirements": [
+      "本文件代替 GB/T 3048.8—2007，主要技术变化：更改试验设备电压波形要求、更改容许偏差要求"
+    ],
+    "interpretation": "版本沿革信息，一般不作为具体考题参数。",
+    "priority": "P2",
+    "is_exam_point": false
+  }
+]

@@ -1,0 +1,48 @@
+[
+ {
+  "standard_no": "GB/T 19666-2019",
+  "type": "classification",
+  "title": "阻燃电线电缆燃烧特性代号体系(Z/ZA-D/N/NJ/NS)",
+  "clause": "5/表4-表6",
+  "is_exam_point": true,
+  "priority": "P0",
+  "key_requirements": [
+   "Z: 单根阻燃(按外径分4档: ≤25/50/75/>75mm，供火60~480s)",
+   "ZA~ZD: 成束阻燃(A类7L/m 40min → D类0.5L/m 20min)",
+   "N: 耐火(90min供火+15min冷却，保持线路完整性)",
+   "NJ: 耐火(小外径≤20mm, 120min)",
+   "NS: 耐火+喷淋(120min+最后15min水喷淋/喷射)"
+  ],
+  "interpretation": "19666是阻燃耐火电缆的「宪法」，代号体系是必考点。"
+ },
+ {
+  "standard_no": "GB/T 19666-2019",
+  "type": "test_method",
+  "title": "无卤低烟性能要求(pH值/电导率/卤素/烟密度)",
+  "clause": "6.4/表7-表8",
+  "is_exam_point": true,
+  "priority": "P0",
+  "key_requirements": [
+   "pH值≥4.3(最小值)",
+   "电导率≤10μS/cm(最大值)",
+   "溴+氯含量(以HCl表示)≤0.5%",
+   "氟含量≤0.1%",
+   "烟密度透光率: 外径>80cm时结果乘(d/80)系数"
+  ],
+  "interpretation": "无卤低烟是重要安全指标，数值必须记住。"
+ },
+ {
+  "standard_no": "GB/T 19666-2019",
+  "type": "classification",
+  "title": "低毒定义与无卤低烟低毒系列组合",
+  "clause": "3.5/7.1.3",
+  "is_exam_point": true,
+  "priority": "P1",
+  "key_requirements": [
+   "2009版新增'低毒'定义",
+   "新增无卤低烟低毒(WDZ)系列燃烧特性代号组合",
+   "燃烧滴落物考核指标和方法(表4)"
+  ],
+  "interpretation": "低毒是更高安全等级要求。"
+ }
+]

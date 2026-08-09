@@ -1,0 +1,82 @@
+[
+  {
+    "standard_no": "GB/T 3048.3-2007",
+    "type": "parameter",
+    "title": "测试温度与恒温箱控制",
+    "clause": "3.6/5.1",
+    "is_exam_point": true,
+    "priority": "P0",
+    "key_requirements": ["恒温箱温度控制范围(70±1)℃", "试验前试样在(70±1)℃下加热2h"],
+    "interpretation": "70℃是半导电橡塑材料体积电阻率的标准测试温度，常考。"
+  },
+  {
+    "standard_no": "GB/T 3048.3-2007",
+    "type": "parameter",
+    "title": "环境条件化处理",
+    "clause": "5.2",
+    "is_exam_point": true,
+    "priority": "P0",
+    "key_requirements": ["加热后原样取出，在(23±2)℃、相对湿度(50±5)%环境条件下放置16h"],
+    "interpretation": "测量前标准环境条件化处理，保证结果可比。"
+  },
+  {
+    "standard_no": "GB/T 3048.3-2007",
+    "type": "sample_prep",
+    "title": "试样尺寸与数量",
+    "clause": "4.1/4.3",
+    "is_exam_point": true,
+    "priority": "P1",
+    "key_requirements": ["每次试验至少准备尺寸相同的试样3个", "试样长方形：长110mm、宽50mm、厚2mm或4mm", "厚度沿长度大致等距测6点取平均，每点偏差不超过±5%", "硫化或塑化试样至少放置16h后方可试验，最长不超过28d"],
+    "interpretation": "试样制备的尺寸与放置时间要求。"
+  },
+  {
+    "standard_no": "GB/T 3048.3-2007",
+    "type": "test_method",
+    "title": "电极结构与尺寸",
+    "clause": "3.4.1/3.4.2",
+    "is_exam_point": true,
+    "priority": "P1",
+    "key_requirements": ["电流电极：黄铜或不锈钢夹状，接触宽度约5mm，两电流电极间距(100±1)mm", "电位电极：不锈钢，高15mm，顶端圆角半径≤0.5mm，两测量极间距20mm(误差≤±2%)，沿宽度压力约65N/m", "电流电极、电位电极、绝缘板绝缘电阻均>10¹²Ω"],
+    "interpretation": "三电极系统的结构参数。"
+  },
+  {
+    "standard_no": "GB/T 3048.3-2007",
+    "type": "parameter",
+    "title": "测量仪器参数",
+    "clause": "3.1-3.3/3.5",
+    "is_exam_point": true,
+    "priority": "P1",
+    "key_requirements": ["直流电源：试样两电位电极间功率损耗≤0.1W，对地绝缘电阻≥10¹²Ω", "电流表示值误差≤±1%", "电压表输入阻抗≥10⁸Ω，对地绝缘电阻>10¹²Ω，示值误差≤±1%", "绝缘板绝缘电阻率≥10¹⁵Ω·cm"],
+    "interpretation": "测量系统精度与绝缘要求。"
+  },
+  {
+    "standard_no": "GB/T 3048.3-2007",
+    "type": "test_method",
+    "title": "测量程序与读数",
+    "clause": "5.3/5.4",
+    "is_exam_point": true,
+    "priority": "P1",
+    "key_requirements": ["电位电极刀口垂直于电流方向，与电流电极距离≥20mm", "接通电流充电1min后读电流和电压", "采用电流换向法读正反向取算术平均消除接触电势", "同一试样重复测量2次并移动电位电极，取算术平均"],
+    "interpretation": "标准测量步骤。"
+  },
+  {
+    "standard_no": "GB/T 3048.3-2007",
+    "type": "parameter",
+    "title": "适用范围",
+    "clause": "1",
+    "is_exam_point": true,
+    "priority": "P1",
+    "key_requirements": ["适用于测量电线电缆用橡皮和塑料半导电材料的体积电阻率", "测量范围不大于10⁶Ω·cm", "应与GB/T 3048.1一起使用"],
+    "interpretation": "方法适用边界。"
+  },
+  {
+    "standard_no": "GB/T 3048.3-2007",
+    "type": "non_exam",
+    "title": "前言/修订说明/图示",
+    "clause": "前言/图1-2",
+    "is_exam_point": false,
+    "priority": "",
+    "key_requirements": ["本部分代替GB/T 3048.3-1994"],
+    "interpretation": "版本沿革与测量系统示意，非直接考点。"
+  }
+]

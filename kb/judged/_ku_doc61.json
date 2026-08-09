@@ -1,0 +1,95 @@
+[
+ {
+  "standard_no": "JB/T 8735.2-2016",
+  "type": "requirement",
+  "title": "通用橡套软电缆的适用范围与额定电压",
+  "clause": "1/3.1",
+  "is_exam_point": true,
+  "priority": "P0",
+  "key_requirements": [
+   "规定通用橡套软电缆的使用特性、型号、规格、技术要求和检验",
+   "适用于交流额定电压U0/U 450/750V及以下家用电器、电动工具和各种移动式电器设备",
+   "额定电压U0/U为450/750V、300/500V和300/300V三档"
+  ],
+  "interpretation": "三档额定电压与适用设备是型号判读题的前提。"
+ },
+ {
+  "standard_no": "JB/T 8735.2-2016",
+  "type": "classification",
+  "title": "通用橡套软电缆型号系列与轻中重型对应电压",
+  "clause": "表3~表7",
+  "is_exam_point": true,
+  "priority": "P0",
+  "key_requirements": [
+   "YQ、YQW: 轻型, 300/300V",
+   "YZ、YZW: 中型, 300/500V",
+   "YZB、YZWB: 中型橡套扁形, 300/500V",
+   "YC、YCW: 重型, 450/750V",
+   "带W后缀为耐候(户外)型",
+   "表3~表7分别给出各型芯数×导体标称截面积、导体中单线最大直径、绝缘厚度规定值、护套厚度规定值、平均外径上下限、20℃时导体电阻最大值(铜芯/镀锡铜芯)"
+  ],
+  "interpretation": "YQ/YZ/YC 轻中重三级与电压等级的对应是必背对照表。"
+ },
+ {
+  "standard_no": "JB/T 8735.2-2016",
+  "type": "requirement",
+  "title": "护套橡皮混合物型号(SE3/SE4)规定",
+  "clause": "6.6",
+  "is_exam_point": true,
+  "priority": "P0",
+  "key_requirements": [
+   "YQ、YZ、YZB、YC型电缆护套应为SE3型橡皮混合物",
+   "YQW、YZW、YZWB、YCW型电缆护套应为SE4型橡皮混合物",
+   "YCW的护套也可以是两层: 内层SE3型、外层SE4型",
+   "护套厚度应符合表3~表7规定"
+  ],
+  "interpretation": "SE3 对应普通型、SE4 对应耐候型(W), 是高频选择题。"
+ },
+ {
+  "standard_no": "JB/T 8735.2-2016",
+  "type": "requirement",
+  "title": "与第1部分(一般要求)的关系",
+  "clause": "6.1",
+  "is_exam_point": true,
+  "priority": "P1",
+  "key_requirements": [
+   "电缆除应符合本部分规定的技术要求外, 还应符合JB/T 8735.1-2016的规定",
+   "若JB/T 8735.1-2016与本部分不一致, 以本部分为准",
+   "JB/T 8735分为三个部分: 第1部分一般要求; 第2部分通用橡套软电缆; 第3部分橡皮绝缘编织软电线"
+  ],
+  "interpretation": "专用部分优先于通用部分, 是标准适用性判断题的经典设点。"
+ },
+ {
+  "standard_no": "JB/T 8735.2-2016",
+  "type": "requirement",
+  "title": "2016版相对2011版的主要技术变化",
+  "clause": "前言",
+  "is_exam_point": true,
+  "priority": "P2",
+  "key_requirements": [
+   "YC单芯电缆规格修订为标称截面积1mm²~400mm²(表2)",
+   "修改了部分YC型电缆平均外径上下限(表6)",
+   "增加了标称截面积1mm²的YC型单芯电缆结构尺寸(表6)",
+   "修改了部分YCW型电缆平均外径上下限(表7)",
+   "代替JB/T 8735.2-2011, 历次版本为1998、2011"
+  ],
+  "interpretation": "版本变化题偶尔出现, 优先级低但可作为附加分点。"
+ },
+ {
+  "standard_no": "JB/T 8735.2-2016",
+  "type": "test_method",
+  "title": "规范性引用的试验方法标准",
+  "clause": "2",
+  "is_exam_point": true,
+  "priority": "P1",
+  "key_requirements": [
+   "GB/T 2951.11-2008 厚度和外形尺寸测量、机械性能试验",
+   "GB/T 2951.12-2008 热老化试验方法",
+   "GB/T 2951.14-2008 低温试验",
+   "GB/T 2951.21-2008 耐臭氧试验、热延伸试验、浸矿物油试验",
+   "GB/T 5013.2-2008 额定电压450/750V及以下橡皮绝缘电缆 试验方法",
+   "JB/T 8735.1-2016 一般要求"
+  ],
+  "interpretation": "橡套电缆检验时该查哪本方法标准, 是实操衔接的关键。"
+ }
+]

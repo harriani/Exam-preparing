@@ -1,0 +1,82 @@
+[
+  {
+    "standard_no": "GB/T 3048.1-2007",
+    "type": "parameter",
+    "title": "标准参考大气条件具体数值",
+    "clause": "2.2",
+    "is_exam_point": true,
+    "priority": "P0",
+    "key_requirements": ["温度 t0=20℃", "气压 b0=101.3kPa", "绝对湿度 h0=11g/m3"],
+    "interpretation": "标准参考环境用于把任意环境测得的值校正到特定环境，三个数值是常考硬参数。"
+  },
+  {
+    "standard_no": "GB/T 3048.1-2007",
+    "type": "parameter",
+    "title": "型式试验环境条件化处理时间",
+    "clause": "3.2",
+    "is_exam_point": true,
+    "priority": "P0",
+    "key_requirements": ["型式试验时试样应进行环境条件化处理至少16h", "环境条件按有关标准规定"],
+    "interpretation": "16h是型式试验前处理的最低时间要求。"
+  },
+  {
+    "standard_no": "GB/T 3048.1-2007",
+    "type": "sample_prep",
+    "title": "取样规则（按芯数取样）",
+    "clause": "3.5",
+    "is_exam_point": true,
+    "priority": "P1",
+    "key_requirements": ["三芯及以下的电缆每芯均应取样", "超过三芯的电缆应取三个芯的试样", "多芯各芯颜色不同时应取不同颜色的试样"],
+    "interpretation": "取样芯数规则，保证试样代表性。"
+  },
+  {
+    "standard_no": "GB/T 3048.1-2007",
+    "type": "test_method",
+    "title": "基准试验方法与常规试验方法",
+    "clause": "3.6",
+    "is_exam_point": true,
+    "priority": "P1",
+    "key_requirements": ["同一试验项目有两种以上方法时分为基准和常规", "两种方法均适用于正常电缆产品检验", "有争议时以基准试验方法为准"],
+    "interpretation": "争议仲裁以基准方法为准。"
+  },
+  {
+    "standard_no": "GB/T 3048.1-2007",
+    "type": "test_method",
+    "title": "试验温度环境（默认室温）",
+    "clause": "3.1",
+    "is_exam_point": true,
+    "priority": "P1",
+    "key_requirements": ["除有关标准中另有规定，试验一律在环境温度（室温）下进行"],
+    "interpretation": "默认试验环境为室温，除非产品标准另有规定。"
+  },
+  {
+    "standard_no": "GB/T 3048.1-2007",
+    "type": "pass_criteria",
+    "title": "试验设备校准要求",
+    "clause": "5",
+    "is_exam_point": true,
+    "priority": "P1",
+    "key_requirements": ["对检验准确性或有效性有影响的设备投入使用前必须校准", "特殊检验设备按检定方法标准校准", "应按规定进行定期校准"],
+    "interpretation": "校准是保证检验结果有效性的前提。"
+  },
+  {
+    "standard_no": "GB/T 3048.1-2007",
+    "type": "classification",
+    "title": "基础术语：重复性/再现性/校准/环境条件化处理/标准参考环境",
+    "clause": "2.1-2.5",
+    "is_exam_point": true,
+    "priority": "P1",
+    "key_requirements": ["重复性：相同测量条件下连续多次测量结果之间的一致性", "再现性：改变测量条件下同一被测物理量测量结果之间的一致性", "校准：确定测量仪器示值与参考标准量值之间关系的一组操作", "环境条件化处理：在规定温度、时间、相对湿度或浸液中置试样", "标准参考环境：测得值可校正到的特定环境条件"],
+    "interpretation": "基础术语定义，属理解类考点，常考概念辨析。"
+  },
+  {
+    "standard_no": "GB/T 3048.1-2007",
+    "type": "non_exam",
+    "title": "范围与目的（框架性描述）",
+    "clause": "1/4",
+    "is_exam_point": false,
+    "priority": "",
+    "key_requirements": ["本部分规定术语和定义、试验的一般规定、实现规定的目的和试验设备的定期校准"],
+    "interpretation": "框架性描述，非直接考题来源。"
+  }
+]

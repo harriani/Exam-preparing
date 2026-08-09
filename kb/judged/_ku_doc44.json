@@ -1,0 +1,98 @@
+[
+ {
+  "standard_no": "GB/T 2951.41-2008",
+  "type": "test_method",
+  "title": "耐环境应力开裂试验(ESCR)试剂与程序",
+  "clause": "8",
+  "is_exam_point": true,
+  "priority": "P0",
+  "key_requirements": [
+   "程序A: 100% Igepal CO-630(Antarox CO-630)或同化学组分试剂",
+   "程序B: 10% Igepal CO-630 水溶液(按体积)",
+   "试剂只能用一次",
+   "含水量略微超过规定最大值1%活性即明显增大",
+   "水溶液应在60~70℃搅拌至少1h制取, 制取后一周内使用"
+  ],
+  "interpretation": "ESCR 是聚乙烯护套的核心专用试验, 试剂浓度与A/B程序区分是高频考点。"
+ },
+ {
+  "standard_no": "GB/T 2951.41-2008",
+  "type": "test_method",
+  "title": "ESCR试片模压与条件处理温度",
+  "clause": "8.3.3/8.4",
+  "is_exam_point": true,
+  "priority": "P0",
+  "key_requirements": [
+   "模板传感器温度达165~170℃时加50kN~200kN全压力, 保持2min",
+   "加全压力阶段结束时停止加热",
+   "烘箱条件处理: 低密度PE (145±2)℃; 中密度PE (155±2)℃; 高密度PE (165±2)℃",
+   "保持1h后以(5±2)K/h速率降至(29±1)℃",
+   "温度测点在模压试片表面中心以上不超过5mm处"
+  ],
+  "interpretation": "三档密度对应三档温度是必背数值; 降温速率5±2 K/h 常作填空。"
+ },
+ {
+  "standard_no": "GB/T 2951.41-2008",
+  "type": "parameter",
+  "title": "ESCR试件尺寸与刻痕深度(按密度分档)",
+  "clause": "8.6.2/图7",
+  "is_exam_point": true,
+  "priority": "P1",
+  "key_requirements": [
+   "密度≤0.940g/cm³: A=38.0±2.5mm, B=13.0±0.8mm, C=3.00~3.30mm, D=0.50~0.65mm",
+   "密度>0.940g/cm³: A=38.0±2.5mm, B=13.0±0.8mm, C=1.75~2.0mm, D=0.30~0.40mm",
+   "刻痕深度D在长度方向应均匀",
+   "密度指未填充树脂"
+  ],
+  "interpretation": "高密度料试件更薄、刻痕更浅, 尺寸表可直接出选择题。"
+ },
+ {
+  "standard_no": "GB/T 2951.41-2008",
+  "type": "requirement",
+  "title": "ESCR试件数量与刻痕刀片寿命",
+  "clause": "8.6",
+  "is_exam_point": true,
+  "priority": "P1",
+  "key_requirements": [
+   "在距试片边缘大于25mm处切取10个试件",
+   "试片边缘10mm以外范围表面应光滑, 无气泡/突起/凹陷",
+   "每个试件放入试剂前均应刻痕",
+   "刀片即使在很好条件下最多只能刻100个刻痕",
+   "用台钳或恒速电动压床在30s~35s内闭合弯曲夹持装置"
+  ],
+  "interpretation": "10个试件、100个刻痕、30~35s 三个数字是易考细节。"
+ },
+ {
+  "standard_no": "GB/T 2951.41-2008",
+  "type": "test_method",
+  "title": "熔体指数(MFI)测量方法与设备",
+  "clause": "10",
+  "is_exam_point": true,
+  "priority": "P0",
+  "key_requirements": [
+   "MFI定义: 190℃温度下在负荷作用下通过规定出料模, 在1.5min或10min内挤出的材料数量",
+   "熔体指数不适用于阻燃聚乙烯",
+   "钢筒垂直固定并热绝缘, 在190℃工作",
+   "钢筒长至少115mm, 内径9.5mm~10mm",
+   "裸露金属表面积超过4cm²时钢筒底座应绝热"
+  ],
+  "interpretation": "190℃与不适用阻燃PE是两个高频判断题点。"
+ },
+ {
+  "standard_no": "GB/T 2951.41-2008",
+  "type": "classification",
+  "title": "本部分包含的五项专用试验",
+  "clause": "范围",
+  "is_exam_point": true,
+  "priority": "P1",
+  "key_requirements": [
+   "耐环境应力开裂试验",
+   "熔体指数测量方法",
+   "直接燃烧法测量聚乙烯中碳黑和/或矿物质填料含量",
+   "热重分析法(TGA)测量碳黑含量",
+   "显微镜法评估聚乙烯中碳黑分散度",
+   "等同采用IEC 60811-4-1:2004, 代替GB/T 2951.8-1997"
+  ],
+  "interpretation": "2951 各部分试验项目归属是标准体系题的常见考法。"
+ }
+]

@@ -1,0 +1,44 @@
+[
+ {
+  "standard_no": "GB/T 2951.32-2008",
+  "type": "non_exam",
+  "title": "封面/前言/起草信息",
+  "clause": "封面/前言",
+  "key_requirements": [
+   "GB/T 2951.32-2008/IEC 60811-3-2:1985",
+   "代替 GB/T 2951.7-1997"
+  ],
+  "interpretation": "框架性信息，非考点。",
+  "priority": "",
+  "is_exam_point": false
+ },
+ {
+  "standard_no": "GB/T 2951.32-2008",
+  "type": "test_method",
+  "title": "绝缘和护套失重试验",
+  "clause": "8 失重试验",
+  "key_requirements": [
+   "烘箱:空气每小时更换8~20次，不得用旋转风扇；有争议用自然通风烘箱",
+   "分析天平感量0.1mg",
+   "管状试件两端不应封闭；哑铃试件厚(1.0±0.2)mm；每试件表面积≥5cm²",
+   "制备好试件在环境湿度下干燥器存放≥20h，取出立即称重(精确0.1mg)",
+   "在(80±2)℃烘箱保存7×24h，再干燥器存放20h后称重",
+   "失重=质量差(mg)/表面积(cm²)，取3试件中间值，单位mg/cm²"
+  ],
+  "interpretation": "失重试验的烘箱换气次数、温度80±2℃、时间7×24h、结果以mg/cm²表示是核心考点。",
+  "priority": "P0",
+  "is_exam_point": true
+ },
+ {
+  "standard_no": "GB/T 2951.32-2008",
+  "type": "sample_prep",
+  "title": "热稳定性试验—玻璃管试样",
+  "clause": "9 热稳定性试验",
+  "key_requirements": [
+   "玻璃管长110mm，外径约5mm，内径(4.0±0.5)mm，一端密封(如熔融法)"
+  ],
+  "interpretation": "热稳定性试验所用玻璃管的尺寸与密封要求是实操考点。",
+  "priority": "P0",
+  "is_exam_point": true
+ }
+]

@@ -1,0 +1,301 @@
+{
+  "cards": [
+    {
+      "id": "C5023_01",
+      "kind": "choice",
+      "family": "GB/T 5023 系列",
+      "std": "GB/T",
+      "method": "应用",
+      "priority": "P0",
+      "front": "绝缘厚度合格判据是什么？",
+      "back": "答案：平均值≥规定值，且任一点可小于规定值但不小于规定值的90%−0.1mm。护套才是85%−0.1mm。",
+      "src": "GB/T 5023.1-2008 5.2.3"
+    },
+    {
+      "id": "C5023_02",
+      "kind": "choice",
+      "family": "GB/T 5023 系列",
+      "std": "GB/T",
+      "method": "应用",
+      "priority": "P0",
+      "front": "聚氯乙烯护套任一点最小厚度？",
+      "back": "答案：规定值的85%−0.1mm（注意绝缘是90%−0.1mm，二者不同）。",
+      "src": "GB/T 5023.1-2008 5.5.3"
+    },
+    {
+      "id": "C5023_03",
+      "kind": "choice",
+      "family": "GB/T 5023 系列",
+      "std": "GB/T",
+      "method": "记忆",
+      "priority": "P1",
+      "front": "有护套电缆绝缘上标志连续性距离上限？",
+      "back": "答案：275mm（外护套才是550mm）。",
+      "src": "GB/T 5023.1-2008 3.1.1"
+    },
+    {
+      "id": "C5023_04",
+      "kind": "choice",
+      "family": "GB/T 5023 系列",
+      "std": "GB/T",
+      "method": "记忆",
+      "priority": "P1",
+      "front": "六芯电缆绝缘线芯识别方式？",
+      "back": "答案：数字识别（五芯及以下用颜色，五芯以上用数字）。",
+      "src": "GB/T 5023.1-2008 4"
+    },
+    {
+      "id": "C5023_05",
+      "kind": "choice",
+      "family": "GB/T 5023 系列",
+      "std": "GB/T",
+      "method": "记忆",
+      "priority": "P1",
+      "front": "三芯软电缆优先色谱？",
+      "back": "答案：黄/绿、蓝、棕 或 棕、黑、灰。",
+      "src": "GB/T 5023.1-2008 4.1.2"
+    },
+    {
+      "id": "C5023_06",
+      "kind": "choice",
+      "family": "GB/T 5023 系列",
+      "std": "GB/T",
+      "method": "理解",
+      "priority": "P0",
+      "front": "黄/绿双色线芯单色覆盖比例？",
+      "back": "答案：每段15mm中一种颜色至少30%且不大于70%。",
+      "src": "GB/T 5023.1-2008 4.1"
+    },
+    {
+      "id": "C5023_07",
+      "kind": "choice",
+      "family": "GB/T 5023 系列",
+      "std": "GB/T",
+      "method": "应用",
+      "priority": "P0",
+      "front": "RVV 类软线绝缘混合物？",
+      "back": "答案：PVC/D 型（固定敷设 PVC/C，耐热 PVC/E）。",
+      "src": "GB/T 5023.1-2008 5.2.1；GB/T 5023.5-2008 6.3.2"
+    },
+    {
+      "id": "C5023_08",
+      "kind": "choice",
+      "family": "GB/T 5023 系列",
+      "std": "GB/T",
+      "method": "应用",
+      "priority": "P0",
+      "front": "BVV 固定布线护套混合物？",
+      "back": "答案：PVC/ST4 型（软电缆 ST5，耐油 ST9，90℃ ST10）。",
+      "src": "GB/T 5023.1-2008 5.5.1；GB/T 5023.4-2008 2.3.5"
+    },
+    {
+      "id": "C5023_09",
+      "kind": "choice",
+      "family": "GB/T 5023 系列",
+      "std": "GB/T",
+      "method": "记忆",
+      "priority": "P1",
+      "front": "普通软电缆曲挠次数？",
+      "back": "答案：15000 次往复（30000 单程）；铜皮软线60000次双向。",
+      "src": "GB/T 5023.1-2008 5.6.3.1"
+    },
+    {
+      "id": "C5023_10",
+      "kind": "choice",
+      "family": "GB/T 5023 系列",
+      "std": "GB/T",
+      "method": "应用",
+      "priority": "P0",
+      "front": "450/750V 成品电缆试验电压？",
+      "back": "答案：2500V（300/500V 及以下为2000V）。",
+      "src": "GB/T 5023.3-2008 1.2；GB/T 5023.6-2008 1.3"
+    },
+    {
+      "id": "C5023_11",
+      "kind": "choice",
+      "family": "GB/T 5023 系列",
+      "std": "GB/T",
+      "method": "理解",
+      "priority": "P1",
+      "front": "RVV 导体类别？",
+      "back": "答案：第5种软导体（硬电缆用第1/2种）。",
+      "src": "GB/T 5023.5-2008 6.3.1"
+    },
+    {
+      "id": "C5023_12",
+      "kind": "choice",
+      "family": "GB/T 5023 系列",
+      "std": "GB/T",
+      "method": "应用",
+      "priority": "P0",
+      "front": "屏蔽软电缆30MHz转移阻抗上限？",
+      "back": "答案：250Ω/km（屏蔽覆盖率另要求≥85%）。",
+      "src": "GB/T 5023.7-2008 2.3.5"
+    },
+    {
+      "id": "F5023_01",
+      "kind": "fill",
+      "family": "GB/T 5023 系列",
+      "std": "GB/T",
+      "method": "记忆",
+      "priority": "P1",
+      "front": "导体电阻在什么温度下考核？",
+      "back": "答案：20℃（符合 GB/T 3956）。",
+      "src": "GB/T 5023.1-2008 5.1.4"
+    },
+    {
+      "id": "F5023_02",
+      "kind": "fill",
+      "family": "GB/T 5023 系列",
+      "std": "GB/T",
+      "method": "记忆",
+      "priority": "P1",
+      "front": "绝缘/护套挤出后多久可试验？",
+      "back": "答案：至少存放 16h。",
+      "src": "GB/T 5023.2-2008 1.5"
+    },
+    {
+      "id": "F5023_03",
+      "kind": "fill",
+      "family": "GB/T 5023 系列",
+      "std": "GB/T",
+      "method": "记忆",
+      "priority": "P1",
+      "front": "数字识别相邻标志最大间距？",
+      "back": "答案：不大于 50mm。",
+      "src": "GB/T 5023.1-2008 4.2"
+    },
+    {
+      "id": "F5023_04",
+      "kind": "fill",
+      "family": "GB/T 5023 系列",
+      "std": "GB/T",
+      "method": "记忆",
+      "priority": "P1",
+      "front": "电梯电缆循环曲挠次数？",
+      "back": "答案：3000000 次。",
+      "src": "GB/T 5023.6-2008 4.4.1.1.4"
+    },
+    {
+      "id": "F5023_05",
+      "kind": "fill",
+      "family": "GB/T 5023 系列",
+      "std": "GB/T",
+      "method": "记忆",
+      "priority": "P1",
+      "front": "电梯电缆屏蔽编织覆盖率下限？",
+      "back": "答案：不小于 85%。",
+      "src": "GB/T 5023.6-2008 4.3.5"
+    },
+    {
+      "id": "F5023_06",
+      "kind": "fill",
+      "family": "GB/T 5023 系列",
+      "std": "GB/T",
+      "method": "记忆",
+      "priority": "P1",
+      "front": "BV-90/RV-90 导体最高温度？",
+      "back": "答案：90℃（耐热型）。",
+      "src": "GB/T 5023.3-2008 6.2；GB/T 5023.1-2008 5.5.1"
+    },
+    {
+      "id": "J5023_01",
+      "kind": "judge",
+      "family": "GB/T 5023 系列",
+      "std": "GB/T",
+      "method": "理解",
+      "priority": "P0",
+      "front": "绝缘任一点可小于规定值但不小于90%−0.1mm？",
+      "back": "答案：正确。这是绝缘厚度单点合格下限。（本题判定为正确）",
+      "src": "GB/T 5023.1-2008 5.2.3"
+    },
+    {
+      "id": "J5023_02",
+      "kind": "judge",
+      "family": "GB/T 5023 系列",
+      "std": "GB/T",
+      "method": "应用",
+      "priority": "P0",
+      "front": "护套任一点不小于规定值90%−0.1mm？",
+      "back": "答案：错误。护套是85%−0.1mm，90% 是绝缘。（本题判定为错误）",
+      "src": "GB/T 5023.1-2008 5.5.3"
+    },
+    {
+      "id": "J5023_03",
+      "kind": "judge",
+      "family": "GB/T 5023 系列",
+      "std": "GB/T",
+      "method": "应用",
+      "priority": "P0",
+      "front": "有护套电缆绝缘标志距离可到550mm？",
+      "back": "答案：错误。绝缘上应≤275mm，550mm 仅外护套。（本题判定为错误）",
+      "src": "GB/T 5023.1-2008 3.1.1"
+    },
+    {
+      "id": "J5023_04",
+      "kind": "judge",
+      "family": "GB/T 5023 系列",
+      "std": "GB/T",
+      "method": "记忆",
+      "priority": "P1",
+      "front": "五芯及以上用颜色识别？",
+      "back": "答案：错误。五芯及以下用颜色，五芯以上用数字。（本题判定为错误）",
+      "src": "GB/T 5023.1-2008 4"
+    },
+    {
+      "id": "J5023_05",
+      "kind": "judge",
+      "family": "GB/T 5023 系列",
+      "std": "GB/T",
+      "method": "记忆",
+      "priority": "P1",
+      "front": "铜皮软线60000次双向弯曲？",
+      "back": "答案：正确。（本题判定为正确）",
+      "src": "GB/T 5023.1-2008 5.6.3.2"
+    },
+    {
+      "id": "J5023_06",
+      "kind": "judge",
+      "family": "GB/T 5023 系列",
+      "std": "GB/T",
+      "method": "记忆",
+      "priority": "P1",
+      "front": "撕离力在3N~30N之间？",
+      "back": "答案：正确。（本题判定为正确）",
+      "src": "GB/T 5023.1-2008 5.6.3.4"
+    },
+    {
+      "id": "J5023_07",
+      "kind": "judge",
+      "family": "GB/T 5023 系列",
+      "std": "GB/T",
+      "method": "记忆",
+      "priority": "P1",
+      "front": "所有电缆须符合不延燃 GB/T18380.12？",
+      "back": "答案：正确。（本题判定为正确）",
+      "src": "GB/T 5023.1-2008 5.6.4"
+    },
+    {
+      "id": "J5023_08",
+      "kind": "judge",
+      "family": "GB/T 5023 系列",
+      "std": "GB/T",
+      "method": "理解",
+      "priority": "P0",
+      "front": "屏蔽软电缆护套 t=0.08d+0.4mm，最大2.4mm？",
+      "back": "答案：正确。内护层另为 t=0.02D+0.6mm。（本题判定为正确）",
+      "src": "GB/T 5023.7-2008 2.3.6"
+    },
+    {
+      "id": "K5023_01",
+      "kind": "calc",
+      "family": "GB/T 5023 系列",
+      "std": "GB/T 5023.1-2008 5.2.3",
+      "method": "应用",
+      "priority": "P0",
+      "front": "绝缘厚度规定值0.8mm时如何判定合格？",
+      "back": "答案：单点最小允许值=0.8×0.9−0.1=0.62mm；平均值须≥0.8mm。平均0.78mm或单点0.60mm均判不合格。",
+      "src": "GB/T 5023.1-2008 5.2.3"
+    }
+  ]
+}
