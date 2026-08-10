@@ -19,13 +19,13 @@ const ASSETS = {
     "gbt_5023_full":    {file:"data/gbt_5023_full.json",      name:"GB/T 5023 聚氯乙烯绝缘电缆卷(67分)", std:"GB/T 5023", _count:27},
     "gbt_8734_full":    {file:"data/gbt_8734_full.json",      name:"JB/T 8734 聚氯乙烯绝缘电线卷(71分)", std:"JB/T 8734", _count:29},
     "gbt_10491_full":   {file:"data/gbt_10491_full.json",     name:"JB/T 10491 交联聚烯烃绝缘电缆卷(64分)", std:"JB/T 10491", _count:27},
-    "gbt_19666_full":   {file:"data/gbt_19666_full.json",      name:"GB/T 19666 阻燃耐火卷(79分)", std:"GB/T 19666", _count:41},
-    "gbt_9330_full":    {file:"data/gbt_9330_full.json",       name:"GB/T 9330 控制电缆卷(79分)", std:"GB/T 9330", _count:41},
-    "gbt_12706_full":   {file:"data/gbt_12706_full.json",      name:"GB/T 12706.3 电力电缆卷(79分)", std:"GB/T 12706", _count:41},
-    "gbt_5013_full":    {file:"data/gbt_5013_full.json",       name:"GB/T 5013.3 橡皮绝缘卷(79分)", std:"GB/T 5013", _count:41},
-    "gbt_8735_full":    {file:"data/gbt_8735_full.json",       name:"JB/T 8735.2 橡皮软电缆卷(79分)", std:"JB/T 8735", _count:41},
-    "gbt_11017_full":   {file:"data/gbt_11017_full.json",      name:"GB/T 11017 超高压电缆卷(79分)", std:"GB/T 11017", _count:41},
-    "gbt_18890_full":   {file:"data/gbt_18890_full.json",      name:"GB/T 18890 超高压附件卷(79分)", std:"GB/T 18890", _count:41}
+    "gbt_19666_full":   {file:"data/gbt_19666_full.json",      name:"GB/T 19666 阻燃耐火卷(64分)", std:"GB/T 19666", _count:41},
+    "gbt_9330_full":    {file:"data/gbt_9330_full.json",       name:"GB/T 9330 控制电缆卷(64分)", std:"GB/T 9330", _count:41},
+    "gbt_12706_full":   {file:"data/gbt_12706_full.json",      name:"GB/T 12706.3 电力电缆卷(64分)", std:"GB/T 12706", _count:41},
+    "gbt_5013_full":    {file:"data/gbt_5013_full.json",       name:"GB/T 5013.3 橡皮绝缘卷(64分)", std:"GB/T 5013", _count:41},
+    "gbt_8735_full":    {file:"data/gbt_8735_full.json",       name:"JB/T 8735.2 橡皮软电缆卷(64分)", std:"JB/T 8735", _count:41},
+    "gbt_11017_full":   {file:"data/gbt_11017_full.json",      name:"GB/T 11017 超高压电缆卷(64分)", std:"GB/T 11017", _count:41},
+    "gbt_18890_full":   {file:"data/gbt_18890_full.json",      name:"GB/T 18890 超高压附件卷(64分)", std:"GB/T 18890", _count:41}
   },
   study: {
     "gbt_2951_materials":     {file:"data/gbt_2951_materials.json",      name:"GB/T 2951 学习材料(54节)"},
