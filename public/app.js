@@ -87,38 +87,52 @@ function parseHash(){
 }
 function nav(){ const {path,q}=parseHash();
   document.querySelectorAll(".bar a").forEach(a=>a.classList.toggle("on", a.dataset.r===path));
-  const map={home:home, exam:exam, study:study, flashcards:flashcards, terminology:terminology, builder:builder, syllabus:syllabus, "syllabus-weight":syllabusWeight, feedback:feedback};
+  const map={home:home, exam:exam, flashcards:flashcards, terminology:terminology, builder:builder, "syllabus-weight":syllabusWeight, feedback:feedback};
   (map[path]||home)(q);
 }
 
-// ---------- 首页 ----------
+// ---------- 首页：进度仪表盘 ----------
 function home(){
+  // 自测进度（localStorage 累计）
+  let scores=[]; try{ scores=JSON.parse(localStorage.getItem("exam_scores")||"[]"); }catch(e){}
+  const doneSets=scores.length;
+  const avg=doneSets? Math.round(scores.reduce((a,s)=>a+(s.pct||0),0)/doneSets) : null;
+  // 闪卡复习进度（SM-2）
+  let fcTotal=0, fcDone=0, fcDue=0, now=Date.now();
+  Object.keys(ASSETS.decks).forEach(k=>{
+    try{
+      const prog=JSON.parse(localStorage.getItem("fc_"+k)||"{}");
+      fcTotal+=(ASSETS.decks[k]._count||0);
+      Object.keys(prog).forEach(id=>{ const p=prog[id]; if(p&&p.reps>0){ fcDone++; if(p.due<=now) fcDue++; } });
+    }catch(e){}
+  });
   const bankKeys=Object.keys(ASSETS.banks);
-  const studyKeys=Object.keys(ASSETS.study);
-  const deckKeys=Object.keys(ASSETS.decks);
-  const totalQ=bankKeys.reduce((s,k)=>{const b=ASSETS.banks[k];return s+(b._count||0);},0);
-  const totalC=deckKeys.reduce((s,k)=>{const d=ASSETS.decks[k];return s+(d._count||0);},0);
+  const totalQ=bankKeys.reduce((s,k)=>s+(ASSETS.banks[k]._count||0),0);
+  const totalC=Object.keys(ASSETS.decks).reduce((s,k)=>s+(ASSETS.decks[k]._count||0),0);
 
-  let bankTiles=bankKeys.map(k=>{const b=ASSETS.banks[k];
-    return tile(`#/exam?bank=${k}`,`📝 ${b.name}`,`共${b._count||"?"}题 · 纯脚本即时判分`);}).join("");
-  let studyTiles=`<div style="grid-column:1/-1"><h3 style="margin:10px 0 6px">📖 学习材料</h3></div>`+
-    studyKeys.map(k=>tile(`#/study?m=${k}`,ASSETS.study[k].name,"标准解读 / Quiz / 易错点")).join("");
-  let deckTiles=`<div style="grid-column:1/-1"><h3 style="margin:10px 0 6px">🃏 闪卡库</h3></div>`+
-    deckKeys.map(k=>tile(`#/${k==="gbt_2951_flashcards"?"flashcards":"flashcards"}?deck=${k}`,ASSETS.decks[k].name,"浏览+SM-2学习模式")).join("");
-
-  app.innerHTML=`<h1>国缆检测杯 · 在线学习考试系统</h1>
-  <p class="sub">大模型出题 + 脚本判分 · 静态部署版（进度/反馈存本机浏览器）</p>
-  <div class="note">已收录 ${bankKeys} 套题库(${totalQ}题) / ${deckKeys} 套闪卡(${totalC}张) / ${studyKeys} 套学习材料。纯前端分享版，闭卷防作弊/跨设备同步需本机服务端。</div>
+  app.innerHTML=`<h1>国缆检测杯 · 在线考试系统</h1>
+  <p class="sub">出考题 · 出考卷 · 做测试（进度存本机浏览器）</p>
+  <div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(200px,1fr))">
+    ${stat("📝 自测练习", doneSets? doneSets+" 套" : "未开始", avg!=null? "平均正确率 "+avg+"%" : "去自测卷练手 →")}
+    ${stat("🃏 闪卡复习", fcDone? fcDone+" / "+fcTotal+" 张" : "未开始", fcDue>0? fcDue+" 张待复习" : (fcDone? "已覆盖到期复习" : "SM-2 记忆曲线"))}
+    ${stat("📚 题库规模", bankKeys.length+" 套题库", totalQ+" 题 · "+totalC+" 闪卡")}
+    ${stat("📊 大纲权重", "125 知识点", "19 条熟练掌握优先")}
+  </div>
+  <h3 style="margin:24px 0 8px">快捷入口</h3>
   <div class="grid">
-    <div style="grid-column:1/-1"><h3 style="margin:0 0 6px">📝 自测题库</h3></div>${bankTiles}
-    ${studyTiles}
-    ${deckTiles}
-    ${tile("#/terminology","🔤 术语库","70条电缆检验术语，搜索+分类")}
+    ${tile("#/exam","📝 自测卷","按标准套卷 · 即时判分")}
     ${tile("#/builder","🎯 出卷器","跨标准按权重抽题组卷")}
-    ${tile("#/syllabus","📋 考试大纲","2026竞赛复习大纲125条知识点")}
-    ${tile("#/syllabus-weight","📊 大纲权重","认知层次占比·熟练掌握→教材映射")}
-    ${tile("#/feedback","💬 反馈","报错/建议收集（形成本地日志）")}
+    ${tile("#/syllabus-weight","📊 大纲权重","认知层次占比·教材映射")}
+    ${tile("#/flashcards","🃏 闪卡","SM-2 记忆模式")}
+    ${tile("#/terminology","🔤 术语库","70 条检验术语")}
+    ${tile("#/feedback","💬 反馈","报错 / 建议")}
   </div>`;
+}
+function stat(title, big, sub){
+  return `<div class="card" style="text-align:center;padding:18px 12px">
+    <div class="muted" style="font-size:13px">${esc(title)}</div>
+    <div style="font-size:1.55rem;font-weight:700;color:var(--blue);margin:8px 0 2px">${esc(big)}</div>
+    <div class="muted" style="font-size:12px">${esc(sub)}</div></div>`;
 }
 function tile(h,t,d){return `<a class="tile" href="${h}"><h3>${t}</h3><p>${d}</p></a>`;}
 
@@ -168,6 +182,7 @@ async function exam(q){
   window.W.grade=()=>{
     const r=Grade.gradeAll(bank,A);
     const maxTotal=(bank.meta&&bank.meta.total)||(function(){let t=0;["choice","judge","fill"].forEach(s=>(bank[s]||[]).forEach(it=>{t+=(it.points||0);}));(bank.calc||[]).forEach(it=>{(it.subs||[]).forEach(su=>{if(su[3])t+=su[3];});});return t||100;})();
+    try{ const _sc=JSON.parse(localStorage.getItem("exam_scores")||"[]"); _sc.push({name:title,got:r.got.total,max:maxTotal,pct:Math.round(100*r.got.total/maxTotal),t:Date.now()}); localStorage.setItem("exam_scores",JSON.stringify(_sc.slice(-200))); }catch(e){}
     let out=`<div class="card"><div class="score">总分：<span class="n">${r.got.total}</span> / ${maxTotal}</div>
       <div class="muted">选择 ${r.got.choice} · 判断 ${r.got.judge} · 填空 ${r.got.fill} · 计算 ${r.got.calc}</div></div>`;
     const show=(arr,type,getAns,getCorr)=>{
@@ -318,34 +333,7 @@ async function downloadAnswer(){
   saveAs(blob,name);
 }
 
-// ---------- 学习页 ----------
-async function study(q){
-  const keys=Object.keys(ASSETS.study);
-  const key=q.m||(keys[0]||"");
-  if(!key || !ASSETS.study[key]){ app.innerHTML=`<h1>学习页</h1><div class="empty">暂无学习材料</div>`; return; }
-  const m=await load(ASSETS.study[key].file);
-  let selHtml=`<div class="card" style="margin-bottom:12px"><b>选择材料：</b> <select onchange="location.hash='#/study?m='+this.value">${keys.map(k=>`<option value="${k}" ${k===key?'selected':''}>${esc(ASSETS.study[k].name)}</option>`).join("")}</select></div>`;
-  let html=`<h1>学习页</h1>${selHtml}<p class="sub">${esc(ASSETS.study[key].name)}</p>`;
-  if(m.summary) html+=`<div class="card">${esc(m.summary)}</div>`;
-  if(m.quiz) m.quiz.forEach((x,i)=>{html+=`<div class="card"><b>Q${i+1}. ${esc(x.q)}</b><div class="muted" style="margin-top:6px">${esc(x.a)}</div></div>`;});
-  if(m.key_points) html+=`<div class="card"><b>记忆要点</b><ul>${m.key_points.map(p=>`<li>${esc(p)}</li>`).join("")}</ul></div>`;
-  if(m.interpretations) m.interpretations.forEach(s=>{html+=`<div class="card">${esc(s)}</div>`;});
-  // 渲染 sections[]（当前数据格式：summary/quiz/pitfall/key_table/flashcard）
-  (m.sections||[]).forEach(s=>{
-    if(s.type==="summary"){ html+=`<div class="card"><h3 style="margin:0 0 6px">${esc(s.title||"概述")}</h3><div>${esc(s.body||"")}</div></div>`; }
-    else if(s.type==="flashcard"){ /* 闪卡类型归属闪卡页，学习页跳过 */ }
-    else if(s.type==="key_table"){
-      const cols=(s.columns||[]).map(c=>`<th>${esc(c)}</th>`).join("");
-      const rows=(s.rows||[]).map(r=>`<tr>${r.map(v=>`<td>${esc(v)}</td>`).join("")}</tr>`).join("");
-      html+=`<div class="card"><b>${esc(s.title||"参数表")}</b><table class="ktab"><tr>${cols}</tr>${rows}</table><div class="muted">来源：${esc(s.src||"")}</div></div>`;
-    }
-    else if(s.type==="quiz"){ html+=`<div class="card"><b>Q. ${esc(s.q||"")}</b><div class="muted" style="margin-top:6px">答：${esc(s.a||"")}</div>${s.explain?`<div class="muted">解析：${esc(s.explain)}</div>`:""}<div class="muted">来源：${esc(s.src||"")}</div></div>`; }
-    else if(s.type==="pitfall"){ html+=`<div class="card note"><b>⚠ 易错点</b><div>${esc(s.desc||"")}</div><div class="muted" style="margin-top:6px">正确：${esc(s.correct||"")}</div><div class="muted">来源：${esc(s.src||"")}</div></div>`; }
-    else { html+=`<div class="card">${esc(s.title||"")} ${esc(s.body||"")}</div>`; }
-  });
-  if(!m.summary&&!m.quiz&&!m.key_points&&!m.interpretations&&!(m.sections&&m.sections.length)) html+=`<div class="empty">该学习材料暂无结构化内容</div>`;
-  app.innerHTML=html;
-}
+// ---------- 学习页（已移除：系统定位为出考题/出考卷/做测试，不含学习模块） ----------
 
 // ---------- 闪卡 ----------
 async function flashcards(q){
@@ -425,8 +413,10 @@ async function flashcards(q){
 
 // ---------- 术语库 ----------
 async function terminology(){
-  const d=await load(ASSETS.term);
-  const terms=d.terms||[];
+  let d;
+  try{ d=await load(ASSETS.term); }catch(e){ app.innerHTML=`<h1>术语库</h1><div class="empty">术语数据加载失败：${esc(e.message||e)}</div>`; return; }
+  const terms=Array.isArray(d)?d:((d&&d.terms)||[]);
+  if(!terms.length){ app.innerHTML=`<h1>术语库</h1><div class="empty">暂无术语数据</div>`; return; }
   const cats=[...new Set(terms.map(t=>t.category||"其他"))];
   let kw="",cat="";
   function render(){
@@ -609,22 +599,7 @@ async function builder(){
   await render();
 }
 
-// ---------- 考试大纲 ----------
-async function syllabus(){
-  const d=await load(ASSETS.syll);
-  const items=d.items||[];
-  let kw="";
-  function render(){
-    const list=items.filter(it=>!kw||(it.topic+it.requirement+(it.ref_standards||[]).join("")).toLowerCase().includes(kw.toLowerCase()));
-    let html=`<h1>考试大纲</h1><p class="sub">${esc(d.meta&&d.meta.name||"2026竞赛复习大纲")}　·　${items.length} 条知识点</p>
-      <div class="card"><input type="search" placeholder="搜索知识点…" value="${esc(kw)}" oninput="W['sk'](this.value)"><span class="muted"> ${list.length} 条</span></div>
-      <div class="card"><table><tr><th>模块</th><th>分类</th><th>知识点</th><th>依据标准</th></tr>
-      ${list.slice(0,300).map(it=>`<tr><td>${esc(it.part)}</td><td>${esc(it.category)}</td><td>${esc(it.topic)}</td><td class="muted">${(it.ref_standards||[]).join("、")||"—"}</td></tr>`).join("")}</table></div>`;
-    app.innerHTML=html;
-  }
-  window.W=window.W||{}; window.W.sk=v=>{kw=v;render();};
-  render();
-}
+// ---------- 考试大纲（已移除：由「大纲权重」取代） ----------
 
 // ---------- 大纲认知层次权重 ----------
 async function syllabusWeight(){
@@ -660,8 +635,7 @@ async function syllabusWeight(){
   }
   const byLvl={}; ORDER.forEach(L=>byLvl[L]=[]);
   items.forEach(it=>byLvl[lvlOf(it)].push(it));
-  let html=`  <div style="margin-bottom:10px"><a class="back" href="#/syllabus">← 返回考试大纲</a></div>
-  <h1>大纲认知层次权重</h1>
+  let html=`<h1>大纲认知层次权重</h1>
   <p class="sub">2026竞赛复习大纲 · 认知层次：了解 &lt; 熟悉 &lt; 掌握 &lt; 熟练掌握（决定命题深度与权重）</p>
   <div class="card"><h3>① 四层权重总览（共 ${total} 条）</h3>
     ${ORDER.map(L=>`<div style="margin:10px 0">
