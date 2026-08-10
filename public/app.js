@@ -660,7 +660,8 @@ async function syllabusWeight(){
   }
   const byLvl={}; ORDER.forEach(L=>byLvl[L]=[]);
   items.forEach(it=>byLvl[lvlOf(it)].push(it));
-  let html=`<h1>大纲认知层次权重</h1>
+  let html=`  <div style="margin-bottom:10px"><a class="back" href="#/syllabus">← 返回考试大纲</a></div>
+  <h1>大纲认知层次权重</h1>
   <p class="sub">2026竞赛复习大纲 · 认知层次：了解 &lt; 熟悉 &lt; 掌握 &lt; 熟练掌握（决定命题深度与权重）</p>
   <div class="card"><h3>① 四层权重总览（共 ${total} 条）</h3>
     ${ORDER.map(L=>`<div style="margin:10px 0">
