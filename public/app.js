@@ -18,7 +18,14 @@ const ASSETS = {
     "gbt_others_full":   {file:"data/gbt_others_full.json",      name:"产品标准合集卷(67分)", std:"其他标准", _count:32},
     "gbt_5023_full":    {file:"data/gbt_5023_full.json",      name:"GB/T 5023 聚氯乙烯绝缘电缆卷(67分)", std:"GB/T 5023", _count:27},
     "gbt_8734_full":    {file:"data/gbt_8734_full.json",      name:"JB/T 8734 聚氯乙烯绝缘电线卷(71分)", std:"JB/T 8734", _count:29},
-    "gbt_10491_full":   {file:"data/gbt_10491_full.json",     name:"JB/T 10491 交联聚烯烃绝缘电缆卷(64分)", std:"JB/T 10491", _count:27}
+    "gbt_10491_full":   {file:"data/gbt_10491_full.json",     name:"JB/T 10491 交联聚烯烃绝缘电缆卷(64分)", std:"JB/T 10491", _count:27},
+    "gbt_19666_full":   {file:"data/gbt_19666_full.json",      name:"GB/T 19666 阻燃耐火卷(79分)", std:"GB/T 19666", _count:41},
+    "gbt_9330_full":    {file:"data/gbt_9330_full.json",       name:"GB/T 9330 控制电缆卷(79分)", std:"GB/T 9330", _count:41},
+    "gbt_12706_full":   {file:"data/gbt_12706_full.json",      name:"GB/T 12706.3 电力电缆卷(79分)", std:"GB/T 12706", _count:41},
+    "gbt_5013_full":    {file:"data/gbt_5013_full.json",       name:"GB/T 5013.3 橡皮绝缘卷(79分)", std:"GB/T 5013", _count:41},
+    "gbt_8735_full":    {file:"data/gbt_8735_full.json",       name:"JB/T 8735.2 橡皮软电缆卷(79分)", std:"JB/T 8735", _count:41},
+    "gbt_11017_full":   {file:"data/gbt_11017_full.json",      name:"GB/T 11017 超高压电缆卷(79分)", std:"GB/T 11017", _count:41},
+    "gbt_18890_full":   {file:"data/gbt_18890_full.json",      name:"GB/T 18890 超高压附件卷(79分)", std:"GB/T 18890", _count:41}
   },
   study: {
     "gbt_2951_materials":     {file:"data/gbt_2951_materials.json",      name:"GB/T 2951 学习材料(54节)"},
@@ -29,7 +36,14 @@ const ASSETS = {
     "gbt_others_full_materials":{file:"data/gbt_others_full_materials.json",name:"产品标准合集 学习材料(44节)"},
     "gbt_5023_full_materials":{file:"data/gbt_5023_full_materials.json",name:"GB/T 5023 学习材料(31节)"},
     "gbt_8734_full_materials":{file:"data/gbt_8734_full_materials.json",name:"JB/T 8734 学习材料(43节)"},
-    "gbt_10491_full_materials":{file:"data/gbt_10491_full_materials.json",name:"JB/T 10491 学习材料(38节)"}
+    "gbt_10491_full_materials":{file:"data/gbt_10491_full_materials.json",name:"JB/T 10491 学习材料(38节)"},
+    "gbt_19666_materials":    {file:"data/gbt_19666_full_materials.json", name:"GB/T 19666 阻燃耐火材料(23节)"},
+    "gbt_9330_materials":     {file:"data/gbt_9330_full_materials.json",  name:"GB/T 9330 控制电缆材料(18节)"},
+    "gbt_12706_materials":    {file:"data/gbt_12706_full_materials.json", name:"GB/T 12706.3 电力电缆材料(21节)"},
+    "gbt_5013_materials":     {file:"data/gbt_5013_full_materials.json",  name:"GB/T 5013.3 橡皮绝缘材料(19节)"},
+    "gbt_8735_materials":     {file:"data/gbt_8735_full_materials.json",  name:"JB/T 8735.2 橡皮软电缆材料(20节)"},
+    "gbt_11017_materials":    {file:"data/gbt_11017_full_materials.json", name:"GB/T 11017 超高压电缆材料(20节)"},
+    "gbt_18890_materials":    {file:"data/gbt_18890_full_materials.json", name:"GB/T 18890 超高压附件材料(22节)"}
   },
   decks: {
     "gbt_2951_flashcards":    {file:"data/gbt_2951_flashcards.json",    name:"GB/T 2951 闪卡(43张)", _count:43},
@@ -40,7 +54,14 @@ const ASSETS = {
     "gbt_others_full_flashcards":{file:"data/gbt_others_full_flashcards.json",name:"产品标准合集 闪卡(32张)", _count:32},
     "gbt_5023_full_flashcards":{file:"data/gbt_5023_full_flashcards.json",name:"GB/T 5023 闪卡(27张)", _count:27},
     "gbt_8734_full_flashcards":{file:"data/gbt_8734_full_flashcards.json",name:"JB/T 8734 闪卡(29张)", _count:29},
-    "gbt_10491_full_flashcards":{file:"data/gbt_10491_full_flashcards.json",name:"JB/T 10491 闪卡(27张)", _count:27}
+    "gbt_10491_full_flashcards":{file:"data/gbt_10491_full_flashcards.json",name:"JB/T 10491 闪卡(27张)", _count:27},
+    "gbt_19666_flashcards":   {file:"data/gbt_19666_full_flashcards.json", name:"GB/T 19666 阻燃耐火闪卡(30张)", _count:30},
+    "gbt_9330_flashcards":    {file:"data/gbt_9330_full_flashcards.json",  name:"GB/T 9330 控制电缆闪卡(30张)", _count:30},
+    "gbt_12706_flashcards":   {file:"data/gbt_12706_full_flashcards.json", name:"GB/T 12706.3 电力电缆闪卡(30张)", _count:30},
+    "gbt_5013_flashcards":    {file:"data/gbt_5013_full_flashcards.json",  name:"GB/T 5013.3 橡皮绝缘闪卡(30张)", _count:30},
+    "gbt_8735_flashcards":    {file:"data/gbt_8735_full_flashcards.json",  name:"JB/T 8735.2 橡皮软电缆闪卡(30张)", _count:30},
+    "gbt_11017_flashcards":   {file:"data/gbt_11017_full_flashcards.json", name:"GB/T 11017 超高压闪卡(30张)", _count:30},
+    "gbt_18890_flashcards":   {file:"data/gbt_18890_full_flashcards.json", name:"GB/T 18890 超高压附件闪卡(38张)", _count:38}
   },
   term:  "data/terminology_v1.json",
   syll:  "data/syllabus_2026.json"
@@ -66,7 +87,7 @@ function parseHash(){
 }
 function nav(){ const {path,q}=parseHash();
   document.querySelectorAll(".bar a").forEach(a=>a.classList.toggle("on", a.dataset.r===path));
-  const map={home:home, exam:exam, study:study, flashcards:flashcards, terminology:terminology, builder:builder, syllabus:syllabus, feedback:feedback};
+  const map={home:home, exam:exam, study:study, flashcards:flashcards, terminology:terminology, builder:builder, syllabus:syllabus, "syllabus-weight":syllabusWeight, feedback:feedback};
   (map[path]||home)(q);
 }
 
@@ -95,6 +116,7 @@ function home(){
     ${tile("#/terminology","🔤 术语库","70条电缆检验术语，搜索+分类")}
     ${tile("#/builder","🎯 出卷器","跨标准按权重抽题组卷")}
     ${tile("#/syllabus","📋 考试大纲","2026竞赛复习大纲125条知识点")}
+    ${tile("#/syllabus-weight","📊 大纲权重","认知层次占比·熟练掌握→教材映射")}
     ${tile("#/feedback","💬 反馈","报错/建议收集（形成本地日志）")}
   </div>`;
 }
@@ -602,6 +624,73 @@ async function syllabus(){
   }
   window.W=window.W||{}; window.W.sk=v=>{kw=v;render();};
   render();
+}
+
+// ---------- 大纲认知层次权重 ----------
+async function syllabusWeight(){
+  const d=await load(ASSETS.syll);
+  const items=d.items||[];
+  const ORDER=["了解","熟悉","掌握","熟练掌握"];
+  const COLORS={"了解":"#9aa7b5","熟悉":"#3b82f6","掌握":"#f59e0b","熟练掌握":"#ef4444"};
+  function lvlOf(it){
+    const cl=it.cognitive_level;
+    if(ORDER.indexOf(cl)>=0) return cl;
+    const req=it.requirement||"";
+    for(const L of ORDER){ if(req.indexOf(L)>=0) return L; }
+    return "了解";
+  }
+  const cnt={}; ORDER.forEach(L=>cnt[L]=0);
+  items.forEach(it=>{ cnt[lvlOf(it)]++; });
+  const total=items.length;
+  const pct=n=>(100*n/total).toFixed(1)+"%";
+  function textbooksFor(std){
+    const s=std||"";
+    if(s.indexOf("2951")>=0) return "《电缆产品检验-非电性能检验》第三/四/五章（绝缘护套通用/弹性体/聚氯乙烯）";
+    if(s.indexOf("3048")>=0) return "《电缆产品检验-电性能检验》第二/四章（通用电性能/原始记录）";
+    if(s.indexOf("19666")>=0) return "《电缆产品检验-非电性能检验》第七章（燃烧性能）";
+    if(s.indexOf("3956")>=0) return "《电缆产品检验-电性能检验》第一章（导体）";
+    return "对应教材相关章节";
+  }
+  function productsFor(std){
+    const s=std||"";
+    if(s.indexOf("2951")>=0||s.indexOf("3048")>=0||s.indexOf("19666")>=0)
+      return "GB/T 11017 / 18890 / 12706 / 5023 / 8734 / 5013 / 9330 等（按产品类型取用）";
+    if(s.indexOf("3956")>=0) return "GB/T 5023 / 8734 / 5013 / 9330 / 12706 等";
+    return "—";
+  }
+  const byLvl={}; ORDER.forEach(L=>byLvl[L]=[]);
+  items.forEach(it=>byLvl[lvlOf(it)].push(it));
+  let html=`<h1>大纲认知层次权重</h1>
+  <p class="sub">2026竞赛复习大纲 · 认知层次：了解 &lt; 熟悉 &lt; 掌握 &lt; 熟练掌握（决定命题深度与权重）</p>
+  <div class="card"><h3>① 四层权重总览（共 ${total} 条）</h3>
+    ${ORDER.map(L=>`<div style="margin:10px 0">
+      <div style="display:flex;justify-content:space-between"><b style="color:${COLORS[L]}">${L}</b><span class="muted">${cnt[L]} 条 · ${pct(cnt[L])}</span></div>
+      <div style="height:14px;background:var(--bd);border-radius:7px;overflow:hidden"><div style="height:100%;width:${pct(cnt[L])};background:${COLORS[L]}"></div></div>
+    </div>`).join("")}
+    <div class="note">命题深度权重：熟练掌握(${cnt["熟练掌握"]}) &gt; 掌握(${cnt["掌握"]}) &gt; 熟悉(${cnt["熟悉"]}) &gt; 了解(${cnt["了解"]})。复习策略：先死磕 ${cnt["熟练掌握"]} 条熟练掌握 + ${cnt["掌握"]} 条掌握（占深度大头），了解点到为止。</div>
+  </div>
+  <div class="card"><h3>② 熟练掌握 → 教材 / 依据标准 / 关联产品标准</h3>
+    <p class="muted">竞赛对动手操作要求极高，以下 ${byLvl["熟练掌握"].length} 条「熟练掌握」最该优先（实操为主 + 少量理论）。</p>
+    <table><tr><th>知识点</th><th>依据标准</th><th>教材对应</th><th>关联产品标准</th></tr>
+    ${byLvl["熟练掌握"].map(it=>`<tr><td>${esc(it.topic)}</td><td class="muted">${(it.ref_standards||[]).join("、")||"—"}</td><td>${textbooksFor((it.ref_standards||[]).join(" "))}</td><td class="muted">${productsFor((it.ref_standards||[]).join(" "))}</td></tr>`).join("")}
+    </table>
+  </div>
+  <div class="card"><h3>③ 125 条按层次分组（点击展开）</h3>
+    ${ORDER.slice().reverse().map(L=>`<details><summary><b style="color:${COLORS[L]}">${L}</b> · ${byLvl[L].length} 条</summary>
+      <table><tr><th>模块</th><th>分类</th><th>知识点</th><th>依据标准</th></tr>
+      ${byLvl[L].map(it=>`<tr><td>${esc(it.part)}</td><td>${esc(it.category)}</td><td>${esc(it.topic)}</td><td class="muted">${(it.ref_standards||[]).join("、")||"—"}</td></tr>`).join("")}
+      </table></details>`).join("")}
+  </div>
+  <div class="card"><h3>④ 出题 / 闪卡占比建议</h3>
+    <ul>
+      <li><b>熟练掌握</b>：必出且可多题/高权重（操作类优先出实操步骤题）。</li>
+      <li><b>掌握</b>：高权出题，覆盖计算/判定。</li>
+      <li><b>熟悉</b>：中等权重，概念/辨析为主。</li>
+      <li><b>了解</b>：少出，点到为止（占分低）。</li>
+    </ul>
+    <div class="note">本地 Flask 版出题已按此权重加权（guideline.py 认知层次权重）；线上版出卷器/闪卡如需同权重，需在 public/app.js 接入本层次。</div>
+  </div>`;
+  app.innerHTML=html;
 }
 
 // ---------- 反馈（三类 + 划词题干识别 + 双写 localStorage/后端） ----------
