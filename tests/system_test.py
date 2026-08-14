@@ -33,7 +33,7 @@ sys.path.insert(0, KB)
 NODE = r"C:/Users/ZT-052382/.workbuddy/binaries/node/versions/22.22.2/node.exe"
 PY = sys.executable
 
-STD_RE = re.compile(r"^(GB/T|GB|JB/T|JB|IEC)\s?\d+(\.\d+)*(-\d{4})?$")
+STD_RE = re.compile(r"^(GB/T|GB|JB/T|JB|IEC|YB/T|YB)\s?\d+(\.\d+)*(-\d{4})?$")
 
 # ---------------------------------------------------------------- 结果收集
 RESULTS = []

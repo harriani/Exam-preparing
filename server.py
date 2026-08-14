@@ -41,7 +41,15 @@ FEEDBACK_LOG = os.path.join(DATA, "feedback.log")
 FC_PROGRESS = os.path.join(DATA, "flashcard_progress.json")
 SYLLABUS = os.path.join(MATERIALS, "syllabus_2026.json")
 sys.path.insert(0, ENGINE)
-import generate  # 复用 grade_all / grade_judge 等
+try:
+    import generate  # 复用 grade_all / grade_judge 等（判分真源）
+except Exception as _ge:
+    # engine/generate.py 偶发损坏（含空字节）时不阻断服务；仅判分接口受影响
+    generate = None
+    print(f"[warn] engine/generate.py 不可用，判分接口将返回 503：{_ge}", file=sys.stderr)
+KB = os.path.join(HERE, "kb")
+sys.path.insert(0, KB)
+import query_links  # 知识库结构化链接查询层（只读消费）
 
 PORT = int(sys.argv[1]) if len(sys.argv) > 1 else 3000
 
@@ -232,6 +240,61 @@ def load_syllabus():
     if not os.path.isfile(SYLLABUS):
         return None
     return json.load(open(SYLLABUS, encoding="utf-8"))
+
+# ----------------------------------------------------------------------------
+# 知识库结构化链接导航页（证明链接真实可查，而非仅展示层 JSON）
+def kb_nav_html():
+    li = json.load(open(os.path.join(HERE, "public", "data", "link_index.json"), encoding="utf-8"))
+    opts = "".join(
+        f'<option value="{esc(sid)}">{esc(sid)} · {(it.get("topic") or it.get("requirement") or "")[:40]}</option>'
+        for sid, it in li.get("syllabus", {}).items())
+    exps = "".join(f'<option value="{esc(e)}">{esc(e)}</option>' for e in li.get("by_experiment", {}).keys())
+    stds = "".join(f'<option value="{esc(s)}">{esc(s)}</option>' for s in li.get("by_standard", {}).keys())
+    return f"""<!doctype html><html lang=zh><head><meta charset=utf-8>
+<title>知识库结构化链接导航</title><style>{CSS}</style></head><body>
+<nav><a href="/">首页</a><a href="/flashcards">闪卡库</a><a href="/terminology">术语库</a><a href="/syllabus">考试大纲</a><a href="/scores">成绩</a><a href="/weak">弱项</a><a href="/feedback">反馈</a></nav>
+<h1>知识库结构化链接导航</h1>
+<div style="color:#666;font-size:14px">大纲 → 实验 → 标准 → 知识单元 / 产品标准特殊规定。链接已写入 kb.db（knowledge_units / ku_links / product_special 三表），此处为只读查询。</div>
+<div class="card">
+  <div>按大纲：<select id=sel_sid onchange="go('sid',this.value)"><option value="">—</option>{opts}</select></div>
+  <div style="margin-top:8px">按实验：<select id=sel_exp onchange="go('exp',this.value)"><option value="">—</option>{exps}</select></div>
+  <div style="margin-top:8px">按标准：<select id=sel_std onchange="go('std',this.value)"><option value="">—</option>{stds}</select></div>
+  <div style="margin-top:8px">搜索：<input id=sel_q placeholder="关键词，如 局放 / 导体电阻" onkeydown="if(event.key==='Enter')go('q',this.value)"></div>
+</div>
+<div id=out></div>
+<script>
+function go(k,v){{if(!v)return; fetch('/api/kb?'+k+'='+encodeURIComponent(v)).then(r=>r.json()).then(render).catch(e=>document.getElementById('out').innerHTML='<span class=bad>'+e+'</span>');}}
+function render(d){{
+  if(d.error){{document.getElementById('out').innerHTML='<div class=bad>'+esc(d.error)+'</div>';return;}}
+  let h='';
+  if(d.syllabus_id){{
+    h+='<h2>大纲 '+esc(d.syllabus_id)+'：'+esc(d.topic||'')+'</h2>';
+    h+='<div class=card>认知：'+(d.cognitive_level||'—')+' ｜ 权重：'+(d.weight??'—')+' ｜ 路线：'+(d.ref_route||'—')+'</div>';
+    h+='<div class=card><b>实验（'+d.experiments.length+'）：</b> '+d.experiments.map(e=>'<span class=tag>'+esc(e)+'</span>').join(' ')+'</div>';
+    h+='<div class=card><b>涉及标准：</b> '+d.standard_dist.map(s=>'<span class=tag>'+esc(s.standard_no)+' '+s.n+'</span>').join(' ')+'</div>';
+    if(d.product_special&&d.product_special.length){{h+='<div class=card"><b>产品标准特殊规定：</b><br>'+d.product_special.map(p=>p.product_std+'（'+(p.special_params&&p.special_params.length?p.special_params.length+' 条':'数值见方法标准')+'）').map(x=>'<span class=tag>'+esc(x)+'</span>').join(' ')+'</div>';}}
+    h+='<div class=card"><b>知识单元 '+d.ku_count+' 条</b>（按标准分组）：</div>';
+    h+=d.knowledge_units.slice(0,200).map(k=>'<div style="padding:3px 0;border-bottom:1px solid #f0f0f0">['+esc(k.tier)+'] '+esc(k.title)+' <span class=src>'+esc((k.ref_standards||[]).join(','))+'</span></div>').join('');
+  }} else if(d.experiment){{
+    h+='<h2>实验 '+esc(d.experiment)+'</h2>';
+    h+='<div class=card>关联大纲：'+d.related_syllabus.map(s=>'<span class=tag>'+esc(s)+'</span>').join(' ')+'</div>';
+    h+='<div class=card>产品特殊规定：'+d.product_special.map(p=>'<span class=tag>'+esc(p.product_std)+' '+(p.special_params.length)+'条</span>').join(' ')+'</div>';
+    h+='<div class=card><b>知识单元 '+d.ku_count+' 条</b></div>';
+    h+=d.knowledge_units.slice(0,200).map(k=>'<div style="padding:3px 0;border-bottom:1px solid #f0f0f0">['+esc(k.tier)+'] '+esc(k.title)+' <span class=src>'+esc((k.syllabus_ids||[]).join(','))+'</span></div>').join('');
+  }} else if(d.standard){{
+    h+='<h2>标准 '+esc(d.standard)+'</h2>';
+    h+='<div class=card>关联大纲：'+d.related_syllabus.map(s=>'<span class=tag>'+esc(s)+'</span>').join(' ')+'</div>';
+    h+='<div class=card><b>知识单元 '+d.ku_count+' 条</b></div>';
+    h+=d.knowledge_units.slice(0,200).map(k=>'<div style="padding:3px 0;border-bottom:1px solid #f0f0f0">['+esc(k.tier)+'] '+esc(k.title)+' <span class=src>'+esc((k.experiment||[]).join(','))+'</span></div>').join('');
+  }} else if(Array.isArray(d)){{
+    h+='<h2>搜索结果 '+d.length+' 条</h2>';
+    h+=d.map(k=>'<div style="padding:3px 0;border-bottom:1px solid #f0f0f0">['+esc(k.tier)+'] '+esc(k.title)+' <span class=src>'+esc((k.syllabus_ids||[]).join(','))+'</span></div>').join('');
+  }}
+  document.getElementById('out').innerHTML=h;
+}}
+function esc(s){{return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}}
+</script>
+</body></html>"""
 
 # ----------------------------------------------------------------------------
 def dashboard_html():
@@ -779,6 +842,33 @@ class Handler(http.server.BaseHTTPRequestHandler):
             return self._send(200, terminology_html(f))
         if path == "/syllabus":
             return self._send(200, syllabus_html())
+        if path == "/kb":
+            return self._send(200, kb_nav_html())
+        if path == "/api/kb":
+            sid = q.get("sid", [None])[0]
+            exp = q.get("exp", [None])[0]
+            std = q.get("std", [None])[0]
+            kw = q.get("q", [None])[0]
+            try:
+                if sid:
+                    res = query_links.nav_syllabus(sid)
+                elif exp:
+                    res = query_links.nav_experiment(exp)
+                elif std:
+                    res = query_links.nav_standard(std)
+                elif kw:
+                    res = query_links.search_kb(kw)
+                else:
+                    res = {"error": "需要 sid / exp / std / q 之一"}
+            except Exception as e:
+                res = {"error": str(e)}
+            return self._send(200, json.dumps(res, ensure_ascii=False), "application/json; charset=utf-8")
+        if path == "/api/syllabus_weights":
+            name = q.get("bank", [""])[0]
+            kp_counts = self.compute_syllabus_weights(name)
+            if kp_counts is None:
+                return self._send(404, json.dumps({"error": "no bank or syllabus"}), "application/json")
+            return self._send(200, json.dumps({"kp_counts": kp_counts}, ensure_ascii=False), "application/json; charset=utf-8")
         if path == "/scores":
             return self._send(200, scores_html())
         if path == "/weak":
@@ -827,6 +917,36 @@ class Handler(http.server.BaseHTTPRequestHandler):
             return self._send(200, open(fp, "rb").read())
         return self._send(404, "not found")
 
+    def compute_syllabus_weights(self, name):
+        """计算大纲认知层次加权后的知识点配额。GET/POST 共用。
+        name 为空或 bank/syllabus 不存在时返回 None。"""
+        bank = load_bank(name)
+        if not bank:
+            return None
+        sy = load_syllabus()
+        if not sy:
+            return None
+        cw = {"了解": 1, "熟悉": 2, "掌握": 3, "熟练掌握": 4}
+        std_weight = {}
+        for it in sy.get("items", []):
+            lvl = it.get("cognitive_level")
+            if not lvl:
+                continue
+            w = cw.get(lvl, 1)
+            for rs in it.get("ref_standards", []):
+                key = re.sub(r"[^A-Z0-9]", "", rs.upper())
+                std_weight[key] = max(std_weight.get(key, 0), w)
+        kp_counts = {}
+        for kp, cnt in group_by_kp(bank):
+            kn = re.sub(r"[^A-Z0-9]", "", kp.upper())
+            best = 0
+            for key, w in std_weight.items():
+                if kn.startswith(key) or key.startswith(kn):
+                    best = max(best, w)
+            if best:
+                kp_counts[kp] = min(best, cnt)
+        return kp_counts
+
     def do_POST(self):
         u = urllib.parse.urlparse(self.path)
         n = int(self.headers.get("Content-Length", 0))
@@ -845,6 +965,10 @@ class Handler(http.server.BaseHTTPRequestHandler):
                 bank = load_bank(name)
                 if not bank:
                     return self._send(404, json.dumps({"error": "no bank"}), "application/json")
+            if generate is None:
+                return self._send(503, json.dumps(
+                    {"error": "判分引擎(generate)当前不可用，请检查 engine/generate.py"}),
+                    "application/json")
             res = generate.grade_all(bank, answers)
             save_score({
                 "ts": datetime.now().strftime("%Y-%m-%d %H:%M"),
@@ -897,33 +1021,9 @@ class Handler(http.server.BaseHTTPRequestHandler):
             return self._send(200, json.dumps({"ok": True}, ensure_ascii=False), "application/json; charset=utf-8")
         if u.path == "/api/syllabus_weights":
             name = payload.get("bank", "")
-            bank = load_bank(name)
-            if not bank:
-                return self._send(404, json.dumps({"error": "no bank"}), "application/json")
-            sy = load_syllabus()
-            if not sy:
-                return self._send(404, json.dumps({"error": "no syllabus"}), "application/json")
-            # 认知层次 → 权重
-            cw = {"了解": 1, "熟悉": 2, "掌握": 3, "熟练掌握": 4}
-            # 标准前缀 → 最大权重
-            std_weight = {}
-            for it in sy.get("items", []):
-                lvl = it.get("cognitive_level")
-                if not lvl:
-                    continue
-                w = cw.get(lvl, 1)
-                for rs in it.get("ref_standards", []):
-                    key = re.sub(r"[^A-Z0-9]", "", rs.upper())
-                    std_weight[key] = max(std_weight.get(key, 0), w)
-            kp_counts = {}
-            for kp, cnt in group_by_kp(bank):
-                kn = re.sub(r"[^A-Z0-9]", "", kp.upper())
-                best = 0
-                for key, w in std_weight.items():
-                    if kn.startswith(key) or key.startswith(kn):
-                        best = max(best, w)
-                if best:
-                    kp_counts[kp] = min(best, cnt)
+            kp_counts = self.compute_syllabus_weights(name)
+            if kp_counts is None:
+                return self._send(404, json.dumps({"error": "no bank or syllabus"}), "application/json")
             return self._send(200, json.dumps({"kp_counts": kp_counts}, ensure_ascii=False), "application/json; charset=utf-8")
         return self._send(404, "not found")
 

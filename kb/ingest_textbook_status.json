@@ -1,0 +1,32 @@
+{
+  "ocr_elec": {
+    "state": "done",
+    "time": "15:11:46",
+    "err": null
+  },
+  "build_elec": {
+    "state": "fail",
+    "time": "15:11:47",
+    "err": "F:\\WorkBuddy\\2026-08-04-11-22-11\\learning-system-v2\\kb\\raw\\err_build_elec.log"
+  },
+  "ocr_nonelec": {
+    "state": "done",
+    "time": "07:42:08",
+    "err": null
+  },
+  "build_nonelec": {
+    "state": "fail",
+    "time": "07:42:08",
+    "err": "F:\\WorkBuddy\\2026-08-04-11-22-11\\learning-system-v2\\kb\\raw\\err_build_nonelec.log"
+  },
+  "rebuild_ku": {
+    "state": "done",
+    "time": "07:42:13",
+    "err": null
+  },
+  "build_links": {
+    "state": "done",
+    "time": "07:42:17",
+    "err": null
+  }
+}

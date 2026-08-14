@@ -13,8 +13,8 @@ const ASSETS = {
     "gbt_2951_11_12":   {file:"data/gbt_2951_11_12.json",   name:"GB/T 2951.11/12 卷(98分)", std:"GB/T 2951", _count:43},
     "gbt_3048_8":       {file:"data/gbt_3048_8.json",        name:"GB/T 3048.8-2025 卷(60分)", std:"GB/T 3048.8", _count:26},
     "gbt_3956":         {file:"data/gbt_3956.json",           name:"GB/T 3956-2008 卷(23分)", std:"GB/T 3956", _count:11},
-    "gbt_2951_full":    {file:"data/gbt_2951_full.json",      name:"GB/T 2951 全系卷(214分)", std:"GB/T 2951", _count:88},
-    "gbt_3048_full":    {file:"data/gbt_3048_full.json",      name:"GB/T 3048 全系卷(376分)", std:"GB/T 3048", _count:152},
+    "gbt_2951_full":    {file:"data/gbt_2951_full.json",      name:"GB/T 2951 全系卷(214分)", std:"GB/T 2951", _count:98},
+    "gbt_3048_full":    {file:"data/gbt_3048_full.json",      name:"GB/T 3048 全系卷(376分)", std:"GB/T 3048", _count:188},
     "gbt_others_full":   {file:"data/gbt_others_full.json",      name:"产品标准合集卷(67分)", std:"其他标准", _count:32},
     "gbt_5023_full":    {file:"data/gbt_5023_full.json",      name:"GB/T 5023 聚氯乙烯绝缘电缆卷(67分)", std:"GB/T 5023", _count:27},
     "gbt_8734_full":    {file:"data/gbt_8734_full.json",      name:"JB/T 8734 聚氯乙烯绝缘电线卷(71分)", std:"JB/T 8734", _count:29},
@@ -25,7 +25,10 @@ const ASSETS = {
     "gbt_5013_full":    {file:"data/gbt_5013_full.json",       name:"GB/T 5013.3 橡皮绝缘卷(64分)", std:"GB/T 5013", _count:41},
     "gbt_8735_full":    {file:"data/gbt_8735_full.json",       name:"JB/T 8735.2 橡皮软电缆卷(64分)", std:"JB/T 8735", _count:41},
     "gbt_11017_full":   {file:"data/gbt_11017_full.json",      name:"GB/T 11017 超高压电缆卷(64分)", std:"GB/T 11017", _count:41},
-    "gbt_18890_full":   {file:"data/gbt_18890_full.json",      name:"GB/T 18890 超高压附件卷(64分)", std:"GB/T 18890", _count:41}
+    "gbt_18890_full":   {file:"data/gbt_18890_full.json",      name:"GB/T 18890 超高压附件卷(64分)", std:"GB/T 18890", _count:41},
+    "gbt_18380_full":   {file:"data/gbt_18380_full.json",      name:"GB/T 18380 燃烧试验卷(22题)", std:"GB/T 18380", _count:22},
+    "telecom_exam":     {file:"data/telecom_exam_questions.json", name:"电信电缆检验员培训试题(网上题库)", std:"网上题库", _count:309, online:true},
+    "guojiabei_2021":   {file:"data/guojiabei_2021_full.json", name:"2021国缆杯·裸电线理论(87分)", std:"国缆杯2021", _count:55}
   },
   study: {
     "gbt_2951_materials":     {file:"data/gbt_2951_materials.json",      name:"GB/T 2951 学习材料(54节)"},
@@ -43,7 +46,8 @@ const ASSETS = {
     "gbt_5013_materials":     {file:"data/gbt_5013_full_materials.json",  name:"GB/T 5013.3 橡皮绝缘材料(19节)"},
     "gbt_8735_materials":     {file:"data/gbt_8735_full_materials.json",  name:"JB/T 8735.2 橡皮软电缆材料(20节)"},
     "gbt_11017_materials":    {file:"data/gbt_11017_full_materials.json", name:"GB/T 11017 超高压电缆材料(20节)"},
-    "gbt_18890_materials":    {file:"data/gbt_18890_full_materials.json", name:"GB/T 18890 超高压附件材料(22节)"}
+    "gbt_18890_materials":    {file:"data/gbt_18890_full_materials.json", name:"GB/T 18890 超高压附件材料(22节)"},
+    "guojiabei_2021_materials":{file:"data/guojiabei_2021_full_materials.json", name:"2021国缆杯·实操与测量材料(13节)"}
   },
   decks: {
     "gbt_2951_flashcards":    {file:"data/gbt_2951_flashcards.json",    name:"GB/T 2951 闪卡(43张)", _count:43},
@@ -61,10 +65,12 @@ const ASSETS = {
     "gbt_5013_flashcards":    {file:"data/gbt_5013_full_flashcards.json",  name:"GB/T 5013.3 橡皮绝缘闪卡(30张)", _count:30},
     "gbt_8735_flashcards":    {file:"data/gbt_8735_full_flashcards.json",  name:"JB/T 8735.2 橡皮软电缆闪卡(30张)", _count:30},
     "gbt_11017_flashcards":   {file:"data/gbt_11017_full_flashcards.json", name:"GB/T 11017 超高压闪卡(30张)", _count:30},
-    "gbt_18890_flashcards":   {file:"data/gbt_18890_full_flashcards.json", name:"GB/T 18890 超高压附件闪卡(38张)", _count:38}
+    "gbt_18890_flashcards":   {file:"data/gbt_18890_full_flashcards.json", name:"GB/T 18890 超高压附件闪卡(38张)", _count:38},
+    "guojiabei_2021_flashcards":{file:"data/guojiabei_2021_full_flashcards.json", name:"2021国缆杯 闪卡(30张)", _count:30}
   },
   term:  "data/terminology_v1.json",
-  syll:  "data/syllabus_2026.json"
+  syll:  "data/syllabus_2026.json",
+  linkIndex: "data/link_index.json"
 };
 const cache = {};
 function load(k){ return cache[k] || (cache[k]=fetch(k).then(r=>{if(!r.ok)throw new Error(r.status);return r.json();})); }
@@ -143,9 +149,11 @@ async function exam(q){
   if(!bank && q.bank && ASSETS.banks[q.bank]){ bank=await load(ASSETS.banks[q.bank].file); }
   if(!bank){ return builder(); }
   const title = (bank.meta&&bank.meta.name)?bank.meta.name:"自定义组卷";
-  const A={choice:{},judge:{},fill:{},calc:{}};
+  const isOnline = !!(bank.meta&&bank.meta.online_bank);
+  const A={choice:{},judge:{},fill:{},calc:{},essay:{}};
   const dlBar=(q.inline==="1")?`<div class="card" style="margin-bottom:10px"><b>导出 Word：</b> <button class="b" onclick="W['dlPaper']()">⬇ 试卷</button> <button class="b" onclick="W['dlAnswer']()">⬇ 答案解析</button> <span class="muted">（试卷与答案分开两个文件，答案解析带依据）</span></div>`:"";
-  let html=`${dlBar}<h1>自测卷</h1><p class="sub">${esc(title)}　·　纯脚本判分（不调大模型）</p><div id="qs">`;
+  const onlineWarn = isOnline?`<div class="card warn" style="margin-bottom:10px">⚠ <b>网上题库</b>：题目/答案${bank.meta&&bank.meta.answer_note?("（"+esc(bank.meta.answer_note)+"）"):"未经权威标准逐一核对，仅供练习参考，正式出题前请人工核对答案。"}</div>`:"";
+  let html=`${dlBar}<h1>自测卷</h1><p class="sub">${esc(title)}　·　${isOnline?"练习卷（答案待核·不自动判分）":"纯脚本判分（不调大模型）"}</p>${onlineWarn}<div id="qs">`;
   (bank.choice||[]).forEach((it,i)=>{
     const no=i+1, src=stdNo(it.src||(bank.meta&&bank.meta.name)||"");
     html+=`<div class="q" data-qno="${no}" data-qtype="选择题" data-qsrc="${esc(src)}"><span class="pts">${it.points||2}分</span><div class="stem">${i+1}. ${esc(it.q)}</div>`;
@@ -164,11 +172,15 @@ async function exam(q){
     for(let k=0;k<(it.answers||[]).length;k++) html+=`<input type="text" placeholder="空${k+1}" onchange="W['setF']('${it.id}',${k},this.value)"> `;
     html+=`</div></div>`;
   });
-  (bank.calc||[]).forEach((it,i)=>{
+    (bank.calc||[]).forEach((it,i)=>{
     const no=i+1+(bank.choice||[]).length+(bank.judge||[]).length+(bank.fill||[]).length, src=stdNo(it.src||(bank.meta&&bank.meta.name)||"");
     html+=`<div class="q" data-qno="${no}" data-qtype="计算题" data-qsrc="${esc(src)}"><span class="pts">计算</span><div class="stem">${esc(it.title||"计算题")}</div><div class="muted" style="margin:6px 0">${esc(it.stem)}</div>`;
     (it.subs||[]).forEach((s,si)=>{ html+=`<div class="calcsub"><span class="lb">${esc(s[0])}</span><input type="text" placeholder="填结果" onchange="W['setCalc']('${it.id}',${si},this.value)"> <span class="muted">(${s[3]}分)</span></div>`; });
     html+=`</div>`;
+  });
+  (bank.essay||[]).forEach((it,i)=>{
+    const no=i+1+(bank.choice||[]).length+(bank.judge||[]).length+(bank.fill||[]).length+(bank.calc||[]).length, src=stdNo(it.src||(bank.meta&&bank.meta.name)||"");
+    html+=`<div class="q" data-qno="${no}" data-qtype="问答题" data-qsrc="${esc(src)}"><span class="pts">${it.points||5}分</span><div class="stem">${no}. ${esc(it.q)}</div><div class="muted" style="margin:6px 0">（开放题，请自行作答；答案待核）</div></div>`;
   });
   html+=`</div><div class="barfix"><button class="b" onclick="W['grade']()">交卷判分</button><span id="score"></span></div><div id="result"></div>`;
   app.innerHTML=html;
@@ -180,6 +192,10 @@ async function exam(q){
   window.W.dlPaper=()=>downloadPaper();
   window.W.dlAnswer=()=>downloadAnswer();
   window.W.grade=()=>{
+    if(isOnline){
+      $("#result").innerHTML=`<div class="card warn">本卷为<b>网上题库</b>，答案待人工核对，暂不自动判分。可凭本题自测练习；正式考试请勿直接采用未经核对的答案。</div>`;
+      return;
+    }
     const r=Grade.gradeAll(bank,A);
     const maxTotal=(bank.meta&&bank.meta.total)||(function(){let t=0;["choice","judge","fill"].forEach(s=>(bank[s]||[]).forEach(it=>{t+=(it.points||0);}));(bank.calc||[]).forEach(it=>{(it.subs||[]).forEach(su=>{if(su[3])t+=su[3];});});return t||100;})();
     try{ const _sc=JSON.parse(localStorage.getItem("exam_scores")||"[]"); _sc.push({name:title,got:r.got.total,max:maxTotal,pct:Math.round(100*r.got.total/maxTotal),t:Date.now()}); localStorage.setItem("exam_scores",JSON.stringify(_sc.slice(-200))); }catch(e){}
@@ -196,20 +212,24 @@ async function exam(q){
         out+=`</div>`;
       });
     };
-    show(bank.choice||[],"choice",it=>{const v=A.choice[it.id];return v==null?"未答":it.options[v];},it=>it.options[it.answer]);
-    show(bank.judge||[],"judge",it=>{const v=A.judge[it.id];return v==null?"未答":(v?"对":"错");},it=>it.answer?"对":"错");
-    show(bank.fill||[],"fill",it=>(A.fill[it.id]||[]).join(" / ")||"未答",it=>(it.answers||[]).join(" / "));
-    show(bank.calc||[],"calc",it=>(A.calc[it.id]||[]).join(" / ")||"未答",it=>(it.subs||[]).map(s=>s[1]).join(" / "));
+    const corrChoice=it=>it.answer==null?"待核":(it.options?it.options[it.answer]:"");
+    const corrJudge=it=>it.answer==null?"待核":(it.answer?"对":"错");
+    show(bank.choice||[],"choice",it=>{const v=A.choice[it.id];return v==null?"未答":it.options[v];},corrChoice);
+    show(bank.judge||[],"judge",it=>{const v=A.judge[it.id];return v==null?"未答":(v?"对":"错");},corrJudge);
+    show(bank.fill||[],"fill",it=>(A.fill[it.id]||[]).join(" / ")||"未答",it=>(it.answers||[]).join(" / ")||"待核");
+    show(bank.calc||[],"calc",it=>(A.calc[it.id]||[]).join(" / ")||"未答",it=>isOnline?"待核":(it.subs||[]).map(s=>s[1]).join(" / ")||"待核");
+    if(bank.essay&&bank.essay.length) show(bank.essay,"essay",()=>"开放题",()=>"待核");
     $("#result").innerHTML=out;
     $("#score").innerHTML=`本次 ${r.got.total} 分`;
   };
 }
 
 // ---------- Word 导出（真正的 .docx，OOXML 格式）----------
-const WSECTIONS=[["choice","一、单项选择题"],["judge","二、判断题"],["fill","三、填空题"],["calc","四、计算题"]];
+const WSECTIONS=[["choice","一、单项选择题"],["judge","二、判断题"],["fill","三、填空题"],["calc","四、计算题"],["essay","五、问答题"]];
 
 async function buildDocx(bank, mode){
   const {Document,Packer,Paragraph,TextRun,HeadingLevel,AlignmentType,BorderStyle,UnderlineType}=docx;
+  const isOnline = !!(bank.meta&&bank.meta.online_bank);
   const title=(bank.meta&&bank.meta.name)?bank.meta.name:"自定义组卷";
   const total=(bank.meta&&bank.meta.total)||100;
   const showAns=(mode==="answer");
@@ -237,10 +257,10 @@ async function buildDocx(bank, mode){
         it.options.forEach((o,oi)=>{
           children.push(new Paragraph({indent:{left:480},spacing:{after:40},children:[new TextRun({text:String.fromCharCode(65+oi)+". "+o,size:22})]}));
         });
-        if(showAns){
+        if(showAns && !isOnline){
           children.push(new Paragraph({indent:{left:480},spacing:{after:60},children:[
             new TextRun({text:"答案：",bold:true,color:"1A5276",size:22}),
-            new TextRun({text:String.fromCharCode(65+it.answer)+". "+it.options[it.answer],color:"1A5276",size:22})
+            new TextRun({text:String.fromCharCode(65+(it.answer==null?0:it.answer))+". "+(it.options&&it.answer!=null?it.options[it.answer]:"待核"),color:"1A5276",size:22})
           ]}));
           if(it.explain) children.push(new Paragraph({indent:{left:480},spacing:{after:40},children:[
             new TextRun({text:"解析：",bold:true,color:"555555",size:21}),
@@ -255,10 +275,10 @@ async function buildDocx(bank, mode){
         children.push(new Paragraph({spacing:{before:200},children:[
           new TextRun({text:no+". ",bold:true,size:24}),new TextRun({text:it.q+"　（　　　）",size:24})
         ]}));
-        if(showAns){
+        if(showAns && !isOnline){
           children.push(new Paragraph({indent:{left:480},spacing:{after:60},children:[
             new TextRun({text:"答案：",bold:true,color:"1A5276",size:22}),
-            new TextRun({text:it.answer?"正确":"错误",color:"1A5276",size:22})
+            new TextRun({text:(it.answer==null?"待核":(it.answer?"正确":"错误")),color:"1A5276",size:22})
           ]}));
           if(it.explain) children.push(new Paragraph({indent:{left:480},spacing:{after:40},children:[
             new TextRun({text:"解析：",bold:true,color:"555555",size:21}),new TextRun({text:it.explain,color:"555555",size:21})
@@ -271,10 +291,10 @@ async function buildDocx(bank, mode){
         children.push(new Paragraph({spacing:{before:200},children:[
           new TextRun({text:no+". ",bold:true,size:24}),new TextRun({text:it.q,size:24})
         ]}));
-        if(showAns){
+        if(showAns && !isOnline){
           children.push(new Paragraph({indent:{left:480},spacing:{after:60},children:[
             new TextRun({text:"答案：",bold:true,color:"1A5276",size:22}),
-            new TextRun({text:(it.answers||[]).join(" / "),color:"1A5276",size:22})
+            new TextRun({text:(it.answers&&it.answers.length?(it.answers||[]).join(" / "):"待核"),color:"1A5276",size:22})
           ]}));
           if(it.explain) children.push(new Paragraph({indent:{left:480},spacing:{after:40},children:[
             new TextRun({text:"解析：",bold:true,color:"555555",size:21}),new TextRun({text:it.explain,color:"555555",size:21})
@@ -294,17 +314,29 @@ async function buildDocx(bank, mode){
           children.push(new Paragraph({indent:{left:480},spacing:{after:40},children:[
             new TextRun({text:"（"+(si+1)+"）"+s[0]+"：______________　（"+s[3]+"分）",size:22})
           ]}));
-          if(showAns) children.push(new Paragraph({indent:{left:960},spacing:{after:40},children:[
+          if(showAns && !isOnline) children.push(new Paragraph({indent:{left:960},spacing:{after:40},children:[
             new TextRun({text:"答案：",bold:true,color:"1A5276",size:22}),
             new TextRun({text:String(s[1])+(s[2]?"（允许误差 ±"+s[2]+"）":""),color:"1A5276",size:22})
           ]}));
         });
-        if(showAns){
+        if(showAns && isOnline) children.push(new Paragraph({indent:{left:480},spacing:{after:120},children:[
+          new TextRun({text:"（网上题库·答案待核，请自行核对）",color:"7D3C98",size:21})
+        ]}));
+        if(showAns && !isOnline){
           if(it.explain) children.push(new Paragraph({indent:{left:480},spacing:{after:40},children:[
             new TextRun({text:"解析：",bold:true,color:"555555",size:21}),new TextRun({text:it.explain,color:"555555",size:21})
           ]}));
           if(it.src) children.push(new Paragraph({indent:{left:480},spacing:{after:120},children:[
             new TextRun({text:"依据：",bold:true,color:"7D3C98",size:21}),new TextRun({text:it.src,color:"7D3C98",size:21})
+          ]}));
+        }
+      }else if(t==="essay"){
+        children.push(new Paragraph({spacing:{before:200},children:[
+          new TextRun({text:no+". ",bold:true,size:24}),new TextRun({text:it.q,size:24})
+        ]}));
+        if(showAns){
+          children.push(new Paragraph({indent:{left:480},spacing:{after:120},children:[
+            new TextRun({text:(isOnline?"（网上题库·答案待核，请自行核对）":"（开放题，参考答案略）"),color:"7D3C98",size:21})
           ]}));
         }
       }
@@ -446,12 +478,30 @@ async function builder(){
   let mode="preset";
   let counts={choice:15, judge:0, fill:12, calc:2};
   let weighted=true;
+  let selExps=new Set();
+  let selLevels=new Set(["了解","熟悉","掌握","熟练掌握"]);
+  let incFlash=false;
+  let curLI=null;
+  let incHistorical=false;
+  function inSyllabus(it){ return !it.scope || it.scope==="syllabus"; }
   const PRESETS={
     practice:{choice:15, judge:0, fill:12, calc:2, label:"练习卷"},
     mock:   {choice:30, judge:10, fill:20, calc:2, label:"模拟考"}
   };
   function b64(s){return encodeURIComponent(s);}
   function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));const t=a[i];a[i]=a[j];a[j]=t;}return a;}
+  function weightedSample(pool, need, wf){
+    const arr=pool.map(id=>({id, w:Math.max(0.05, wf(id)||1)}));
+    const out=[];
+    while(out.length<need && arr.length){
+      let tot=0; arr.forEach(x=>tot+=x.w);
+      let r=Math.random()*tot, i=0;
+      for(; i<arr.length; i++){ r-=arr[i].w; if(r<=0) break; }
+      if(i>=arr.length) i=arr.length-1;
+      out.push(arr[i].id); arr.splice(i,1);
+    }
+    return out;
+  }
   async function loadScope(){
     if(scope==="__all__"){
       const banks=await Promise.all(keys.map(k=>load(ASSETS.banks[k].file)));
@@ -492,16 +542,18 @@ async function builder(){
     return pe;
   }
   async function render(){
-    let bank=null;
+    let bank=null, li=null;
     if(mode==="std") bank=await loadScope();
+    if(mode==="syllabus"){ li=await load(ASSETS.linkIndex); curLI=li; }
     let html=`<h1>出卷器</h1><p class="sub">参照旧系统比例：卷型预设 + 总分100分（计算题每道约10分，选择/判断/填空每题约2分）</p>
-      <div class="card"><b>题库范围</b>：<select id="sc" onchange="W['chScope'](this.value)">
+      ${mode!=="syllabus"?`<div class="card"><b>题库范围</b>：<select id="sc" onchange="W['chScope'](this.value)">
         <option value="__all__" ${scope==="__all__"?"selected":""}>全部标准合并</option>
         ${keys.map(k=>`<option value="${k}" ${scope===k?"selected":""}>${esc(ASSETS.banks[k].name)}</option>`).join("")}
-      </select></div>
+      </select></div>`:`<div class="card muted">📋 按大纲出卷：题源取自 link_index 关联的全部题库（不受上方「题库范围」限制）</div>`}
       <div class="card"><b>出卷方式</b>：
         <button class="${mode==='preset'?'b':'s'}" onclick="W['chMode']('preset')">卷型预设</button>
-        <button class="${mode==='std'?'b':'s'}" onclick="W['chMode']('std')">按标准号(高级)</button></div>`;
+        <button class="${mode==='std'?'b':'s'}" onclick="W['chMode']('std')">按标准号(高级)</button>
+        <button class="${mode==='syllabus'?'b':'s'}" onclick="W['chMode']('syllabus')">📋 按大纲出卷</button></div>`;
     if(mode==="preset"){
       html+=`<div class="card"><b>卷型预设</b>：
         <button class="s" onclick="W['applyPreset']('practice')">练习卷(选择15/填空12/计算2)</button>
@@ -513,10 +565,11 @@ async function builder(){
         填空<input type="number" min="0" id="c_fill" value="${counts.fill}" oninput="W['setCount']('fill',this.value)" style="width:50px">
         计算<input type="number" min="0" id="c_calc" value="${counts.calc}" oninput="W['setCount']('calc',this.value)" style="width:50px">
         </div>
-        <div class="card"><label><input type="checkbox" id="wg" ${weighted?"checked":""} onchange="W['setW'](this.checked)"> 均衡覆盖各标准（避免某标准扎堆）</label></div>`;
-    } else {
+        <div class="card"><label><input type="checkbox" id="wg" ${weighted?"checked":""} onchange="W['setW'](this.checked)"> 均衡覆盖各标准（避免某标准扎堆）</label></div>
+        <div class="card"><label><input type="checkbox" id="ih" ${incHistorical?"checked":""} onchange="W['setIncHist'](this.checked)"> 包含大纲外历史题（2021国缆杯·裸电线等；默认仅出本次大纲内的题）</label></div>`;
+    } else if(mode==="std"){
       const groups={};
-      ["choice","judge","fill","calc"].forEach(t=>(bank[t]||[]).forEach(it=>{const s=stdOf(it.src);(groups[s]=groups[s]||{choice:0,judge:0,fill:0,calc:0})[t]++;}));
+      ["choice","judge","fill","calc"].forEach(t=>(bank[t]||[]).forEach(it=>{ if(!incHistorical && !inSyllabus(it)) return; const s=stdOf(it.src);(groups[s]=groups[s]||{choice:0,judge:0,fill:0,calc:0})[t]++;}));
       const stds=Object.keys(groups);
       let g=`<div class="card"><b>各标准号抽题数</b><div class="muted">该标准号总题数见括号；留空=不抽</div>`;
       stds.forEach(s=>{const gr=groups[s];const total=gr.choice+gr.judge+gr.fill+gr.calc;
@@ -524,17 +577,46 @@ async function builder(){
           <input type="number" min="0" max="${total}" id="w_${b64(s)}" value="" style="width:64px" placeholder="抽"> 题</div>`;
       });
       g+=`</div>`;
+      g+=`<div class="card"><label><input type="checkbox" ${incHistorical?"checked":""} onchange="W['setIncHist'](this.checked)"> 包含大纲外历史题（默认仅出本次大纲内的题）</label></div>`;
       html+=g;
+    } else {
+      // ---- 按大纲出卷 ----
+      const expQ={};
+      Object.keys(li.by_experiment).forEach(e=>{
+        const ids=new Set();
+        (li.by_experiment[e]||[]).forEach(s=>{const r=li.syllabus[s]; if(r&&r.part!=="resource") (r.links.questions||[]).forEach(q=>ids.add(q));});
+        expQ[e]=ids.size;
+      });
+      const expRows=Object.keys(li.by_experiment).sort((a,b)=>expQ[b]-expQ[a]).map(e=>`<label style="display:block;margin:3px 0"><input type="checkbox" ${selExps.has(e)?'checked':''} onchange="W['chExp']('${esc(e)}',this.checked)"> ${esc(e)} <span class="muted">(${expQ[e]}题)</span></label>`).join("");
+      html+=`<div class="card"><b>选择实验（大纲考点）</b>
+        <button class="s" onclick="W['selAllExp'](true)">全选</button>
+        <button class="s" onclick="W['selAllExp'](false)">清空</button>
+        <div style="max-height:240px;overflow:auto;border:1px solid var(--bd);padding:8px;margin-top:6px">${expRows}</div></div>
+      <div class="card"><b>认知层次</b>（抽题权重：熟练掌握4 &gt; 掌握3 &gt; 熟悉2 &gt; 了解1）
+        ${["了解","熟悉","掌握","熟练掌握"].map(L=>`<label style="margin-right:10px"><input type="checkbox" ${selLevels.has(L)?'checked':''} onchange="W['chLevel']('${L}',this.checked)"> ${L}</label>`).join("")}
+      </div>
+      <div class="card"><b>各题型题数</b>
+        选择<input type="number" min="0" id="c_choice" value="${counts.choice}" oninput="W['setCount']('choice',this.value)" style="width:50px">
+        判断<input type="number" min="0" id="c_judge" value="${counts.judge}" oninput="W['setCount']('judge',this.value)" style="width:50px">
+        填空<input type="number" min="0" id="c_fill" value="${counts.fill}" oninput="W['setCount']('fill',this.value)" style="width:50px">
+        计算<input type="number" min="0" id="c_calc" value="${counts.calc}" oninput="W['setCount']('calc',this.value)" style="width:50px">
+      </div>
+      <div class="card"><label><input type="checkbox" ${incFlash?'checked':''} onchange="W['chFlash'](this.checked)"> 纳入散卡（按大纲考点挑闪卡，front/back 自动转识记题补入填空）</label></div>`;
     }
     html+=`<div style="margin-top:10px"><button class="b" onclick="W['gen']()">🎯 生成试卷</button></div><div id="genMsg"></div>`;
     app.innerHTML=html;
   }
   window.W=window.W||{};
   window.W.chScope=async n=>{scope=n; await render();};
-  window.W.chMode=async m=>{mode=m; await render();};
+  window.W.chMode=async m=>{ if(m==="syllabus") scope="__all__"; mode=m; await render(); };
   window.W.applyPreset=async p=>{const pr=PRESETS[p]; counts={choice:pr.choice,judge:pr.judge,fill:pr.fill,calc:pr.calc}; await render();};
   window.W.setCount=(t,v)=>{counts[t]=parseInt(v)||0;};
   window.W.setW=v=>{weighted=v;};
+  window.W.setIncHist=v=>{ incHistorical=v; render(); };
+  window.W.chExp=(e,on)=>{ if(on) selExps.add(e); else selExps.delete(e); render(); };
+  window.W.chLevel=(L,on)=>{ if(on) selLevels.add(L); else selLevels.delete(L); render(); };
+  window.W.chFlash=(v)=>{ incFlash=v; render(); };
+  window.W.selAllExp=(on)=>{ if(curLI) selExps=new Set(on?Object.keys(curLI.by_experiment):[]); render(); };
   window.W.gen=async()=>{
     const bank=await loadScope();
     const nb={choice:[],judge:[],fill:[],calc:[]};
@@ -542,17 +624,17 @@ async function builder(){
       const stds=[...new Set(["choice","judge","fill","calc"].flatMap(t=>(bank[t]||[]).map(it=>stdOf(it.src))))];
       stds.forEach(s=>{
         const el=document.getElementById("w_"+b64(s)); const n=el?parseInt(el.value)||0:0; if(!n)return;
-        const pool=[];["choice","judge","fill","calc"].forEach(t=>(bank[t]||[]).forEach(it=>{if(stdOf(it.src)===s&&!it._skip)pool.push({t,it});}));
+        const pool=[];["choice","judge","fill","calc"].forEach(t=>(bank[t]||[]).forEach(it=>{if(stdOf(it.src)===s&&!it._skip&&(incHistorical||inSyllabus(it)))pool.push({t,it});}));
         shuffle(pool);
         pool.slice(0,n).forEach(({t,it})=>nb[t].push(it));
       });
       if(!nb.choice.length&&!nb.judge.length&&!nb.fill.length&&!nb.calc.length){ $("#genMsg").innerHTML=`<div class="note">请至少为一个标准号填写抽题数</div>`; return; }
-    } else {
+    } else if(mode==="preset"){
       ["choice","judge","fill","calc"].forEach(t=>{
         let need=counts[t]||0;
         const el=document.getElementById("c_"+t); if(el) need=parseInt(el.value)||0;
         if(!need) return;
-        let pool=(bank[t]||[]).filter(it=>!it._skip).slice();
+        let pool=(bank[t]||[]).filter(it=>!it._skip && (incHistorical||inSyllabus(it))).slice();
         if(weighted){
           const buckets={};
           pool.forEach(it=>{const s=stdOf(it.src);(buckets[s]=buckets[s]||[]).push(it);});
@@ -577,6 +659,61 @@ async function builder(){
         }
       });
       if(!nb.choice.length&&!nb.judge.length&&!nb.fill.length&&!nb.calc.length){ $("#genMsg").innerHTML=`<div class="note">请设置题型题数或选择卷型预设</div>`; return; }
+    } else {
+      // ---- 按大纲出卷 ----
+      const LI=await load(ASSETS.linkIndex);
+      const qById={};
+      ["choice","judge","fill","calc"].forEach(t=>(bank[t]||[]).forEach(it=>{ qById[it.id]={t,it}; }));
+      const selExp=[...selExps];
+      if(!selExp.length){ $("#genMsg").innerHTML=`<div class="note">请至少选择一个实验（大纲考点）</div>`; return; }
+      if(!selLevels.size){ $("#genMsg").innerHTML=`<div class="note">请至少选择一个认知层次</div>`; return; }
+      const candByType={choice:[],judge:[],fill:[],calc:[]};
+      const wOf={};
+      selExp.forEach(e=>{
+        (LI.by_experiment[e]||[]).forEach(s=>{
+          const rec=LI.syllabus[s];
+          if(!rec||rec.part==="resource") return;
+          if(!selLevels.has(rec.cognitive_level||"")) return;
+          const w=rec.weight||1;
+          (rec.links.questions||[]).forEach(qid=>{
+            const m=qById[qid]; if(!m) return;
+            candByType[m.t].push(qid);
+            wOf[qid]=Math.max(wOf[qid]||0, w);
+          });
+        });
+      });
+      ["choice","judge","fill","calc"].forEach(t=>{ candByType[t]=[...new Set(candByType[t])]; });
+      const msg=[];
+      ["choice","judge","fill","calc"].forEach(t=>{
+        let need=counts[t]||0;
+        const el=document.getElementById("c_"+t); if(el) need=parseInt(el.value)||0;
+        if(!need) return;
+        const picked=weightedSample(candByType[t], need, id=>wOf[id]||1);
+        if(picked.length && picked.length<need) msg.push(`「${t}」候选仅 ${picked.length}/${need} 道`);
+        picked.forEach(qid=>nb[t].push(qById[qid].it));
+      });
+      if(incFlash){
+        const deckKeys=Object.keys(ASSETS.decks);
+        const decks=await Promise.all(deckKeys.map(k=>load(ASSETS.decks[k].file)));
+        const cardById={}; decks.forEach(d=>(d.cards||[]).forEach(c=>cardById[c.id]=c));
+        const cardIds=new Set();
+        selExp.forEach(e=>{
+          (LI.by_experiment[e]||[]).forEach(s=>{
+            const rec=LI.syllabus[s];
+            if(!rec||rec.part==="resource") return;
+            (rec.links.flashcards||[]).forEach(cid=>cardIds.add(cid));
+          });
+        });
+        let added=0;
+        [...cardIds].forEach(cid=>{
+          if(added>=10) return;
+          const c=cardById[cid]; if(!c) return;
+          nb.fill.push({id:"fc_"+c.id, q:c.front, answers:[c.back], points:2, src:c.src||c.std, explain:c.back, _flash:true});
+          added++;
+        });
+      }
+      if(!nb.choice.length&&!nb.judge.length&&!nb.fill.length&&!nb.calc.length){ $("#genMsg").innerHTML=`<div class="note">所选大纲考点下没有可抽的题，请调整实验/层次</div>`; return; }
+      if(msg.length) $("#genMsg").innerHTML=`<div class="note">${msg.join("；")}（受大纲考点范围限制）</div>`;
     }
     const n={choice:nb.choice.length,judge:nb.judge.length,fill:nb.fill.length,calc:nb.calc.length};
     const pe=planScores(n,{choice:2,judge:2,fill:2,calc:10});
@@ -591,7 +728,9 @@ async function builder(){
       for(let k=0;k<rem;k++) fl[order[k][0]]++;
       it.subs.forEach((s,i)=>{ s[3]=fl[i]; });
     });
-    const scopeName = scope==="__all__" ? "全部标准合并" : ASSETS.banks[scope].name;
+    let scopeName;
+    if(mode==="syllabus") scopeName=`大纲出卷(${selExps.size}实验/${selLevels.size}层次${incFlash?"+散卡":""})`;
+    else scopeName = scope==="__all__" ? "全部标准合并" : ASSETS.banks[scope].name;
     nb.meta={name: scopeName+" · 自定义组卷(满分100)", total:100};
     sessionStorage.setItem("genBank",JSON.stringify(nb));
     location.hash="#/exam?inline=1";
